@@ -7,5 +7,12 @@
     "TITLE": "Startup Weekend Cochabamba",
     "POWERED_BY": "Powered by Google for entrepreneurs",
     "BUY_TICKETS": "Adquirir Tickets"
+  },
+  "COUNTDOWN": {
+    "TITLE": "El evento comienza en:",
+    "DAYS": "Dias",
+    "HOURS": "Horas",
+    "MINUTES": "Minutos",
+    "SECONDS": "Segundos"
   }
 }

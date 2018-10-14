@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './custom-components/header/header.component';
 import { EventDescriptionComponent } from './custom-components/event-description/event-description.component';
+import { CountDownComponent } from './custom-components/countdown/countdown.component';
+import { NumberTransformPipe } from './pipes/number-transform/number-transform.pipe';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -18,7 +20,9 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     AppComponent,
     HeaderComponent,
-    EventDescriptionComponent
+    EventDescriptionComponent,
+    CountDownComponent,
+    NumberTransformPipe
   ],
   imports: [
     BrowserModule,
