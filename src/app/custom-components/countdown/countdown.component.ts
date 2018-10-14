@@ -8,24 +8,28 @@ import * as moment from 'moment';
   styleUrls: ['./countdown.component.scss']
 })
 export class CountDownComponent implements OnInit {
-  @Input() date;
-  finishDate;
-  daysRemaning;
-  hoursRemaning;
-  minutesRemaning;
-  secondsRemaning;
-  isFinsshedDate = false;
+  @Input()
+  date: string;
+  finishDate: any;
+  daysRemaining: number;
+  hoursRemaining: number;
+  minutesRemaining: number;
+  secondsRemaining: number;
+  isFinishDate: boolean;
 
-  ngOnInit() {
-    this.finishDate = moment(this.date);
-    setInterval(() => {
-      const today = moment();
-      this.daysRemaning = this.finishDate.diff(today, 'days') % 365;
-      this.hoursRemaning = this.finishDate.diff(today, 'hours') % 24;
-      this.minutesRemaning = this.finishDate.diff(today, 'minutes') % 60;
-      this.secondsRemaning = this.finishDate.diff(today, 'seconds') % 60;
-      this.isFinsshedDate = this.finishDate.isSameOrBefore(today);
-    }, 1000);
+  constructor() {
+    this.isFinishDate = false;
   }
 
+  ngOnInit() {
+    this.finishDate = moment(this.date, 'DD-MM-YYYY HH:mm');
+    setInterval(() => {
+      const today = moment();
+      this.daysRemaining = this.finishDate.diff(today, 'days') % 365;
+      this.hoursRemaining = this.finishDate.diff(today, 'hours') % 24;
+      this.minutesRemaining = this.finishDate.diff(today, 'minutes') % 60;
+      this.secondsRemaining = this.finishDate.diff(today, 'seconds') % 60;
+      this.isFinishDate = this.finishDate.isSameOrBefore(today);
+    }, 1000);
+  }
 }
