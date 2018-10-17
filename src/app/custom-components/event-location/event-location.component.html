@@ -1,14 +1,14 @@
 <div style="height: 600px">
-  <x-map #xmap [Options]="_options" [Box]="_box">
+  <x-map #xmap [Options]="mapOptions" [Box]="_box">
     <x-map-marker 
       [Latitude]="-17.41809191207568" 
       [Longitude]="-66.12963527113635"
-      [Title]="'My Marker'"
-      [IconInfo]="_iconInfo">
+      [Title]="'Campo Ferial'"
+      [IconInfo]="iconInfo">
         <x-info-box
           [DisableAutoPan]="true"
-          [Title]="'My InfoBox'"
-          [Description]="'Hi, this is the content of the <strong>info window</strong>. It is your responsibility to implement functionality such as close, etc...'">
+          [Title]="'Dirección'"
+          [Description]="'Cto Bolivia, Cochabamba'">
             <x-info-box-action [Label]="'Click Me'" (ActionClicked)="_click()"></x-info-box-action>
         </x-info-box>
     </x-map-marker>

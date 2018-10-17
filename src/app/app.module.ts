@@ -32,10 +32,7 @@ export class AppModule {}
 
 export function MapServiceProviderFactory() {
   let bc: BingMapAPILoaderConfig = new BingMapAPILoaderConfig();
-  bc.apiKey = 'AiieQo9VbTBwg_ZSPdmnE0kbORnnQ7SsHvZ-klkQNOvfrpp5Th6Jvny9H6junIe5'; // your bing map key
+  bc.apiKey = 'AiieQo9VbTBwg_ZSPdmnE0kbORnnQ7SsHvZ-klkQNOvfrpp5Th6Jvny9H6junIe5';
   bc.branch = 'experimental';
-  // to use the experimental bing brach. There are some bug fixes for
-  // clustering in that branch you will need if you want to use
-  // clustering.
   return new BingMapAPILoader(bc, new WindowRef(), new DocumentRef());
 }
