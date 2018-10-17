@@ -1,20 +1,22 @@
-import { Component } from "@angular/core";
-import { IMapOptions, IMarkerIconInfo, ILatLong } from "angular-maps";
+import { Component } from '@angular/core';
+import { IMapOptions, IMarkerIconInfo, ILatLong } from 'angular-maps';
 
-const LATITUDE: number = -17.41809191207568;
-const LONGITUDE: number = -66.12963527113635;
+const LATITUDE = -17.41809191207568;
+const LONGITUDE = -66.12963527113635;
 @Component({
-  selector: "sw-event-location",
-  templateUrl: "./event-location.component.html",
-  styleUrls: ["./event-location.component.scss"]
+  selector: 'sw-event-location',
+  templateUrl: './event-location.component.html',
+  styleUrls: ['./event-location.component.scss']
 })
 export class EventLocationComponent {
+  mapRedirectionUrl: string;
   isMapRendered: boolean;
   mapFocus: ILatLong;
   mapOptions: IMapOptions;
   iconInfo: IMarkerIconInfo;
 
   constructor() {
+    this.mapRedirectionUrl = `//www.google.com/maps/dir/${LATITUDE},${LONGITUDE}/@${LATITUDE},${LONGITUDE},18z`;
     this.isMapRendered = false;
     this.mapFocus = {
       latitude: LATITUDE,

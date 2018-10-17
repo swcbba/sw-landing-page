@@ -24,6 +24,7 @@ import { EventDescriptionComponent } from './custom-components/event-description
 import { CountDownComponent } from './custom-components/countdown/countdown.component';
 import { NumberTransformPipe } from './pipes/number-transform/number-transform.pipe';
 import { EventLocationComponent } from './custom-components/event-location/event-location.component';
+import { environment } from 'src/environments/environment';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -56,7 +57,8 @@ export function createTranslateLoader(http: HttpClient) {
       provide: MapAPILoader,
       deps: [],
       useFactory: MapServiceProviderFactory
-    }],
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
@@ -66,8 +68,12 @@ export class AppModule {
   }
 }
 export function MapServiceProviderFactory() {
-  let bc: BingMapAPILoaderConfig = new BingMapAPILoaderConfig();
-  bc.apiKey = 'AiieQo9VbTBwg_ZSPdmnE0kbORnnQ7SsHvZ-klkQNOvfrpp5Th6Jvny9H6junIe5';
-  bc.branch = 'experimental';
-  return new BingMapAPILoader(bc, new WindowRef(), new DocumentRef());
+  const bingMapConfig: BingMapAPILoaderConfig = new BingMapAPILoaderConfig();
+  bingMapConfig.apiKey = environment.mapKey;
+  bingMapConfig.branch = 'experimental';
+  return new BingMapAPILoader(
+    bingMapConfig,
+    new WindowRef(),
+    new DocumentRef()
+  );
 }
