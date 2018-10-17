@@ -11,10 +11,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './custom-components/header/header.component';
-import { EventDescriptionComponent } from './custom-components/event-description/event-description.component';
+import { BannerComponent } from './custom-components/banner/banner.component';
+import { AboutComponent } from './custom-components/about/about.component';
 import { CountDownComponent } from './custom-components/countdown/countdown.component';
 import { NumberTransformPipe } from './pipes/number-transform/number-transform.pipe';
+import { HeaderComponent } from './custom-components/header/header.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,10 +24,11 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    EventDescriptionComponent,
+    BannerComponent,
+    AboutComponent,
     CountDownComponent,
-    NumberTransformPipe
+    NumberTransformPipe,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

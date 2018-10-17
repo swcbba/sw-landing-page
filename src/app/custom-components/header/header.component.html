@@ -1,17 +1,17 @@
-<div class="parallax-container">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <br><br>
-      <h2 class="header center teal-text text-lighten-2">{{ 'HEADER.TITLE' | translate}}</h2>
-      <div class="row center">
-        <h5 class="header col s12 light">{{ 'HEADER.POWERED_BY' | translate}}</h5>
-      </div>
-      <div class="row center">
-        <a target="_blank" rel="noopener noreferrer" href="https://bit.ly/swcbba18" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">
-          {{'HEADER.BUY_TICKETS' | translate}}</a>
-      </div>
-      <br><br>
+<div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#banner" class="brand-logo blue-text text-darken-2"><img src="assets/images/logo.png"></a>
+      <a data-target="nav-mobile" class="sidenav-trigger blue-text text-darken-2"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#banner" class="blue-text text-darken-2">{{'HEADER.HOME' | translate}}</a></li>
+        <li><a href="#about" class="blue-text text-darken-2">{{'HEADER.ABOUT' | translate}}</a></li>
+      </ul>
     </div>
-  </div>
-  <div class="parallax"><img src="assets/images/parallax1.jpg"></div>
+  </nav>
 </div>
+
+<ul id="nav-mobile" class="sidenav">
+  <li><a href="#banner" class="sidenav-close blue-text text-darken-2">{{'HEADER.HOME' | translate}}</a></li>
+  <li><a href="#about" class="sidenav-close blue-text text-darken-2">{{'HEADER.ABOUT' | translate}}</a></li>
+</ul>
