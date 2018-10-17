@@ -16,6 +16,7 @@ import { AboutComponent } from './custom-components/about/about.component';
 import { CountDownComponent } from './custom-components/countdown/countdown.component';
 import { NumberTransformPipe } from './pipes/number-transform/number-transform.pipe';
 import { HeaderComponent } from './custom-components/header/header.component';
+import { PicturesComponent } from './custom-components/pictures/pictures.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,7 +29,8 @@ export function createTranslateLoader(http: HttpClient) {
     AboutComponent,
     CountDownComponent,
     NumberTransformPipe,
-    HeaderComponent
+    HeaderComponent,
+    PicturesComponent
   ],
   imports: [
     BrowserModule,
