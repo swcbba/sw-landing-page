@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
-import { IMapOptions, IMarkerIconInfo, ILatLong } from 'angular-maps';
+import { Component } from "@angular/core";
+import { IMapOptions, IMarkerIconInfo, ILatLong } from "angular-maps";
 
-declare var $: any;
 const LATITUDE: number = -17.41809191207568;
 const LONGITUDE: number = -66.12963527113635;
 @Component({
-  selector: 'sw-event-location',
-  templateUrl: './event-location.component.html',
-  styleUrls: ['./event-location.component.scss']
+  selector: "sw-event-location",
+  templateUrl: "./event-location.component.html",
+  styleUrls: ["./event-location.component.scss"]
 })
 export class EventLocationComponent {
   isMapRendered: boolean;

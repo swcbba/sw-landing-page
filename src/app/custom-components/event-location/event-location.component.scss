@@ -1,31 +1,50 @@
 #custom-container {
-    position: relative;
+  position: relative;
 }
 
 #location-card {
-    position: absolute;
-    bottom: 28%;
-    right: 13%;
-    width: 30.333333%;
+  position: absolute;
+  bottom: 23%;
+  right: 20%;
 }
 
 #location-card .material-icons {
-    color: #b90693;
+  color: #b90693;
 }
 
 #location-card .card .card-image .card-title {
-    font-size: 16px;
-    font-weight: bold;
-    background: #ca00974d;
-    border-radius: 14px;
-    bottom: 106px;
-    padding: 11px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ca00974d;
+  border-radius: 14px;
+  bottom: 106px;
+  padding: 11px;
 }
 
 #location-card .card .card-action:last-child {
-    text-align: right;
+  text-align: right;
 }
 
 #location-card .card .card-action:last-child i:hover {
-    color: #cb00996b !important;
+  color: #cb00996b !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  #location-card {
+    position: absolute;
+    bottom: 23%;
+    right: 3%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #location-card {
+    position: absolute;
+    bottom: 9%;
+    right: 0;
+  }
+
+  #custom-container > div:first-child {
+    height: 697px !important;
+  }
 }
