@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+
+import { PicturesService } from './pictures.service';
+
 declare const $: any;
 
 @Component({
@@ -8,13 +12,19 @@ declare const $: any;
   styleUrls: ['./pictures.component.scss']
 })
 export class PicturesComponent implements OnInit {
-  constructor() {}
+  picturesData$: Observable<any>;
+
+  constructor(private picturesService: PicturesService) {
+    this.picturesData$ = this.picturesService.getPicturesData();
+  }
 
   ngOnInit() {
     $(() => {
       $('.slider').slider({
         indicators: false,
-        height: 500
+        height: 500,
+        duration: 2000,
+        interval: 3000
       });
     });
   }
