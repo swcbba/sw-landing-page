@@ -21,7 +21,7 @@ export class CountDownComponent implements OnInit {
     this.isFinishDate = false;
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.finishDate = moment(this.date, 'DD-MM-YYYY HH:mm');
     setInterval(() => {
       const today = moment();

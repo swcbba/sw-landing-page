@@ -18,7 +18,7 @@ export class PicturesComponent implements OnInit {
     this.picturesData$ = this.picturesService.getPicturesData();
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     $(() => {
       $('.slider').slider({
         indicators: false,

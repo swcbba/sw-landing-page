@@ -10,7 +10,7 @@ declare const $: any;
 export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     $(() => {
-      $('.parallax').parallax();
+      $('.sidenav').sidenav();
     });
   }
 }
