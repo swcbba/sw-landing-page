@@ -1,0 +1,18 @@
+{
+  "DESCRIPTION": {
+    "TITLE": "¿Qué es el Startup Weekend?",
+    "DETAIL": "Startup Weekend es el programa más grande para emprendedores a nivel mundial, donde en 54 horas personas de todos los dominios se reúnen para crear una empresa."
+  },
+  "HEADER": {
+    "TITLE": "Startup Weekend Cochabamba",
+    "POWERED_BY": "Powered by Google for entrepreneurs",
+    "BUY_TICKETS": "Adquirir Tickets"
+  },
+  "COUNTDOWN": {
+    "TITLE": "El evento comienza en:",
+    "DAYS": "Días",
+    "HOURS": "Horas",
+    "MINUTES": "Minutos",
+    "SECONDS": "Segundos"
+  }
+}
