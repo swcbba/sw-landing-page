@@ -14,5 +14,11 @@
     "HOURS": "Horas",
     "MINUTES": "Minutos",
     "SECONDS": "Segundos"
+  },
+  "MAP_CONTENT": {
+    "LOCATION_NAME": "Campo Ferial",
+    "LOCATION_DESCRIPTION": "Cuenta con salones especiales donde se realizan eventos feriales, actividades profesionales, culturales y sociales.",
+    "ADDRESS": "Circuito Bolivia",
+    "CITY": "Cochabamba, Bolivia"
   }
 }
