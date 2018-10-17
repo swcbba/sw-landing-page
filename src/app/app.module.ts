@@ -24,10 +24,10 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    NumberTransformPipe,
     HeaderComponent,
     EventDescriptionComponent,
     CountDownComponent,
-    NumberTransformPipe,
     PicturesComponent
   ],
   imports: [
