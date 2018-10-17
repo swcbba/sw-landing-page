@@ -1,0 +1,13 @@
+li a.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo img {
+  margin: 3px;
+}
+
+@media only screen and (min-width: 601px) {
+  .brand-logo img {
+    margin: 7px;
+  }
+}
