@@ -1,15 +1,15 @@
-import { Component, AfterContentChecked, AfterViewChecked, OnInit } from "@angular/core";
-import { IMapOptions, IMarkerIconInfo, ILatLong } from "angular-maps";
+import { Component } from '@angular/core';
+import { IMapOptions, IMarkerIconInfo, ILatLong } from 'angular-maps';
 
 declare var $: any;
 const LATITUDE: number = -17.41809191207568;
 const LONGITUDE: number = -66.12963527113635;
 @Component({
-  selector: "sw-event-location",
-  templateUrl: "./event-location.component.html",
-  styleUrls: ["./event-location.component.scss"]
+  selector: 'sw-event-location',
+  templateUrl: './event-location.component.html',
+  styleUrls: ['./event-location.component.scss']
 })
-export class EventLocationComponent implements AfterContentChecked, AfterViewChecked, OnInit {
+export class EventLocationComponent {
   isMapRendered: boolean;
   mapFocus: ILatLong;
   mapOptions: IMapOptions;
@@ -31,6 +31,7 @@ export class EventLocationComponent implements AfterContentChecked, AfterViewChe
       showCopyright: false,
       showBreadcrumb: false,
       showScalebar: false,
+      showDashboard: false,
       mapTypeId: 7
     };
 
@@ -38,20 +39,4 @@ export class EventLocationComponent implements AfterContentChecked, AfterViewChe
       markerType: 0
     };
   }
-
-  ngOnInit() {
-    $('.Infobox').parent().css('display', 'block');
-  }
-
-  ngAfterContentChecked() {
-    if ($('.Infobox')[0] && !this.isMapRendered) {
-      $('.Infobox').parent().css('display', 'block');
-      this.isMapRendered = true;
-    }
-  }
-
-  ngAfterViewChecked() {
-    // console.log('ngAfterViewChecked', $('.infobox-body'));
-  }
-
 }

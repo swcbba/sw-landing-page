@@ -1,16 +1,40 @@
-<div style="height: 600px">
-  <x-map #xmap [Options]="mapOptions" [Box]="_box">
-    <x-map-marker 
-      [Latitude]="-17.41809191207568" 
-      [Longitude]="-66.12963527113635"
-      [Title]="'Campo Ferial'"
-      [IconInfo]="iconInfo">
-        <x-info-box
-          [DisableAutoPan]="true"
-          [Title]="'Dirección'"
-          [Description]="'Cto Bolivia, Cochabamba'">
-            <x-info-box-action [Label]="'Click Me'" (ActionClicked)="_click()"></x-info-box-action>
-        </x-info-box>
-    </x-map-marker>
-  </x-map>
-</div>  
+<div id="custom-container">
+  <div style="height: 800px">
+    <x-map #xmap [Options]="mapOptions" [Box]="_box">
+      <x-map-marker [Latitude]="-17.41809191207568" [Longitude]="-66.12963527113635" [Title]="'Campo Ferial'"
+        [IconInfo]="iconInfo">
+      </x-map-marker>
+    </x-map>
+  </div>
+
+  <div class="row">
+    <div id="location-card" class="col s7 over-map">
+      <div class="card hoverable">
+        <div class="card-image">
+          <img src="assets/images/feicobol3.jpg">
+          <span class="card-title">Campo Ferial</span>
+        </div>
+        <div class="card-content">
+          <div class="row">
+            <i class="col m2 material-icons">announcement</i>
+            <p class="col m10">Cuenta con salones especiales donde se realizan eventos feriales, actividades
+              profesionales, culturales
+              y
+              sociales.</p>
+          </div>
+          <div class="row">
+            <i class="col m2 material-icons">location_on</i>
+            <p class="col m8">Circuito Bolivia</p>
+            <p class="col m8">Cochabamba, Bolivia</p>
+          </div>
+        </div>
+        <div class="card-action">
+          <div>
+            <a target="_blank" rel="noopener noreferrer" href="//www.google.com/maps/dir/-17.4180919,-66.1296353/@-17.4180919,-66.1296353,18z"><i
+                class="material-icons">forward</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
