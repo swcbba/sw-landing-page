@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { IMapOptions, IMarkerIconInfo, ILatLong } from "angular-maps";
 
-const LATITUDE: number = -17.41809191207568;
+const LATITUDE = -17.41809191207568;
 const LONGITUDE: number = -66.12963527113635;
 @Component({
   selector: "sw-event-location",
