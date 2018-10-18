@@ -5,11 +5,11 @@ const LATITUDE = -17.41809191207568;
 const LONGITUDE = -66.12963527113635;
 
 @Component({
-  selector: 'sw-event-location',
-  templateUrl: './event-location.component.html',
-  styleUrls: ['./event-location.component.scss']
+  selector: 'sw-location',
+  templateUrl: './location.component.html',
+  styleUrls: ['./location.component.scss']
 })
-export class EventLocationComponent {
+export class LocationComponent {
   mapRedirectionUrl: string;
   isMapRendered: boolean;
   mapFocus: ILatLong;

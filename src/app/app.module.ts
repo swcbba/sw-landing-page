@@ -26,7 +26,7 @@ import { NumberTransformPipe } from './pipes/number-transform/number-transform.p
 import { environment } from 'src/environments/environment';
 import { HeaderComponent } from './custom-components/header/header.component';
 import { PicturesComponent } from './custom-components/pictures/pictures.component';
-import { EventLocationComponent } from './custom-components/event-location/event-location.component';
+import { LocationComponent } from './custom-components/location/location.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -42,7 +42,7 @@ export function createTranslateLoader(http: HttpClient) {
     NumberTransformPipe,
     HeaderComponent,
     PicturesComponent,
-    EventLocationComponent
+    LocationComponent
   ],
   imports: [
     BrowserModule,
