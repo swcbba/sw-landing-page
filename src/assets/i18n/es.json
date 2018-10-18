@@ -26,5 +26,12 @@
     "LOCATION_DESCRIPTION": "El Startup Weekend Cochabamba 2018 se realizará en instalaciones del Campo Ferial Alalay.",
     "ADDRESS": "Circuito Bolivia",
     "CITY": "Cochabamba, Bolivia"
+  },
+  "FOOTER": {
+    "SUBTITLE": "Redes sociales del evento:",
+    "FACEBOOK": "Facebook",
+    "TWITTER": "Twitter",
+    "INSTAGRAM": "Instagram",
+    "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend"
   }
 }
