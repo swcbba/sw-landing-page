@@ -30,8 +30,6 @@ export class LocationComponent {
 
     this.mapOptions = {
       showMapTypeSelector: false,
-      disablePanning: true,
-      disableZooming: true,
       center: this.mapFocus,
       zoom: 17,
       showCopyright: false,
