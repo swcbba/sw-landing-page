@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ProfilesService } from './profiles.service';
 
 @Component({
   selector: 'sw-profiles',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profiles.component.scss']
 })
 export class ProfilesComponent implements OnInit {
+  profiles$: Observable<any>;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private profilesService: ProfilesService) {
+    this.profiles$ = this.profilesService.getPicturesData();
   }
 
+  ngOnInit() {}
 }

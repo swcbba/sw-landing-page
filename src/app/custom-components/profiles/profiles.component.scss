@@ -1,0 +1,21 @@
+#profiles label, #profiles span {
+  display: block;
+  white-space: nowrap;
+}
+
+#profiles > div {
+  width: 10%;
+  display: inline-block;
+  margin: 3%;
+}
+
+@media only screen and (max-width: 1024px) {
+  #profiles > div {
+    width: 35%;
+    margin: 7%;
+  }
+
+  #profiles > h1 {
+    font-size: 3.2rem;
+  }
+}
