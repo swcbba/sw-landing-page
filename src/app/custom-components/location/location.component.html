@@ -1,8 +1,7 @@
 <div id="custom-container">
-  <div style="height: 800px">
+  <div id="map" style="height: 800px">
     <x-map #xmap [Options]="mapOptions">
-      <x-map-marker [Latitude]="lat" [Longitude]="lng" [Title]="'MAP_CONTENT.LOCATION_NAME' | translate"
-        [IconInfo]="iconInfo">
+      <x-map-marker [Latitude]="lat" [Longitude]="lng" [Title]="'MAP_CONTENT.LOCATION_NAME' | translate" [IconInfo]="iconInfo">
       </x-map-marker>
     </x-map>
   </div>

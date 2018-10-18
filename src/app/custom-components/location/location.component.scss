@@ -48,3 +48,11 @@
     height: 697px !important;
   }
 }
+
+#custom-container > div {
+  margin: 0;
+}
+
+#map {
+  pointer-events: none;
+}
