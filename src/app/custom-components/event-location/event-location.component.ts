@@ -3,6 +3,7 @@ import { IMapOptions, IMarkerIconInfo, ILatLong } from 'angular-maps';
 
 const LATITUDE = -17.41809191207568;
 const LONGITUDE = -66.12963527113635;
+
 @Component({
   selector: 'sw-event-location',
   templateUrl: './event-location.component.html',
@@ -14,8 +15,12 @@ export class EventLocationComponent {
   mapFocus: ILatLong;
   mapOptions: IMapOptions;
   iconInfo: IMarkerIconInfo;
+  lat: number;
+  lng: number;
 
   constructor() {
+    this.lat = LATITUDE;
+    this.lng = LONGITUDE;
     this.mapRedirectionUrl = `//www.google.com/maps/dir/${LATITUDE},${LONGITUDE}/@${LATITUDE},${LONGITUDE},18z`;
     this.isMapRendered = false;
     this.mapFocus = {

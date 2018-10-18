@@ -1,7 +1,7 @@
 <div id="custom-container">
   <div style="height: 800px">
     <x-map #xmap [Options]="mapOptions" [Box]="_box">
-      <x-map-marker [Latitude]="-17.41809191207568" [Longitude]="-66.12963527113635" [Title]="'Campo Ferial'"
+      <x-map-marker [Latitude]="lat" [Longitude]="lng" [Title]="'MAP_CONTENT.LOCATION_NAME' | translate"
         [IconInfo]="iconInfo">
       </x-map-marker>
     </x-map>
@@ -27,7 +27,7 @@
         </div>
         <div class="card-action">
           <div>
-            <a target="_blank" rel="noopener noreferrer" href="{{mapRedirectionUrl}}"><i class="material-icons">forward</i></a>
+            <a target="_blank" rel="noopener noreferrer" [href]="mapRedirectionUrl"><i class="material-icons">forward</i></a>
           </div>
         </div>
       </div>
