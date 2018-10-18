@@ -28,6 +28,7 @@ import { HeaderComponent } from './custom-components/header/header.component';
 import { PicturesComponent } from './custom-components/pictures/pictures.component';
 import { LocationComponent } from './custom-components/location/location.component';
 import { FooterComponent } from './custom-components/footer/footer.component'
+import { StatsComponent } from './custom-components/stats/stats.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -44,6 +45,7 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderComponent,
     PicturesComponent,
     LocationComponent,
+    StatsComponent,
     FooterComponent
   ],
   imports: [
