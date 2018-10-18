@@ -6,7 +6,8 @@
   "HEADER": {
     "HOME": "Home",
     "ABOUT": "Acerca de",
-    "PICTURES": "Fotografías"
+    "PICTURES": "Fotografías",
+    "MAP": "Mapa"
   },
   "BANNER": {
     "TITLE": "Startup Weekend Cochabamba",
@@ -19,5 +20,11 @@
     "HOURS": "Horas",
     "MINUTES": "Minutos",
     "SECONDS": "Segundos"
+  },
+  "MAP_CONTENT": {
+    "LOCATION_NAME": "Campo Ferial",
+    "LOCATION_DESCRIPTION": "El Startup Weekend Cochabamba 2018 se realizará en instalaciones del Campo Ferial Alalay.",
+    "ADDRESS": "Circuito Bolivia",
+    "CITY": "Cochabamba, Bolivia"
   }
 }

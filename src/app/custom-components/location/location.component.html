@@ -1,0 +1,36 @@
+<div id="custom-container">
+  <div style="height: 800px">
+    <x-map #xmap [Options]="mapOptions" [Box]="_box">
+      <x-map-marker [Latitude]="lat" [Longitude]="lng" [Title]="'MAP_CONTENT.LOCATION_NAME' | translate"
+        [IconInfo]="iconInfo">
+      </x-map-marker>
+    </x-map>
+  </div>
+
+  <div class="row">
+    <div id="location-card" class="col s12 m5 l5 xl3 over-map">
+      <div class="card hoverable">
+        <div class="card-image">
+          <img src="assets/images/feicobol3.jpg">
+          <span class="card-title">{{ 'MAP_CONTENT.LOCATION_NAME' | translate}}</span>
+        </div>
+        <div class="card-content">
+          <div class="row">
+            <i class="col s2 m2 material-icons">announcement</i>
+            <p class="col s10 m10">{{ 'MAP_CONTENT.LOCATION_DESCRIPTION' | translate}}</p>
+          </div>
+          <div class="row">
+            <i class="col s2 m2 material-icons">location_on</i>
+            <p class="col s10 m8">{{ 'MAP_CONTENT.ADDRESS' | translate}}</p>
+            <p class="col s10 m8">{{ 'MAP_CONTENT.CITY' | translate}}</p>
+          </div>
+        </div>
+        <div class="card-action">
+          <div>
+            <a target="_blank" rel="noopener noreferrer" [href]="mapRedirectionUrl"><i class="material-icons">forward</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
