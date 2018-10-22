@@ -1,0 +1,37 @@
+.card-participants {
+  background-color:  #5f00ed
+}
+
+.card-teachers {
+  background-color:  #28a8e0
+}
+
+.card-sponsors {
+  background-color:  #ed3672
+}
+
+.card-volunters {
+  background-color:  #c62035
+}
+
+.text-description {
+  color: white;
+  float: right;
+  font-size: 50px;
+}
+
+.text-title {
+  color: white;
+  font-weight: bold;
+
+  @media only screen and (min-width: 1453px) {
+    font-size: 25px !important;
+  }
+  @media only screen and (max-width: 1452px) and (min-width: 1200px) {
+    font-size: 20px !important;
+  }
+  @media only screen and (max-width: 1199px) {
+    font-size: 25px !important;
+  }
+}
+
