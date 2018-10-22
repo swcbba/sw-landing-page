@@ -27,6 +27,12 @@
     "ADDRESS": "Circuito Bolivia",
     "CITY": "Cochabamba, Bolivia"
   },
+  "STATS": {
+    "PARTICIPANTS": "Participantes",
+    "SPEAKERS": "Expositores",
+    "SPONSORS": "Patrocinadores",
+    "VOLUNTEERS": "Voluntarios"
+  },
   "FOOTER": {
     "SUBTITLE": "Redes sociales del evento:",
     "FACEBOOK": "Facebook",
