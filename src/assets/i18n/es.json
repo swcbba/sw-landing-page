@@ -11,9 +11,7 @@
     "PROFILES": "Perfiles"
   },
   "BANNER": {
-    "TITLE": "Startup Weekend Cochabamba",
-    "POWERED_BY": "Powered by Google for entrepreneurs",
-    "BUY_TICKETS": "Adquirir Tickets"
+    "BUY_TICKETS": "Obtener Ticket"
   },
   "COUNTDOWN": {
     "TITLE": "El evento comienza en:",

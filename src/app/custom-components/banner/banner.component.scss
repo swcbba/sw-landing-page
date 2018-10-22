@@ -1,0 +1,25 @@
+#banner-container {
+  height: 100vh;
+}
+
+#banner-layer {
+  background-color: rgba(95, 0, 237, 0.4);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+#banner-container {
+  position: relative;
+  z-index: 1;
+}
+
+#header-img {
+  margin: 30px;
+}
+
+.big-text {
+  font-weight: 700;
+  font-size: 50px;
+}
