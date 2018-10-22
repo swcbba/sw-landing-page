@@ -1,13 +1,23 @@
+li a {
+  color: #5f00ed;
+}
+
 li a.active {
   background-color: rgba(0, 0, 0, 0.1);
+  font-weight: 700;
 }
 
 .brand-logo img {
   margin: 7px;
+
+  @media only screen and (min-width: 601px) {
+    margin: 11px;
+  }
 }
 
-@media only screen and (min-width: 601px) {
-  .brand-logo img {
-    margin: 11px;
+.container {
+  @media only screen and (max-width: 992px) {
+    margin: 0;
+    width: 100%;
   }
 }

@@ -1,5 +1,9 @@
 #banner-container {
-  height: 100vh;
+  height: calc(100vh - 56px);
+
+  @media only screen and (min-width: 601px) {
+    height: calc(100vh - 64px);
+  }
 }
 
 #banner-layer {
@@ -15,8 +19,36 @@
   z-index: 1;
 }
 
+#all-action {
+  padding: 5px;
+  color: #5f00ed;
+  background-color: white;
+}
+
+#action-button-container {
+  text-align: center;
+
+  @media only screen and (min-width: 601px) {
+    text-align: right;
+  }
+}
+
+#action-button {
+  color: #5f00ed;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 #header-img {
-  margin: 30px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 40px;
+}
+
+#banner-image {
+  @media only screen and (max-width: 601px) {
+    left: 0;
+  }
 }
 
 .big-text {
