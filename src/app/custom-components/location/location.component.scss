@@ -13,12 +13,9 @@
 }
 
 #location-card .card .card-image .card-title {
-  font-size: 16px;
+  font-size: 19px;
   font-weight: bold;
-  background: #ca00974d;
-  border-radius: 14px;
-  bottom: 106px;
-  padding: 11px;
+  text-shadow: 3px 2px 1px #000;
 }
 
 #location-card .card .card-action:last-child {
@@ -47,4 +44,12 @@
   #custom-container > div:first-child {
     height: 697px !important;
   }
+}
+
+#custom-container > div {
+  margin: 0;
+}
+
+#map {
+  pointer-events: none;
 }

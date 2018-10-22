@@ -27,7 +27,8 @@ import { environment } from 'src/environments/environment';
 import { HeaderComponent } from './custom-components/header/header.component';
 import { PicturesComponent } from './custom-components/pictures/pictures.component';
 import { LocationComponent } from './custom-components/location/location.component';
-import { FooterComponent } from './custom-components/footer/footer.component'
+import { FooterComponent } from './custom-components/footer/footer.component';
+import { ProfilesComponent } from './custom-components/profiles/profiles.component';
 import { StatsComponent } from './custom-components/stats/stats.component';
 
 export function createTranslateLoader(http: HttpClient) {
@@ -45,8 +46,9 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderComponent,
     PicturesComponent,
     LocationComponent,
-    StatsComponent,
-    FooterComponent
+    FooterComponent,
+    ProfilesComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,

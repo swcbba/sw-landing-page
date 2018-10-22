@@ -7,7 +7,8 @@
     "HOME": "Home",
     "ABOUT": "Acerca de",
     "PICTURES": "Fotografías",
-    "MAP": "Mapa"
+    "MAP": "Mapa",
+    "PROFILES": "Perfiles"
   },
   "BANNER": {
     "TITLE": "Startup Weekend Cochabamba",
@@ -39,5 +40,8 @@
     "TWITTER": "Twitter",
     "INSTAGRAM": "Instagram",
     "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend"
+  },
+  "PROFILES": {
+    "TITLE": "ROCKSTARS"
   }
 }
