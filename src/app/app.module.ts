@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import {
   TranslateModule,
@@ -30,6 +31,8 @@ import { LocationComponent } from './custom-components/location/location.compone
 import { FooterComponent } from './custom-components/footer/footer.component';
 import { ProfilesComponent } from './custom-components/profiles/profiles.component';
 import { StatsComponent } from './custom-components/stats/stats.component';
+import { LanguageService } from './services/language-service';
+import { ES_KEY, EN_KEY } from './app.constants';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -51,6 +54,7 @@ export function createTranslateLoader(http: HttpClient) {
     StatsComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     MapModule.forRoot(),
@@ -68,14 +72,19 @@ export function createTranslateLoader(http: HttpClient) {
       provide: MapAPILoader,
       deps: [],
       useFactory: MapServiceProviderFactory
-    }
+    },
+    LanguageService
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(translate: TranslateService) {
-    translate.setDefaultLang('es');
-    translate.use('es');
+  constructor(private translate: TranslateService,
+              private languageService: LanguageService) {
+    let language = this.languageService.getCurrentLanguage();
+    language = language ? language : ES_KEY;
+    this.languageService.setLanguage(language);
+    translate.setDefaultLang(language);
+    translate.use(language);
   }
 }
 export function MapServiceProviderFactory() {

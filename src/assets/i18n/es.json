@@ -43,5 +43,9 @@
   },
   "PROFILES": {
     "TITLE": "ROCKSTARS"
+  },
+  "LANGUAGE": {
+    "SPANISH": "Español",
+    "ENGLISH":"Ingles"
   }
 }
