@@ -1,16 +1,20 @@
 {
   "ABOUT": {
     "TITLE": "¿Qué es el Startup Weekend?",
-    "DETAIL": "Startup Weekend es el programa más grande para emprendedores a nivel mundial, donde en 54 horas personas de todos los dominios se reúnen para crear una empresa."
+    "DETAIL": "Startup Weekend es uno de los programas para emprendedores más grande y reconocido a nivel mundial, donde en 54 horas se reúnen personas de todos los perfiles para convertir sus ideas en negocios innovadores reales."
   },
   "HEADER": {
-    "HOME": "Home",
+    "TICKETS": "Tickets",
     "ABOUT": "Acerca de",
     "PICTURES": "Fotografías",
     "MAP": "Mapa",
     "PROFILES": "Perfiles"
   },
   "BANNER": {
+    "NO_TALK": "No talk",
+    "ALL_ACTION": "all action",
+    "DAYS": "9, 10 y 11",
+    "MONTH": "Noviembre",
     "BUY_TICKETS": "Obtener Ticket"
   },
   "COUNTDOWN": {
@@ -27,19 +31,20 @@
     "CITY": "Cochabamba, Bolivia"
   },
   "STATS": {
+    "TITLE": "Impacto en Cochabamba",
     "PARTICIPANTS": "Participantes",
-    "SPEAKERS": "Expositores",
-    "SPONSORS": "Patrocinadores",
-    "VOLUNTEERS": "Voluntarios"
+    "PROJECTS": "Proyectos",
+    "IDEAS": "Ideas",
+    "VERSIONS": "Versiones"
   },
   "FOOTER": {
     "SUBTITLE": "Redes sociales del evento:",
     "FACEBOOK": "Facebook",
     "TWITTER": "Twitter",
     "INSTAGRAM": "Instagram",
-    "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend"
+    "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend Cochabamba"
   },
   "PROFILES": {
-    "TITLE": "ROCKSTARS"
+    "TITLE": "Mentores"
   }
 }

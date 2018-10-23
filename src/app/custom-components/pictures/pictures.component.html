@@ -1,6 +1,7 @@
 <div class="slider">
   <ul class="slides">
     <li *ngFor="let pictureData of picturesData$ | async">
+      <sw-color-layer></sw-color-layer>
       <img [src]="pictureData.pictureURL">
     </li>
   </ul>

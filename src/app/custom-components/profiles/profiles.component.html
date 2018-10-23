@@ -1,5 +1,5 @@
 <div id="profiles" class="container center-align">
-  <h1>{{ 'PROFILES.TITLE' | translate}}</h1>
+  <p class="medium-text main-color">{{ 'PROFILES.TITLE' | translate}}</p>
   <div class="center-align" *ngFor="let profile of profiles$ | async">
     <img [src]="profile.photo" class="responsive-img circle"><br>
     <span>{{profile.name}}</span>
