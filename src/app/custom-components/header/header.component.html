@@ -8,17 +8,7 @@
         <li><a href="#about" class="blue-text text-darken-2">{{'HEADER.ABOUT' | translate}}</a></li>
         <li><a href="#pictures" class="blue-text text-darken-2">{{'HEADER.PICTURES' | translate}}</a></li>
         <li><a href="#profiles" class="blue-text text-darken-2">{{'HEADER.PROFILES' | translate}}</a></li>
-        <li><a href="#map" class="blue-text text-darken-2">{{'HEADER.MAP' | translate}}</a></li>
-        <li>
-          <div class="switch">
-            <label>
-              {{ 'LANGUAGE.SPANISH' | translate }}
-              <input type="checkbox" [(ngModel)]="isChecked" (change)="changeLanguage()" />
-              <span class="lever"></span>
-              {{ 'LANGUAGE.ENGLISH' | translate }}
-            </label>
-          </div>
-        </li>
+        <li><a class="blue-text text-darken-2" (click)="changeLanguage()">{{language}}</a></li>
       </ul>
     </div>
   </nav>

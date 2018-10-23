@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ES_KEY, EN_KEY } from '../../app.constants';
-import { LanguageService } from '../../services/language-service';
+import { TranslateService } from '@ngx-translate/core';
 
 declare const $: any;
 
@@ -12,21 +12,19 @@ declare const $: any;
 })
 export class HeaderComponent implements OnInit {
 
-  isChecked = true;
+  language = EN_KEY.toUpperCase();
 
-  constructor(private languageService: LanguageService) {}
+  constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {
     $(() => {
       $('.sidenav').sidenav();
     });
-    const language = this.languageService.getCurrentLanguage();
-    this.isChecked = language !== ES_KEY;
   }
 
   changeLanguage() {
-    const language = this.isChecked ? EN_KEY : ES_KEY;
-    this.languageService.setLanguage(language);
-    window.location.reload();
+    const aux = this.language.toLowerCase();
+    this.language = aux === EN_KEY ? ES_KEY.toUpperCase() : EN_KEY.toUpperCase();
+    this.translate.use(aux);
   }
 }
