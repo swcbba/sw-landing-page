@@ -22,7 +22,7 @@ export class PicturesComponent implements OnInit {
     $(() => {
       $('.slider').slider({
         indicators: false,
-        height: 500,
+        height: 700,
         duration: 2000,
         interval: 3000
       });

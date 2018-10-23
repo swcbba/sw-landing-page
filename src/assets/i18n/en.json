@@ -1,19 +1,21 @@
 {
   "ABOUT": {
     "TITLE": "What is Startup Weekend?",
-    "DETAIL": "Startup Weekend is the most program for entrepreneurship  worldwide, where in 54 hours people from all domains meet to start a business."
+    "DETAIL": "Startup Weekend is one of the largest and most recognized programs for entrepreneurs worldwide, where in 54 hours people of all profiles meet to turn their ideas into real innovative businesses."
   },
   "HEADER": {
-    "HOME": "Home",
+    "TICKETS": "Tickets",
     "ABOUT": "About",
     "PICTURES": "Pictures",
     "MAP": "Map",
     "PROFILES": "Profiles"
   },
     "BANNER": {
-      "TITLE": "Startup Weekend Cochabamba",
-      "POWERED_BY": "Powered by Google for entrepreneurs",
-      "BUY_TICKETS": "Buy Tickets"
+      "NO_TALK": "No talk",
+      "ALL_ACTION": "all action",
+      "DAYS": "9, 10 y 11",
+      "MONTH": "November",
+      "BUY_TICKETS": "Buy Ticket"
     },
   "COUNTDOWN": {
     "TITLE": "The event starts in:",
@@ -29,24 +31,21 @@
     "CITY": "Cochabamba, Bolivia"
   },
   "STATS": {
+    "TITLE": "Impact in Cochabamba",
     "PARTICIPANTS": "Participants",
-    "SPEAKERS": "Speakers",
-    "SPONSORS": "Sponsors",
-    "VOLUNTEERS": "Volunteers"
+    "PROJECTS": "Proyects",
+    "IDEAS": "Ideas",
+    "VERSIONS": "Versions"
   },
   "FOOTER": {
     "SUBTITLE": "Follow us:",
     "FACEBOOK": "Facebook",
     "TWITTER": "Twitter",
     "INSTAGRAM": "Instagram",
-    "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend"
+    "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend Cochabamba"
   },
   "PROFILES": {
-    "TITLE": "ROCKSTARS"
-  },
-  "LANGUAGE": {
-    "SPANISH": "Spanish",
-    "ENGLISH":"English"
+    "TITLE": "Mentors"
   }
 }
   

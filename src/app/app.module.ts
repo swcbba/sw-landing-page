@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 import {
   TranslateModule,
@@ -31,6 +30,7 @@ import { LocationComponent } from './custom-components/location/location.compone
 import { FooterComponent } from './custom-components/footer/footer.component';
 import { ProfilesComponent } from './custom-components/profiles/profiles.component';
 import { StatsComponent } from './custom-components/stats/stats.component';
+import { ColorLayerComponent } from './custom-components/color-layer/color-layer.component';
 import { ES_KEY } from './app.constants';
 
 export function createTranslateLoader(http: HttpClient) {
@@ -50,10 +50,10 @@ export function createTranslateLoader(http: HttpClient) {
     LocationComponent,
     FooterComponent,
     ProfilesComponent,
-    StatsComponent
+    StatsComponent,
+    ColorLayerComponent
   ],
   imports: [
-    FormsModule,
     BrowserModule,
     AppRoutingModule,
     MapModule.forRoot(),
