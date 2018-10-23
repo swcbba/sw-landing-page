@@ -1,14 +1,14 @@
 <div *ngIf="!isFinishDate" class="hide-on-small-only">
   <div class="row container">
     <div class="col s12 center-align">
-      <h2 class="text-bold"> {{'COUNTDOWN.TITLE' | translate}} </h2>
+      <h2 id="countdown-title" class="medium-text"> {{'COUNTDOWN.TITLE' | translate}} </h2>
     </div>
   </div>
   <div class="row container">
     <div class="col s3">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <p class="number-style center-align"> {{daysRemaining | appNumberTransform}} </p>
+          <p class="medium-text center-align"> {{daysRemaining | appNumberTransform}} </p>
         </div>
         <div class="card-content">
           <span class="card-title activator white-text text-darken-4 center-align">{{'COUNTDOWN.DAYS' | translate}}</span>
@@ -18,7 +18,7 @@
     <div class="col s3">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <p class="number-style center-align"> {{hoursRemaining | appNumberTransform}} </p>
+          <p class="medium-text center-align"> {{hoursRemaining | appNumberTransform}} </p>
         </div>
         <div class="card-content">
           <span class="card-title activator white-text text-darken-4 center-align">{{'COUNTDOWN.HOURS' | translate}}</span>
@@ -28,7 +28,7 @@
     <div class="col s3">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <p class="number-style center-align"> {{minutesRemaining | appNumberTransform}} </p>
+          <p class="medium-text center-align"> {{minutesRemaining | appNumberTransform}} </p>
         </div>
         <div class="card-content">
           <span class="card-title activator white-text text-darken-4 center-align">{{'COUNTDOWN.MINUTES' | translate}}</span>
@@ -38,7 +38,7 @@
     <div class="col s3">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <p class="number-style center-align"> {{secondsRemaining | appNumberTransform}} </p>
+          <p class="medium-text center-align"> {{secondsRemaining | appNumberTransform}} </p>
         </div>
         <div class="card-content">
           <span class="card-title activator white-text text-darken-4 center-align">{{'COUNTDOWN.SECONDS' | translate}}</span>
