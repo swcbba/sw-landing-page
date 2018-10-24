@@ -4,11 +4,12 @@
     "DETAIL": "Startup Weekend es uno de los programas para emprendedores más grande y reconocido a nivel mundial, donde en 54 horas se reúnen personas de todos los perfiles para convertir sus ideas en negocios innovadores reales."
   },
   "HEADER": {
-    "TICKETS": "Tickets",
+    "HOME": "Inicio",
     "ABOUT": "Acerca de",
     "PICTURES": "Fotografías",
-    "MAP": "Mapa",
-    "PROFILES": "Facilitador"
+    "MAP": "Ubicación",
+    "PROFILES": "Facilitador",
+    "PARTICIPANTS": "Participantes"
   },
   "BANNER": {
     "NO_TALK": "No talk",
@@ -46,5 +47,15 @@
   },
   "PROFILES": {
     "TITLE": "Facilitador"
+  },
+  "PARTICIPANTS": {
+    "TITLE": "¿Quiénes pueden participar?",
+    "SUBTITLE": "Cualquier perfil",
+    "ENTREPRENEUR": "Emprendedor",
+    "STUDENT": "Estudiante",
+    "DEVELOPER": "Desarrollador",
+    "DESIGNER": "Diseñador",
+    "FINANCE": "Finanzas",
+    "MARKETING": "Mercadotecnia"
   }
 }
