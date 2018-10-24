@@ -20,9 +20,18 @@ a {
   color: #5f00ed !important;
 }
 
+.cta-color {
+  background-color: #3ded97 !important;
+}
+
 .highlight {
   padding: 5px;
   background-color: white;
+  margin-bottom: 40px;
+
+  @media only screen and (max-width: 601px) {
+    margin-bottom: 20px;
+  }
 }
 
 .over-layer {
