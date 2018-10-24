@@ -50,5 +50,15 @@
   "PARTNERS": {
     "TITLE": "Our partners",
     "BECOME_SPONSOR": "Become a Sponsor"
+  },
+  "PARTICIPANTS": {
+    "TITLE": "Who can join the event?",
+    "SUBTITLE": "People with any profile",
+    "ENTREPRENEUR": "Entrepreneur",
+    "STUDENT": "Student",
+    "DEVELOPER": "Developer",
+    "DESIGNER": "Designer",
+    "FINANCE": "Finance",
+    "MARKETING": "Marketing"
   }
 }
