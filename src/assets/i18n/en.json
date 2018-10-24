@@ -10,13 +10,13 @@
     "MAP": "Map",
     "PROFILES": "Profiles"
   },
-    "BANNER": {
-      "NO_TALK": "No talk",
-      "ALL_ACTION": "all action",
-      "DAYS": "9, 10 y 11",
-      "MONTH": "November",
-      "BUY_TICKETS": "Buy Ticket"
-    },
+  "BANNER": {
+    "NO_TALK": "No talk",
+    "ALL_ACTION": "all action",
+    "DAYS": "9, 10 and 11",
+    "MONTH": "November",
+    "BUY_TICKETS": "Buy Ticket"
+  },
   "COUNTDOWN": {
     "TITLE": "The event starts in:",
     "DAYS": "Days",
@@ -33,7 +33,7 @@
   "STATS": {
     "TITLE": "Impact in Cochabamba",
     "PARTICIPANTS": "Participants",
-    "PROJECTS": "Proyects",
+    "PROJECTS": "Projects",
     "IDEAS": "Ideas",
     "VERSIONS": "Versions"
   },

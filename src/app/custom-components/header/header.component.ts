@@ -12,7 +12,7 @@ declare const $: any;
 })
 export class HeaderComponent implements OnInit {
 
-  language = MAP_KEY[EN_KEY];
+  language = MAP_KEY[ES_KEY];
 
   constructor(private translate: TranslateService) {}
 
@@ -23,8 +23,8 @@ export class HeaderComponent implements OnInit {
   }
 
   changeLanguage() {
-    const aux = this.language.toLowerCase();
-    this.language = aux === EN_KEY ? MAP_KEY[ES_KEY] : MAP_KEY[EN_KEY];
+    const aux = this.language.toLocaleLowerCase() === ES_KEY ? EN_KEY : ES_KEY;
+    this.language = MAP_KEY[aux];
     this.translate.use(aux);
   }
 }
