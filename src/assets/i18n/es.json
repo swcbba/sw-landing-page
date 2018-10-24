@@ -8,7 +8,7 @@
     "ABOUT": "Acerca de",
     "PICTURES": "Fotografías",
     "MAP": "Mapa",
-    "PROFILES": "Perfiles"
+    "PROFILES": "Facilitador"
   },
   "BANNER": {
     "NO_TALK": "No talk",
@@ -45,6 +45,6 @@
     "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend Cochabamba"
   },
   "PROFILES": {
-    "TITLE": "Mentores"
+    "TITLE": "Facilitador"
   }
 }
