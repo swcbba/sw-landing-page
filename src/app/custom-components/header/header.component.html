@@ -9,7 +9,9 @@
         <li><a class="main-color" href="#participants">{{'HEADER.PARTICIPANTS' | translate}}</a></li>
         <li><a class="main-color" href="#profiles">{{'HEADER.PROFILES' | translate}}</a></li>
         <li><a class="main-color" href="#map">{{'HEADER.MAP' | translate}}</a></li>
+        <li><a class="main-color" (click)="changeLanguage()">{{language}}</a></li>
       </ul>
+      <a class="main-color language-mobile-align" (click)="changeLanguage()">{{language}}</a>
     </div>
   </nav>
 </div>

@@ -32,6 +32,7 @@ import { ProfilesComponent } from './custom-components/profiles/profiles.compone
 import { StatsComponent } from './custom-components/stats/stats.component';
 import { ColorLayerComponent } from './custom-components/color-layer/color-layer.component';
 import { ParticipantsComponent } from './custom-components/participants/participants.component';
+import { ES_KEY } from './app.constants';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -77,9 +78,9 @@ export function createTranslateLoader(http: HttpClient) {
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(translate: TranslateService) {
-    translate.setDefaultLang('es');
-    translate.use('es');
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang(ES_KEY);
+    this.translate.use(ES_KEY);
   }
 }
 export function MapServiceProviderFactory() {
