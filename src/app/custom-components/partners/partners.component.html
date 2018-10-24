@@ -1,0 +1,12 @@
+<div class="container center-align">
+  <p class="medium-text main-color">{{'PARTNERS.TITLE' | translate}}</p>
+  <div class="row">
+    <div *ngFor="let partner of partners$ | async" class="col m8 offset-m2 partner">
+      <a target="_blank" rel="noopener noreferrer" [href]="partner.link">
+        <img [src]="partner.pictureURL" alt="" width="600" height="100">
+      </a>
+    </div>
+  </div>
+  <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/BA6fSS" class="btn-large waves-effect white main-color small-text">
+    {{'PARTNERS.BECOME_SPONSOR' | translate}}</a>
+</div>

@@ -45,7 +45,10 @@
     "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend Cochabamba"
   },
   "PROFILES": {
-    "TITLE": "Mentors"
+    "TITLE": "Facilitator"
+  },
+  "PARTNERS": {
+    "TITLE": "Our partners",
+    "BECOME_SPONSOR": "Become a Sponsor"
   }
 }
-  
