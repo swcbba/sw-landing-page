@@ -21,9 +21,13 @@ a {
 }
 
 .call-to-action {
-  color: white;
-  background-color: #FF154F;
+  color: white !important;
+  background-color: #FF154F !important;
   margin-bottom: 40px;
+}
+
+.call-to-action:hover {
+  opacity: 0.8;
 }
 
 .highlight {
