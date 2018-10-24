@@ -5,11 +5,18 @@
 }
 
 #profiles > div {
+  width: 10%;
   display: inline-block;
-  margin-bottom: 40px;
+  margin: 3%;
 }
 
-.circle {
-  width: 250px;
-  height: 250px;
+@media only screen and (max-width: 1024px) {
+  #profiles > div {
+    width: 35%;
+    margin: 7%;
+  }
+
+  #profiles > h1 {
+    font-size: 3.2rem;
+  }
 }

@@ -47,7 +47,7 @@
     "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend Cochabamba"
   },
   "PROFILES": {
-    "TITLE": "Facilitador"
+    "TITLE": "Rockstars"
   },
   "PARTNERS": {
     "TITLE": "Socios",
@@ -61,5 +61,11 @@
     "DESIGNER": "Diseñador",
     "FINANCE": "Finanzas",
     "MARKETING": "Mercadotecnia"
+  },
+  "FACILITATOR": {
+    "TITLE": "Facilitador",
+    "NAME": "Gonzalo Mena F.",
+    "CITY": "Viña del Mar, Chile",
+    "DESCRIPTION": "Hola que tal"
   }
 }

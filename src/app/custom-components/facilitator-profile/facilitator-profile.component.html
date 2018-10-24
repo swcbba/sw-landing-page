@@ -1,8 +1,27 @@
-<div id="facilitator-profile" class="container center-align">
-  <p class="medium-text main-color">Facilitador</p>
-  <div *ngFor="let profile of profiles$ | async">
-    <img [src]="profile.photo" class="circle">
-    <span class="small-text">Gonzalo Mena F.</span>
-    <label>Viña del Mar, Chile</label>
+<!-- <div id="facilitator-profile" class="container">
+  <p class="medium-text main-color">{{'FACILITATOR.TITLE' | translate}}</p>
+  <div class="row">
+    <div class="col m6">
+      <img src="assets/images/gonzalomena.jpeg" class="circle">
+      <span class="small-text">{{'FACILITATOR.NAME' | translate}}</span>
+      <label>{{'FACILITATOR.CITY' | translate}}</label>
+    </div>
+    <div class="col m6">
+      {{'FACILITATOR.DESCRIPTION' | translate}}
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div id="facilitator-profile" class="row valign-wrapper center-align">
+    <div class="col m4">
+      <img src="assets/images/gonzalomena.jpeg" alt="" class="circle valign">
+      <span class="small-text">{{'FACILITATOR.NAME' | translate}}</span>
+      <label>{{'FACILITATOR.CITY' | translate}}</label>
+    </div>
+    <div class="col m8">
+      <span class="black-text">
+        {{'FACILITATOR.DESCRIPTION' | translate}}
+      </span>
+    </div>
   </div>
 </div>
