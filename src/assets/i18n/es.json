@@ -9,7 +9,8 @@
     "PICTURES": "Fotografías",
     "MAP": "Ubicación",
     "PROFILES": "Facilitador",
-    "PARTICIPANTS": "Participantes"
+    "PARTICIPANTS": "Participantes",
+    "PARTNERS": "Socios"
   },
   "BANNER": {
     "NO_TALK": "No talk",
@@ -54,7 +55,6 @@
   },
   "PARTICIPANTS": {
     "TITLE": "¿Quiénes pueden participar?",
-    "SUBTITLE": "Cualquier perfil",
     "ENTREPRENEUR": "Emprendedor",
     "STUDENT": "Estudiante",
     "DEVELOPER": "Desarrollador",

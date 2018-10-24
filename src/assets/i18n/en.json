@@ -8,7 +8,8 @@
     "ABOUT": "About",
     "PICTURES": "Pictures",
     "MAP": "Map",
-    "PROFILES": "Profiles"
+    "PROFILES": "Profiles",
+    "PARTNERS": "Partners"
   },
   "BANNER": {
     "NO_TALK": "No talk",
@@ -52,8 +53,7 @@
     "BECOME_SPONSOR": "Become a Sponsor"
   },
   "PARTICIPANTS": {
-    "TITLE": "Who can join the event?",
-    "SUBTITLE": "People with any profile",
+    "TITLE": "Who can participate?",
     "ENTREPRENEUR": "Entrepreneur",
     "STUDENT": "Student",
     "DEVELOPER": "Developer",

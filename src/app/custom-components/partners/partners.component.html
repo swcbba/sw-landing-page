@@ -3,7 +3,7 @@
   <div class="row">
     <div *ngFor="let partner of partners$ | async" class="col m8 offset-m2 partner">
       <a target="_blank" rel="noopener noreferrer" [href]="partner.link">
-        <img [src]="partner.pictureURL" alt="" width="600" height="100">
+        <img class="partner-logo" [src]="partner.pictureURL" alt="" width="500" height="100">
       </a>
     </div>
   </div>
