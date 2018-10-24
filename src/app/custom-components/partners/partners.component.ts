@@ -11,6 +11,7 @@ import { PartnersService } from './partners.service';
 })
 export class PartnersComponent {
   partners$: Observable<any>;
+
   constructor(private partnersService: PartnersService) {
     this.partners$ = this.partnersService.getPartnersData();
   }
