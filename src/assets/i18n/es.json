@@ -8,7 +8,7 @@
     "ABOUT": "Acerca de",
     "PICTURES": "Fotografías",
     "MAP": "Mapa",
-    "PROFILES": "Perfiles"
+    "PROFILES": "Facilitador"
   },
   "BANNER": {
     "NO_TALK": "No talk",
@@ -45,12 +45,15 @@
     "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend Cochabamba"
   },
   "PROFILES": {
-    "TITLE": "Mentores"
+    "TITLE": "Facilitador"
   },
-  "MAIN-PROFILE": {
+  "MAIN_PROFILE": {
+    "TITLE": "Facilitador",
     "NAME": "Gonzalo Mena F.",
-    "TITLE": "Gerente Elkare Consultora y Prof. De Emprendimiento e Innovación Duoc UC",
+    "PROFILE_TITLE": "Gerente Elkare Consultora y Prof. De Emprendimiento e Innovación Duoc UC",
     "SPECIALTY": "Especialidad en facilitar el acceso de emprendedores locales y extranjeros al ecosistema chileno, capacitarlos y conectarlos con empresas para que generen negocios.",
-    "DESCRIPTION": "Estudió Administración de Empresas y cuenta con dos Diplomados en Negocios y Tecnologia, y Emprendimiento Corporativo. Lleva 10 años siendo emprendedor en distintos rubros (Derecho, Turismo, Diseño, entre otros). Fan de la Colaboración y el Emprendimiento como herramientas de igualacion social y destructoras de viejos paradigmas. Se ha dedicado a empoderar, conectar y potenciar a emprendedores en su camino al éxito."
+    "DESCRIPTION": "Estudió Administración de Empresas y cuenta con dos Diplomados en Negocios y Tecnologia, y Emprendimiento Corporativo. Lleva 10 años siendo emprendedor en distintos rubros (Derecho, Turismo, Diseño, entre otros). Fan de la Colaboración y el Emprendimiento como herramientas de igualacion social y destructoras de viejos paradigmas. Se ha dedicado a empoderar, conectar y potenciar a emprendedores en su camino al éxito.",
+    "FROM": "Originario de",
+    "CITY": "Viña del Mar, Chile"
   }
 }

@@ -1,33 +1,7 @@
 [
-    {
-      "name": "Franz Silva",
-      "photo": "assets/images/noPhoto.png",
-      "city": "Cochabamba, Bolivia"
-    },
-    {
-        "name": "Denis Parra",
-        "photo": "assets/images/noPhoto.png",
-        "city": "La Paz, Bolivia"
-    },
-    {
-        "name": "Mauricio Arce",
-        "photo": "assets/images/noPhoto.png",
-        "city": "Beni, Bolivia"
-    },
-    {
-        "name": "Irene Argollo",
-        "photo": "assets/images/noPhoto.png",
-        "city": "Medellin, Colombia"
-    },
-    {
-        "name": "Maria Garcia",
-        "photo": "assets/images/noPhoto.png",
-        "city": "Buenos Aires, Argentina"
-    },
-    {
-        "name": "Jazmin Bedregal",
-        "photo": "assets/images/noPhoto.png",
-        "city": "Honduras, Honduras"
-    }
-  ]
-  
+  {
+    "name": "Gonzalo Mena F.",
+    "photo": "assets/images/gonzalomena.jpeg",
+    "city": "Viña del Mar, Chile"
+  }
+]

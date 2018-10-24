@@ -31,18 +31,33 @@ a {
   z-index: 1;
 }
 
-.medium-text {
+.big-text {
   font-weight: 700;
   font-size: 60px;
 
   @media only screen and (max-width: 601px),
     only screen and (max-height: 800px) {
-    font-size: 40px;
+    font-size: 50px;
   }
 
   @media only screen and (max-width: 400px),
     only screen and (max-height: 640px) {
+    font-size: 45px;
+  }
+}
+
+.medium-text {
+  font-weight: 700;
+  font-size: 40px;
+
+  @media only screen and (max-width: 601px),
+    only screen and (max-height: 800px) {
     font-size: 30px;
+  }
+
+  @media only screen and (max-width: 400px),
+    only screen and (max-height: 640px) {
+    font-size: 25px;
   }
 }
 
@@ -59,4 +74,8 @@ a {
     only screen and (max-height: 640px) {
     font-size: 15px;
   }
+}
+
+.text-bold {
+  font-weight: bold;
 }
