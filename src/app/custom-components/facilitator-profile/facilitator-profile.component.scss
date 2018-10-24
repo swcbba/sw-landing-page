@@ -1,0 +1,15 @@
+#facilitator-profile label,
+#facilitator-profile span {
+  display: block;
+  white-space: nowrap;
+}
+
+#facilitator-profile > div {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+}

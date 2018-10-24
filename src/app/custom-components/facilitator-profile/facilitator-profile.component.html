@@ -1,0 +1,8 @@
+<div id="facilitator-profile" class="container center-align">
+  <p class="medium-text main-color">Facilitador</p>
+  <div *ngFor="let profile of profiles$ | async">
+    <img [src]="profile.photo" class="circle">
+    <span class="small-text">Gonzalo Mena F.</span>
+    <label>Viña del Mar, Chile</label>
+  </div>
+</div>

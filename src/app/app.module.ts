@@ -34,6 +34,7 @@ import { StatsComponent } from './custom-components/stats/stats.component';
 import { ColorLayerComponent } from './custom-components/color-layer/color-layer.component';
 import { ParticipantsComponent } from './custom-components/participants/participants.component';
 import { PartnersComponent } from './custom-components/partners/partners.component';
+import { FacilitatorProfileComponent } from './custom-components/facilitator-profile/facilitator-profile.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -55,7 +56,8 @@ export function createTranslateLoader(http: HttpClient) {
     StatsComponent,
     ColorLayerComponent,
     PartnersComponent,
-    ParticipantsComponent
+    ParticipantsComponent,
+    FacilitatorProfileComponent
   ],
   imports: [
     BrowserModule,
