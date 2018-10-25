@@ -16,7 +16,7 @@
 - Create [Issues](https://github.com/swcbba/sw-landing-page/issues) for your work and attach them to [Projects](https://github.com/orgs/swcbba/projects/3) board.
 
 ## Develop deploy
-- Coming soon.
+- [Develop](https://sw-landing-page-dev.firebaseapp.com).
 
 ## Production deploy
 - Coming soon.
