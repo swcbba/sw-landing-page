@@ -4,11 +4,13 @@
     "DETAIL": "Startup Weekend is one of the largest and most recognized programs for entrepreneurs worldwide, where in 54 hours people of all profiles meet to turn their ideas into real innovative businesses."
   },
   "HEADER": {
-    "TICKETS": "Tickets",
+    "HOME": "Home",
     "ABOUT": "About",
     "PICTURES": "Pictures",
     "MAP": "Map",
-    "PROFILES": "Profiles"
+    "PROFILES": "Facilitator",
+    "PARTICIPANTS": "Participants",
+    "PARTNERS": "Partners"
   },
   "BANNER": {
     "NO_TALK": "No talk",
@@ -25,8 +27,8 @@
     "SECONDS": "Seconds"
   },
   "MAP_CONTENT": {
-    "LOCATION_NAME": "Campo Ferial",
-    "LOCATION_DESCRIPTION": "El Startup Weekend Cochabamba 2018 will be in Campo Ferial of the Laguna Alalay.",
+    "LOCATION_NAME": "Feicobol",
+    "LOCATION_DESCRIPTION": "Startup Weekend Cochabamba 2018 will take place at Campo Ferial of the Alalay lagoon.",
     "ADDRESS": "Circuito Bolivia",
     "CITY": "Cochabamba, Bolivia"
   },
@@ -45,7 +47,19 @@
     "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend Cochabamba"
   },
   "PROFILES": {
-    "TITLE": "Mentors"
+    "TITLE": "Facilitator"
+  },
+  "PARTNERS": {
+    "TITLE": "Our partners",
+    "BECOME_SPONSOR": "Become a Sponsor"
+  },
+  "PARTICIPANTS": {
+    "TITLE": "Who can participate?",
+    "ENTREPRENEUR": "Entrepreneur",
+    "STUDENT": "Student",
+    "DEVELOPER": "Developer",
+    "DESIGNER": "Designer",
+    "FINANCE": "Finance",
+    "MARKETING": "Marketing"
   }
 }
-  

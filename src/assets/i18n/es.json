@@ -9,7 +9,8 @@
     "PICTURES": "Fotografías",
     "MAP": "Ubicación",
     "PROFILES": "Facilitador",
-    "PARTICIPANTS": "Participantes"
+    "PARTICIPANTS": "Participantes",
+    "PARTNERS": "Socios"
   },
   "BANNER": {
     "NO_TALK": "No talk",
@@ -26,7 +27,7 @@
     "SECONDS": "Segundos"
   },
   "MAP_CONTENT": {
-    "LOCATION_NAME": "Campo Ferial",
+    "LOCATION_NAME": "Feicobol",
     "LOCATION_DESCRIPTION": "El Startup Weekend Cochabamba 2018 se realizará en instalaciones del Campo Ferial Alalay.",
     "ADDRESS": "Circuito Bolivia",
     "CITY": "Cochabamba, Bolivia"
@@ -39,7 +40,7 @@
     "VERSIONS": "Versiones"
   },
   "FOOTER": {
-    "SUBTITLE": "Redes sociales del evento:",
+    "SUBTITLE": "Contáctanos:",
     "FACEBOOK": "Facebook",
     "TWITTER": "Twitter",
     "INSTAGRAM": "Instagram",
@@ -48,9 +49,12 @@
   "PROFILES": {
     "TITLE": "Facilitador"
   },
+  "PARTNERS": {
+    "TITLE": "Socios",
+    "BECOME_SPONSOR": "Patrocinar"
+  },
   "PARTICIPANTS": {
     "TITLE": "¿Quiénes pueden participar?",
-    "SUBTITLE": "Cualquier perfil",
     "ENTREPRENEUR": "Emprendedor",
     "STUDENT": "Estudiante",
     "DEVELOPER": "Desarrollador",

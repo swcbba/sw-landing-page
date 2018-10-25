@@ -17,6 +17,7 @@ import {
   DocumentRef
 } from 'angular-maps';
 
+import { ES_KEY } from './app.constants';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './custom-components/banner/banner.component';
@@ -32,7 +33,7 @@ import { ProfilesComponent } from './custom-components/profiles/profiles.compone
 import { StatsComponent } from './custom-components/stats/stats.component';
 import { ColorLayerComponent } from './custom-components/color-layer/color-layer.component';
 import { ParticipantsComponent } from './custom-components/participants/participants.component';
-import { ES_KEY } from './app.constants';
+import { PartnersComponent } from './custom-components/partners/partners.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -53,6 +54,7 @@ export function createTranslateLoader(http: HttpClient) {
     ProfilesComponent,
     StatsComponent,
     ColorLayerComponent,
+    PartnersComponent,
     ParticipantsComponent
   ],
   imports: [
