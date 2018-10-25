@@ -16,7 +16,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     $(() => {
-      $('.scrollspy').scrollSpy();
+      $('.scrollspy').scrollSpy({
+        scrollOffset: 70
+      });
     });
   }
 }
