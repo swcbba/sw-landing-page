@@ -4,9 +4,14 @@
   white-space: nowrap;
 }
 
-#facilitator-profile > div {
+.facilitator-abstract {
+  width: 100%;
   display: inline-block;
   margin-bottom: 40px;
+}
+
+.facilitator-description {
+  min-height: 250px;
 }
 
 .circle {
