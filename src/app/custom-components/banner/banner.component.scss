@@ -1,0 +1,23 @@
+#action-button-container {
+  text-align: center;
+
+  @media only screen and (min-width: 601px) {
+    text-align: right;
+  }
+}
+
+#slogan {
+  margin-top: 120px;
+}
+
+#header-img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 40px;
+}
+
+#banner-image {
+  @media only screen and (max-width: 601px) {
+    left: 0;
+  }
+}

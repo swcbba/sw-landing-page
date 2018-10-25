@@ -1,0 +1,74 @@
+{
+  "ABOUT": {
+    "TITLE": "What is Startup Weekend?",
+    "DETAIL": "Startup Weekend is one of the largest and most recognized programs for entrepreneurs worldwide, where in 54 hours people of all profiles meet to turn their ideas into real innovative businesses."
+  },
+  "HEADER": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "PICTURES": "Pictures",
+    "MAP": "Location",
+    "PROFILES": "Profiles",
+    "PARTICIPANTS": "Participants",
+    "PARTNERS": "Partners",
+    "FACILITATOR": "Facilitator"
+  },
+  "BANNER": {
+    "NO_TALK": "No talk",
+    "ALL_ACTION": "all action",
+    "DAYS": "9, 10 and 11",
+    "MONTH": "November, 2018",
+    "BUY_TICKETS": "Buy Ticket"
+  },
+  "COUNTDOWN": {
+    "TITLE": "The event starts in:",
+    "DAYS": "Days",
+    "HOURS": "Hours",
+    "MINUTES": "Minutes",
+    "SECONDS": "Seconds"
+  },
+  "MAP_CONTENT": {
+    "LOCATION_NAME": "Feicobol",
+    "LOCATION_DESCRIPTION": "Startup Weekend Cochabamba 2018 will take place at Campo Ferial of the Alalay lagoon.",
+    "ADDRESS": "Circuito Bolivia",
+    "CITY": "Cochabamba, Bolivia"
+  },
+  "STATS": {
+    "TITLE": "Impact in Cochabamba",
+    "PARTICIPANTS": "Participants",
+    "PROJECTS": "Projects",
+    "IDEAS": "Ideas",
+    "VERSIONS": "Versions"
+  },
+  "FOOTER": {
+    "SUBTITLE": "Follow us:",
+    "FACEBOOK": "Facebook",
+    "TWITTER": "Twitter",
+    "INSTAGRAM": "Instagram",
+    "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend Cochabamba"
+  },
+  "PROFILES": {
+    "TITLE": "Rockstars"
+  },
+  "PARTNERS": {
+    "TITLE": "Our partners",
+    "BECOME_SPONSOR": "Become a Sponsor"
+  },
+  "PARTICIPANTS": {
+    "TITLE": "Who can participate?",
+    "ENTREPRENEUR": "Entrepreneur",
+    "STUDENT": "Student",
+    "DEVELOPER": "Developer",
+    "DESIGNER": "Designer",
+    "FINANCE": "Finance",
+    "MARKETING": "Marketing"
+  },
+  "FACILITATOR": {
+    "TITLE": "Facilitator",
+    "NAME": "Gonzalo Mena F.",
+    "JOB": "Manager at Elkare Consultora and Duoc UC professor of Entrepreneurship and Innovation",
+    "CITY": "Viña del Mar, Chile",
+    "SPECIALTY": "Specialized in facilitating the access of local and foreign entrepreneurs to the Chilean ecosystem, training them and connecting them with companies to generate business.",
+    "DESCRIPTION": "He studied Business Administration and has two Diplomas in Business and Technology, and Corporate Entrepreneurship. He has been an entrepreneur for 10 years in different areas (Law, Tourism, Design, among others). Fan of Collaboration and Entrepreneurship as tools of social equalization and destroyers of old paradigms. He has dedicated himself to empowering, connecting and empowering entrepreneurs on their way to success."
+  }
+}

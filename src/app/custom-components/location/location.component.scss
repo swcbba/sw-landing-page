@@ -1,0 +1,47 @@
+#custom-container {
+  position: relative;
+}
+
+#location-card {
+  position: absolute;
+  bottom: 23%;
+  right: 20%;
+}
+
+#location-card .material-icons {
+  color: #5f00ed;
+}
+
+#location-card .card .card-image .card-title {
+  font-size: 19px;
+  font-weight: bold;
+  text-shadow: 3px 2px 1px #000;
+}
+
+#location-card .card .card-action:last-child {
+  text-align: right;
+}
+
+#location-card .card .card-action:last-child i:hover {
+  color: #aa298f !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  #location-card {
+    position: absolute;
+    bottom: 9%;
+    right: 0;
+  }
+
+  #custom-container > div:first-child {
+    height: 697px !important;
+  }
+}
+
+#custom-container > div {
+  margin: 0;
+}
+
+#map {
+  pointer-events: none;
+}

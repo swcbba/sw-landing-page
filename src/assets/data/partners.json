@@ -1,0 +1,17 @@
+[
+  {
+    "partner": "Google for Startups",
+    "pictureURL": "assets/images/google-for-startups.svg",
+    "link": "https://startup.google.com/"
+  },
+  {
+    "partner": "Dotco",
+    "pictureURL": "assets/images/dotco.svg",
+    "link": "https://www.go.co/"
+  },
+  {
+    "partner": "360 Workplace",
+    "pictureURL": "assets/images/360Workplace.svg",
+    "link": "http://www.360workplace.com/"
+  }
+]

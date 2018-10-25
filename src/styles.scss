@@ -1,6 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+.full-screen {
+  height: calc(100vh - 56px);
+  min-height: 520px;
+
+  @media only screen and (min-width: 601px) {
+    height: calc(100vh - 64px);
+  }
+}
+
+.main-color {
+  color: #5f00ed !important;
+}
+
+.call-to-action {
+  color: white !important;
+  background-color: #ff154f !important;
+  margin-bottom: 40px;
+}
+
+.call-to-action:hover {
+  opacity: 0.8;
+}
+
+.highlight {
+  padding: 5px !important;
+  background-color: white;
+  margin-bottom: 40px;
+
+  @media only screen and (max-width: 601px) {
+    margin-bottom: 20px;
+  }
+}
+
+.over-layer {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.big-text {
+  font-weight: 700;
+  font-size: 60px;
+
+  @media only screen and (max-width: 601px),
+    only screen and (max-height: 800px) {
+    font-size: 45px;
+  }
+
+  @media only screen and (max-width: 400px),
+    only screen and (max-height: 640px) {
+    font-size: 35px;
+  }
+
+  @media only screen and (orientation: landscape) and (max-height: 700px) and (max-width: 900px) {
+    font-size: 30px;
+  }
+}
+
+.medium-text {
+  font-weight: 700;
+  font-size: 40px;
+
+  @media only screen and (max-width: 601px),
+    only screen and (max-height: 800px) {
+    font-size: 30px;
+  }
+
+  @media only screen and (max-width: 400px),
+    only screen and (max-height: 640px) {
+    font-size: 20px;
+  }
+}
+
+.small-text {
+  font-weight: 700;
+  font-size: 30px;
+
+  @media only screen and (max-width: 601px),
+    only screen and (max-height: 800px) {
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width: 400px),
+    only screen and (max-height: 640px) {
+    font-size: 15px;
+  }
 }
