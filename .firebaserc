@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "sw-landing-page-dev"
+    "default": "sw-landing-page-dev",
+    "prod": "swcbba-org"
   }
 }
