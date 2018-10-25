@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ES_KEY, EN_KEY, MAP_KEY } from '../../app.constants';
+import { ES_KEY, EN_KEY } from '../../app.constants';
 import { TranslateService } from '@ngx-translate/core';
 
 declare const $: any;
@@ -11,10 +11,11 @@ declare const $: any;
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  language: string;
 
-  language = MAP_KEY[ES_KEY];
-
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) {
+    this.language = ES_KEY.toUpperCase();
+  }
 
   ngOnInit(): void {
     $(() => {
@@ -22,9 +23,9 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  changeLanguage() {
+  changeLanguage(): void {
     const aux = this.language.toLocaleLowerCase() === ES_KEY ? EN_KEY : ES_KEY;
-    this.language = MAP_KEY[aux];
+    this.language = aux.toUpperCase();
     this.translate.use(aux);
   }
 }
