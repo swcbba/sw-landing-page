@@ -4,6 +4,11 @@
   white-space: nowrap;
 }
 
+#facilitator-picture {
+  max-width: 200px;
+  height: auto;
+}
+
 .facilitator-abstract {
   width: 100%;
   display: inline-block;
@@ -11,10 +16,5 @@
 }
 
 .facilitator-description {
-  min-height: 250px;
-}
-
-.circle {
-  width: 250px;
-  height: 250px;
+  min-height: 200px;
 }
