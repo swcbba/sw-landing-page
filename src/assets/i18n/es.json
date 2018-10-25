@@ -8,15 +8,16 @@
     "ABOUT": "Acerca de",
     "PICTURES": "Fotografías",
     "MAP": "Ubicación",
-    "PROFILES": "Facilitador",
+    "PROFILES": "Perfiles",
     "PARTICIPANTS": "Participantes",
-    "PARTNERS": "Socios"
+    "PARTNERS": "Socios",
+    "FACILITATOR": "Facilitador"
   },
   "BANNER": {
     "NO_TALK": "No talk",
     "ALL_ACTION": "all action",
     "DAYS": "9, 10 y 11",
-    "MONTH": "Noviembre",
+    "MONTH": "Noviembre, 2018",
     "BUY_TICKETS": "Obtener Ticket"
   },
   "COUNTDOWN": {
@@ -47,7 +48,7 @@
     "COPYRIGHT_TEXT": "© 2018 Copyright Startup Weekend Cochabamba"
   },
   "PROFILES": {
-    "TITLE": "Facilitador"
+    "TITLE": "Rockstars"
   },
   "PARTNERS": {
     "TITLE": "Socios",
@@ -61,5 +62,13 @@
     "DESIGNER": "Diseñador",
     "FINANCE": "Finanzas",
     "MARKETING": "Mercadotecnia"
+  },
+  "FACILITATOR": {
+    "TITLE": "Facilitador",
+    "NAME": "Gonzalo Mena F.",
+    "JOB": "Gerente Elkare Consultora y Prof. De Emprendimiento e Innovación en Duoc UC",
+    "CITY": "Viña del Mar, Chile",
+    "SPECIALTY": "Especializado en facilitar el acceso de emprendedores locales y extranjeros al ecosistema chileno, capacitarlos y conectarlos con empresas para que generen negocios.",
+    "DESCRIPTION": "Estudió Administración de Empresas y tiene dos Diplomados en Negocios y Tecnología, y Emprendimiento Corporativo. Lleva 10 años siendo emprendedor en distintos rubros (Derecho, Turismo, Diseño, entre otros). Fan de la Colaboración y el Emprendimiento como herramientas de igualación social y destructoras de viejos paradigmas. Se ha dedicado a empoderar, conectar y potenciar a emprendedores en su camino al éxito."
   }
 }
