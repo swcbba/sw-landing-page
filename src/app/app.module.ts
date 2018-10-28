@@ -16,6 +16,7 @@ import {
   WindowRef,
   DocumentRef
 } from 'angular-maps';
+import { QRCodeModule } from 'angularx-qrcode';
 
 import { ES_KEY } from './app.constants';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +36,9 @@ import { ColorLayerComponent } from './custom-components/color-layer/color-layer
 import { ParticipantsComponent } from './custom-components/participants/participants.component';
 import { PartnersComponent } from './custom-components/partners/partners.component';
 import { FacilitatorProfileComponent } from './custom-components/facilitator-profile/facilitator-profile.component';
+import { AccessDeniedComponent } from './custom-components/access-denied/access-denied.component';
+import { QRComponent } from './custom-components/qr-code/qr-code.component';
+import { DashboardComponent } from './custom-components/dashboard/dashboard.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,6 +47,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
     HeaderComponent,
     BannerComponent,
     AboutComponent,
@@ -57,13 +62,16 @@ export function createTranslateLoader(http: HttpClient) {
     ColorLayerComponent,
     PartnersComponent,
     ParticipantsComponent,
-    FacilitatorProfileComponent
+    FacilitatorProfileComponent,
+    AccessDeniedComponent,
+    QRComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MapModule.forRoot(),
     HttpClientModule,
+    QRCodeModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

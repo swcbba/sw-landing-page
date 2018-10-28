@@ -1,0 +1,46 @@
+.background-sw {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #5f00ed;
+}
+
+.separator {
+  margin-top: 50px;
+}
+
+.separator-description {
+    margin-top: 30px;
+  }
+
+.qrcode {
+  background: white;
+  margin: 20px;
+}
+
+.center-position {
+  display: table;
+  margin: 0 auto;
+  float: none !important;
+}
+
+.text-note {
+  line-break: auto;
+  color: white;
+  font-weight: bold;
+}
+
+.border {
+  float: right;
+  background: transparent;
+  border: none !important;
+  font-size: 20px;
+  color: white;
+  z-index: 12;
+}
+
+.width-fixed {
+  max-width: 80% !important;
+}
