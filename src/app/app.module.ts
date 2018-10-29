@@ -39,6 +39,7 @@ import { FacilitatorProfileComponent } from './custom-components/facilitator-pro
 import { AccessDeniedComponent } from './custom-components/access-denied/access-denied.component';
 import { QRComponent } from './qr-code/qr-code.component';
 import { HomeComponent } from './home/home.component';
+import { SignInComponent } from './authentication/sign-in/sign-in.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -64,7 +65,8 @@ export function createTranslateLoader(http: HttpClient) {
     ParticipantsComponent,
     FacilitatorProfileComponent,
     AccessDeniedComponent,
-    QRComponent
+    QRComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
