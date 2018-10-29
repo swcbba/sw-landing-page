@@ -37,8 +37,8 @@ import { ParticipantsComponent } from './custom-components/participants/particip
 import { PartnersComponent } from './custom-components/partners/partners.component';
 import { FacilitatorProfileComponent } from './custom-components/facilitator-profile/facilitator-profile.component';
 import { AccessDeniedComponent } from './custom-components/access-denied/access-denied.component';
-import { QRComponent } from './custom-components/qr-code/qr-code.component';
-import { DashboardComponent } from './custom-components/dashboard/dashboard.component';
+import { QRComponent } from './qr-code/qr-code.component';
+import { HomeComponent } from './home/home.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -47,7 +47,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
+    HomeComponent,
     HeaderComponent,
     BannerComponent,
     AboutComponent,

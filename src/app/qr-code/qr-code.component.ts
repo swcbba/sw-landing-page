@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 
-import { UserService } from '../../service/user.service';
-import { ES_KEY, EN_KEY } from '../../app.constants';
+import { UserService } from '../service/user.service';
+import { ES_KEY, EN_KEY } from '../app.constants';
 
 @Component({
   selector: 'sw-qr-code',

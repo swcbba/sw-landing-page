@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { QRComponent } from './custom-components/qr-code/qr-code.component';
+import { QRComponent } from './qr-code/qr-code.component';
 import { AccessDeniedComponent } from './custom-components/access-denied/access-denied.component';
 import { AuthGuardService } from './service/auth-guard.service';
-import { DashboardComponent } from './custom-components/dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent
+    component: HomeComponent
   },
   // To test this is needing to change the isLogged variable to false in auth.service.ts file.
   {
