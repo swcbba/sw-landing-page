@@ -9,6 +9,7 @@ declare const $: any;
 })
 export class HomeComponent implements OnInit {
   eventDate: string;
+
   constructor() {
     this.eventDate = '9-11-2018 15:00';
   }

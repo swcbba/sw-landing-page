@@ -14,13 +14,15 @@ export class QRComponent implements OnInit {
   qrText = 'Sample text';
   language: string;
 
-  constructor(private userService: UserService,
-              private translate: TranslateService) {
+  constructor(
+    private userService: UserService,
+    private translate: TranslateService
+  ) {
     this.language = ES_KEY.toUpperCase();
   }
 
   ngOnInit() {
-    this.userService.getUserData().subscribe((newText) => {
+    this.userService.getUserData().subscribe(newText => {
       this.qrText = newText;
     });
     /** Uncomment this block to simulate an update of qr code when user data is updated.

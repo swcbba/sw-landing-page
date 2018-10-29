@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProfilesService } from './profiles.service';
 
@@ -7,12 +7,10 @@ import { ProfilesService } from './profiles.service';
   templateUrl: './profiles.component.html',
   styleUrls: ['./profiles.component.scss']
 })
-export class ProfilesComponent implements OnInit {
+export class ProfilesComponent {
   profiles$: Observable<any>;
 
   constructor(private profilesService: ProfilesService) {
     this.profiles$ = this.profilesService.getPicturesData();
   }
-
-  ngOnInit() {}
 }

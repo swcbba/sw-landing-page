@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './access-denied.component.html',
   styleUrls: ['./access-denied.component.scss']
 })
-export class AccessDeniedComponent { }
+export class AccessDeniedComponent {}

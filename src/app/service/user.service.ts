@@ -6,7 +6,6 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-
   subject: Subject<any> = new Subject<any>();
 
   setUserData(data) {
