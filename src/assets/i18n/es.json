@@ -73,5 +73,10 @@
   },
   "QR_CODE": {
     "DESCRIPTION": "* Utilice este código QR para acceder a los beneficios dentro del Startup Weekend 2018."
+  },
+  "LOGIN": {
+    "EMAIL": "Correo",
+    "PASSWORD": "Contraseña",
+    "SIGNIN": "Ingresar"
   }
 }

@@ -73,5 +73,10 @@
   },
   "QR_CODE": {
     "DESCRIPTION": "* Use this QR code to access the benefits in the Startup Weekend 2018."
+  },
+  "LOGIN": {
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "SIGNIN": "Sign In"
   }
 }

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { QRComponent } from './qr-code/qr-code.component';
 import { AccessDeniedComponent } from './custom-components/access-denied/access-denied.component';
-import { AuthGuardService } from './service/auth-guard.service';
+import { AuthGuardService } from './authentication/auth-guard.service';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './authentication/sign-in/sign-in.component';
 
@@ -19,7 +19,8 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: SignInComponent
+    component: SignInComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'qr-code',

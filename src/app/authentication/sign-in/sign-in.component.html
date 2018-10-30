@@ -1,24 +1,25 @@
 <div class="parallax-container sign-in-container">
   <sw-color-layer></sw-color-layer>
   <div id="sign-in-main" class="row valign-wrapper over-layer">
-    <form class="col s10 offset-s1 m6 offset-m3 l4 offset-l4">
+    <form #loginForm="ngForm" class="col s10 offset-s1 m6 offset-m3 l4 offset-l4" novalidate>
       <div class="row center-align">
         <img class="header-img" src="assets/images/Group75.svg" width="500" height="100" alt="">
+        <sw-language-button class="language-button"></sw-language-button>
       </div>
       <div class="row">
         <div class="input-field">
-          <input id="email" type="email">
-          <label for="email">Email</label>
+          <input id="email" type="email" name="email" [(ngModel)]="email" required>
+          <label for="email">{{'LOGIN.EMAIL' | translate}}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field">
-          <input id="password" type="password">
-          <label for="password">Password</label>
+          <input id="password" type="password" name="password" [(ngModel)]="password" required>
+          <label for="password">{{'LOGIN.PASSWORD' | translate}}</label>
         </div>
       </div>
       <div class="row right">
-        <a class="waves-effect waves-light btn">Sign In</a>
+        <button class="waves-effect waves-light btn" [disabled]="loginForm.invalid" (click)="auth.login(email, password)">{{'LOGIN.SIGNIN' | translate}}</button>
       </div>
     </form>
   </div>

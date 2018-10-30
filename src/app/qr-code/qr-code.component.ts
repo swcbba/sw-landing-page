@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TranslateService } from '@ngx-translate/core';
-
-import { UserService } from '../service/user.service';
-import { ES_KEY, EN_KEY } from '../app.constants';
+import { UserService } from '../authentication/user.service';
+import { AuthService } from '../authentication/auth.service';
 
 @Component({
   selector: 'sw-qr-code',
@@ -11,14 +9,10 @@ import { ES_KEY, EN_KEY } from '../app.constants';
   styleUrls: ['./qr-code.component.scss']
 })
 export class QRComponent implements OnInit {
-  qrText = 'Sample text';
-  language: string;
+  qrText: string;
 
-  constructor(
-    private userService: UserService,
-    private translate: TranslateService
-  ) {
-    this.language = ES_KEY.toUpperCase();
+  constructor(public auth: AuthService, private userService: UserService) {
+    this.qrText = 'Sample text';
   }
 
   ngOnInit() {
@@ -30,11 +24,5 @@ export class QRComponent implements OnInit {
      this.userService.setUserData("Nuevo dato de usuario");
     }, 8000);
     */
-  }
-
-  changeLanguage(): void {
-    const aux = this.language.toLocaleLowerCase() === ES_KEY ? EN_KEY : ES_KEY;
-    this.language = aux.toUpperCase();
-    this.translate.use(aux);
   }
 }

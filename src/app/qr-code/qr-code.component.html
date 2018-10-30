@@ -4,7 +4,9 @@
     <div class="col s12">
       <img id="header-img" class="responsive-img width-fixed" src="assets/images/Group75.svg" width="500" height="100"
         alt="">
-      <button class="border" (click)="changeLanguage()">{{language}}</button>
+      <!-- This logout button is just temporary -->
+      <a (click)="auth.logout()" style="float: right; color: white">Logout</a>
+      <sw-language-button class="language-button"></sw-language-button>
     </div>
 
     <div class="col s12 separator">

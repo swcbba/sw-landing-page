@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 declare const $: any;
 
@@ -8,7 +9,10 @@ declare const $: any;
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
-  constructor() {}
+  email: string;
+  password: string;
+
+  constructor(public auth: AuthService) {}
 
   ngOnInit() {
     $(() => {
