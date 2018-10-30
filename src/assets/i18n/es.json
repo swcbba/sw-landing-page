@@ -78,5 +78,8 @@
     "EMAIL": "Correo",
     "PASSWORD": "Contraseña",
     "SIGNIN": "Ingresar"
+  },
+  "LOGOUT": {
+    "TITLE": "Cerrar Sesión"
   }
 }

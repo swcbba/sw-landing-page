@@ -78,5 +78,8 @@
     "EMAIL": "Email",
     "PASSWORD": "Password",
     "SIGNIN": "Sign In"
+  },
+  "LOGOUT": {
+    "TITLE": "Logout"
   }
 }
