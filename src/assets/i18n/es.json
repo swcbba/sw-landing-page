@@ -77,7 +77,8 @@
   "LOGIN": {
     "EMAIL": "Correo",
     "PASSWORD": "Contraseña",
-    "SIGNIN": "Ingresar"
+    "SIGNIN": "Ingresar",
+    "ERROR": "Error: Correo o Contraseña incorrecta."
   },
   "LOGOUT": {
     "TITLE": "Cerrar Sesión"

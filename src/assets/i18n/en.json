@@ -77,7 +77,8 @@
   "LOGIN": {
     "EMAIL": "Email",
     "PASSWORD": "Password",
-    "SIGNIN": "Sign In"
+    "SIGNIN": "Sign In",
+    "ERROR": "Error: Email or Password is incorrect."
   },
   "LOGOUT": {
     "TITLE": "Logout"

@@ -107,8 +107,9 @@ a {
   }
 }
 
-.language-button {
-  float: right;
+.top-right-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
   font-size: 20px;
-  z-index: 12;
 }

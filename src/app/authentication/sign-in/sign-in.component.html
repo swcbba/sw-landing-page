@@ -4,7 +4,10 @@
     <form #loginForm="ngForm" class="col s10 offset-s1 m6 offset-m3 l4 offset-l4" novalidate>
       <div class="row center-align">
         <img class="header-img" src="assets/images/Group75.svg" width="500" height="100" alt="">
-        <sw-language-button class="language-button"></sw-language-button>
+        <sw-language-button class="top-right-button" textColor="white"></sw-language-button>
+      </div>
+      <div class="row" *ngIf="auth.displayError">
+        <p class="error-message">{{'LOGIN.ERROR' | translate}}</p>
       </div>
       <div class="row">
         <div class="input-field">

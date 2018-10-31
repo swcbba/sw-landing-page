@@ -8,7 +8,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private router: Router, private afAuth: AngularFireAuth) {}
+  displayError: boolean;
+
+  constructor(private router: Router, private afAuth: AngularFireAuth) {
+    this.displayError = false;
+  }
 
   getAuthState(): Observable<any> {
     return this.afAuth.authState;
@@ -17,12 +21,12 @@ export class AuthService {
   login(email, password): void {
     this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
-      .then(signInData => {
-        if (signInData.user.uid) {
-          this.router.navigate(['/qr-code']);
-        }
+      .then(() => {
+        this.displayError = false;
+        this.router.navigate(['/qr-code']);
       })
       .catch(err => {
+        this.displayError = true;
         console.error(err);
       });
   }
