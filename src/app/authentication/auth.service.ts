@@ -19,10 +19,10 @@ export class AuthService {
   }
 
   login(email, password): void {
+    this.displayError = false;
     this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(() => {
-        this.displayError = false;
         this.router.navigate(['/qr-code']);
       })
       .catch(err => {
