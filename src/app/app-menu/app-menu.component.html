@@ -3,11 +3,13 @@
     <div class="nav-wrapper container">
       <a routerLink="/" id="logo-container" class="brand-logo"><img src="assets/images/Group23.svg" width="30px" height="42px"
           alt=""></a>
-      <a data-target="app-nav-mobile" class="sidenav-trigger main-color"><i class="material-icons">menu</i></a>
+      <a [hidden]="!logged" data-target="app-nav-mobile" class="sidenav-trigger main-color"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <ng-container *ngIf="logged">
-          <li><a routerLink="/qr-code" class="main-color">{{ 'QR_CODE.TITLE' | translate }}</a></li>
-          <li><a routerLink="/assistants" class="main-color">{{ 'ASSISTANTS.TITLE' | translate }}</a></li>
+          <li *ngIf="checkVisibility('/qr-code')"><a routerLink="/qr-code" class="main-color">{{ 'QR_CODE.TITLE' |
+              translate }}</a></li>
+          <li *ngIf="checkVisibility('/assistants')"><a routerLink="/assistants" class="main-color">{{
+              'ASSISTANTS.TITLE' | translate }}</a></li>
           <li><a class="main-color" (click)="auth.logout()">{{ 'LOGOUT.TITLE' | translate }}</a></li>
         </ng-container>
         <li>
@@ -18,9 +20,10 @@
     </div>
   </nav>
 </div>
-
 <ul id="app-nav-mobile" class="sidenav">
-  <li><a routerLink="/qr-code" class="sidenav-close main-color">QR</a></li>
-  <li><a routerLink="/assistants" class="sidenav-close main-color">Assistants</a></li>
-  <li><a class="sidenav-close main-color" (click)="auth.logout()">{{ 'LOGOUT.TITLE' | translate }}</a></li>
+  <ng-container *ngIf="logged">
+    <li *ngIf="checkVisibility('/qr-code')"><a routerLink="/qr-code" class="sidenav-close main-color">QR</a></li>
+    <li *ngIf="checkVisibility('/assistants')"><a routerLink="/assistants" class="sidenav-close main-color">Assistants</a></li>
+    <li><a class="sidenav-close main-color" (click)="auth.logout()">{{ 'LOGOUT.TITLE' | translate }}</a></li>
+  </ng-container>
 </ul>

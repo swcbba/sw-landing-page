@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Subscription } from 'rxjs';
-import { take } from 'rxjs/operators';
 
 import { AuthService } from '../authentication/auth.service';
+import { User } from '../users/user';
 
 declare const $: any;
 
@@ -14,16 +14,15 @@ declare const $: any;
 })
 export class AppMenuComponent implements OnInit, OnDestroy {
   logged: boolean;
+  private user: User;
   private authSubscription: Subscription;
 
   constructor(public auth: AuthService) {
     this.logged = false;
-    this.authSubscription = this.auth
-      .getAuthState()
-      .pipe(take(1))
-      .subscribe(user => {
-        this.logged = !!user;
-      });
+    this.authSubscription = this.auth.getAuthUser().subscribe(user => {
+      this.logged = !!user;
+      this.user = user;
+    });
   }
 
   ngOnInit(): void {
@@ -34,5 +33,9 @@ export class AppMenuComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.authSubscription.unsubscribe();
+  }
+
+  checkVisibility(url): boolean {
+    return this.auth.hasAccess(this.user.roles, url);
   }
 }
