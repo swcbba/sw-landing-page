@@ -1,0 +1,24 @@
+<header>
+  <sw-app-menu></sw-app-menu>
+</header>
+<main>
+  <div class="container white-text">
+    <table class="responsive-table">
+      <thead>
+        <tr>
+          <th>{{ 'ASSISTANTS.NAME' | translate }}</th>
+          <th>{{ 'ASSISTANTS.EMAIL' | translate }}</th>
+          <th>{{ 'ASSISTANTS.PROFILE' | translate }}</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr *ngFor="let assistant of assistants$ | async">
+          <td>{{assistant.name}}</td>
+          <td>{{assistant.email}}</td>
+          <td>{{assistant.profile}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

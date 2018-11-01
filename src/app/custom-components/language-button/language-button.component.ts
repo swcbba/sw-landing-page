@@ -4,6 +4,8 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { ES_KEY, EN_KEY } from '../../app.constants';
 
+const mainColor = '#5f00ed';
+
 @Component({
   selector: 'sw-language-button',
   templateUrl: './language-button.component.html',
@@ -15,7 +17,7 @@ export class LanguageButtonComponent {
   language: string;
 
   constructor(private translate: TranslateService) {
-    this.textColor = 'initial';
+    this.textColor = mainColor;
     this.language = ES_KEY.toUpperCase();
   }
 

@@ -72,6 +72,7 @@
     "DESCRIPTION": "Estudió Administración de Empresas y tiene dos Diplomados en Negocios y Tecnología, y Emprendimiento Corporativo. Lleva 10 años siendo emprendedor en distintos rubros (Derecho, Turismo, Diseño, entre otros). Fan de la Colaboración y el Emprendimiento como herramientas de igualación social y destructoras de viejos paradigmas. Se ha dedicado a empoderar, conectar y potenciar a emprendedores en su camino al éxito."
   },
   "QR_CODE": {
+    "TITLE": "QR",
     "DESCRIPTION": "* Utilice este código QR para acceder a los beneficios dentro del Startup Weekend 2018."
   },
   "LOGIN": {
@@ -82,5 +83,11 @@
   },
   "LOGOUT": {
     "TITLE": "Cerrar Sesión"
+  },
+  "ASSISTANTS": {
+    "TITLE": "Asistentes",
+    "NAME": "Nombre",
+    "EMAIL": "Correo",
+    "PROFILE": "Perfil"
   }
 }

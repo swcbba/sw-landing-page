@@ -3,6 +3,21 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: #5f00ed;
+  padding-top: 56px;
+
+  @media only screen and (min-width: 601px) {
+    padding-top: 64px;
+  }
+}
+
 a {
   cursor: pointer;
 }
@@ -112,4 +127,22 @@ a {
   top: 20px;
   right: 20px;
   font-size: 20px;
+}
+
+.language-mobile-align {
+  float: right;
+  margin-right: 15px;
+  @media only screen and (min-width: 992px) {
+    display: none !important;
+  }
+}
+
+.brand-logo img {
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+  @media only screen and (min-width: 601px) {
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
 }

@@ -4,6 +4,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import {
   TranslateModule,
@@ -44,6 +45,8 @@ import { QRComponent } from './qr-code/qr-code.component';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './authentication/sign-in/sign-in.component';
 import { LanguageButtonComponent } from './custom-components/language-button/language-button.component';
+import { AssistantsComponent } from './assistants/assistants.component';
+import { AppMenuComponent } from './app-menu/app-menu.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -71,13 +74,16 @@ export function createTranslateLoader(http: HttpClient) {
     AccessDeniedComponent,
     QRComponent,
     SignInComponent,
-    LanguageButtonComponent
+    LanguageButtonComponent,
+    AssistantsComponent,
+    AppMenuComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'my-app-name'), // imports firebase/app needed for everything
     AngularFireAuthModule,
+    AngularFirestoreModule,
     MapModule.forRoot(),
     HttpClientModule,
     AppRoutingModule,
