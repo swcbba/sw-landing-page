@@ -11,13 +11,13 @@ import { AuthService } from '../authentication/auth.service';
 export class QRComponent implements OnInit {
   qrText: string;
 
-  constructor(public auth: AuthService, private userService: UserService) {
+  constructor(public auth: AuthService) {
     this.qrText = 'Sample text';
   }
 
   ngOnInit() {
-    this.userService.getUserData().subscribe(newText => {
-      this.qrText = newText;
+    this.auth.getAuthUser().subscribe(user => {
+      this.qrText = user.uid;
     });
     /** Uncomment this block to simulate an update of qr code when user data is updated.
     setTimeout(() => {

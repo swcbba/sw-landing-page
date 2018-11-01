@@ -12,17 +12,7 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class UserService {
-  subject: Subject<any> = new Subject<any>();
-
   constructor(private afs: AngularFirestore) {}
-
-  setUserData(data) {
-    this.subject.next(data);
-  }
-
-  getUserData(): Observable<any> {
-    return this.subject.asObservable();
-  }
 
   getUser(uid: string): Observable<User> {
     return this.afs.doc<User>(`users/${uid}`).valueChanges();
