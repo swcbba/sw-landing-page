@@ -6,13 +6,13 @@ import { AccessDeniedComponent } from './custom-components/access-denied/access-
 import { AuthGuardService } from './authentication/auth-guard.service';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './authentication/sign-in/sign-in.component';
+import { AssistantsComponent } from './assistants/assistants.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
   },
-  // To test this is needing to change the isLogged variable to false in auth.service.ts file.
   {
     path: 'access-denied',
     component: AccessDeniedComponent
@@ -25,6 +25,11 @@ const routes: Routes = [
   {
     path: 'qr-code',
     component: QRComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'assistants',
+    component: AssistantsComponent,
     canActivate: [AuthGuardService]
   }
 ];

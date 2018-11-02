@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from '../authentication/user.service';
+import { UserService } from '../users/user.service';
 import { AuthService } from '../authentication/auth.service';
 
 @Component({
@@ -11,18 +11,13 @@ import { AuthService } from '../authentication/auth.service';
 export class QRComponent implements OnInit {
   qrText: string;
 
-  constructor(public auth: AuthService, private userService: UserService) {
-    this.qrText = 'Sample text';
+  constructor(public auth: AuthService) {
+    this.qrText = 'QR was not generated yet';
   }
 
   ngOnInit() {
-    this.userService.getUserData().subscribe(newText => {
-      this.qrText = newText;
+    this.auth.getAuthUser().subscribe(user => {
+      this.qrText = user.uid;
     });
-    /** Uncomment this block to simulate an update of qr code when user data is updated.
-    setTimeout(() => {
-     this.userService.setUserData("Nuevo dato de usuario");
-    }, 8000);
-    */
   }
 }

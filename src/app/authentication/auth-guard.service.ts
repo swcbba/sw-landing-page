@@ -7,7 +7,7 @@ import {
 } from '@angular/router';
 
 import { Observable } from 'rxjs';
-import { take, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 import { AuthService } from './auth.service';
 
@@ -21,14 +21,16 @@ export class AuthGuardService implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> {
-    const authState: Observable<any> = this.auth.getAuthState().pipe(take(1));
-    return authState.pipe(
+    const authUser: Observable<any> = this.auth.getAuthUser();
+
+    return authUser.pipe(
       map(user => {
         if (state.url === '/login') {
           const falseCondition: boolean = user !== null;
           return this.checkLogIn(falseCondition, '/qr-code');
         }
-        return this.checkLogIn(user === null, '/access-denied');
+        const hasAccess = !!user && this.auth.hasAccess(user.roles, state.url);
+        return this.checkLogIn(!hasAccess, '/access-denied');
       })
     );
   }
