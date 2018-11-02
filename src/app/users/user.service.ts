@@ -4,7 +4,8 @@ import {
   AngularFirestoreDocument
 } from '@angular/fire/firestore';
 
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
+import { first } from 'rxjs/operators';
 
 import { User } from './user';
 
@@ -18,17 +19,24 @@ export class UserService {
     return this.afs.doc<User>(`users/${uid}`).valueChanges();
   }
 
-  updateUserData(user): Promise<void> {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(
+  createUserInitData(user): void {
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc<User>(
       `users/${user.uid}`
     );
-    const data: User = {
-      uid: user.uid,
-      email: user.email,
-      roles: {
-        assistant: true
-      }
-    };
-    return userRef.set(data, { merge: true });
+    userRef
+      .get()
+      .pipe(first())
+      .subscribe(docSnapshot => {
+        if (!docSnapshot.exists) {
+          const data: User = {
+            uid: user.uid,
+            email: user.email,
+            roles: {
+              assistant: true
+            }
+          };
+          userRef.set(data, { merge: true });
+        }
+      });
   }
 }

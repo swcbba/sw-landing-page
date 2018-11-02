@@ -17,17 +17,16 @@ export class AppMenuComponent implements OnInit, OnDestroy {
   private user: User;
   private authSubscription: Subscription;
 
-  constructor(public auth: AuthService) {
+  constructor(public auth: AuthService) {}
+
+  ngOnInit(): void {
     this.logged = false;
     this.authSubscription = this.auth.getAuthUser().subscribe(user => {
       this.logged = !!user;
-      this.user = user;
-    });
-  }
-
-  ngOnInit(): void {
-    $(() => {
-      $('.sidenav').sidenav();
+      if (this.logged) {
+        this.user = user;
+        this.initSidenav();
+      }
     });
   }
 
@@ -37,5 +36,11 @@ export class AppMenuComponent implements OnInit, OnDestroy {
 
   checkVisibility(url): boolean {
     return this.auth.hasAccess(this.user.roles, url);
+  }
+
+  private initSidenav(): void {
+    $(() => {
+      $('.sidenav').sidenav();
+    });
   }
 }

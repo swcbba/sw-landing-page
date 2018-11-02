@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore } from '@angular/fire/firestore';
 
 import { Observable, of } from 'rxjs';
 import { take, switchMap } from 'rxjs/operators';
@@ -19,8 +18,7 @@ export class AuthService {
   constructor(
     private router: Router,
     private userService: UserService,
-    private afAuth: AngularFireAuth,
-    protected afs: AngularFirestore
+    private afAuth: AngularFireAuth
   ) {
     this.displayError = false;
   }
@@ -41,7 +39,7 @@ export class AuthService {
     this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(credential => {
-        this.userService.updateUserData(credential.user);
+        this.userService.createUserInitData(credential.user);
         this.router.navigate(['/qr-code']);
       })
       .catch(err => {

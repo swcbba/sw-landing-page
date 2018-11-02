@@ -20,7 +20,7 @@
     </div>
   </nav>
 </div>
-<ul id="app-nav-mobile" class="sidenav">
+<ul [hidden]="!logged" id="app-nav-mobile" class="sidenav">
   <ng-container *ngIf="logged">
     <li *ngIf="checkVisibility('/qr-code')"><a routerLink="/qr-code" class="sidenav-close main-color">QR</a></li>
     <li *ngIf="checkVisibility('/assistants')"><a routerLink="/assistants" class="sidenav-close main-color">Assistants</a></li>
