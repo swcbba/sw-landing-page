@@ -10,6 +10,7 @@
               translate }}</a></li>
           <li *ngIf="checkVisibility('/assistants')"><a routerLink="/assistants" class="main-color">{{
               'ASSISTANTS.TITLE' | translate }}</a></li>
+          <li *ngIf="checkVisibility('/schedule')"><a routerLink="/schedule" class="main-color">Schedule</a></li>
           <li><a class="main-color" (click)="auth.logout()">{{ 'LOGOUT.TITLE' | translate }}</a></li>
         </ng-container>
         <li>
@@ -22,8 +23,9 @@
 </div>
 <ul [hidden]="!logged" id="app-nav-mobile" class="sidenav">
   <ng-container *ngIf="logged">
-    <li *ngIf="checkVisibility('/qr-code')"><a routerLink="/qr-code" class="sidenav-close main-color">QR</a></li>
-    <li *ngIf="checkVisibility('/assistants')"><a routerLink="/assistants" class="sidenav-close main-color">Assistants</a></li>
+    <li *ngIf="checkVisibility('/qr-code')"><a routerLink="/qr-code" class="sidenav-close main-color">{{ 'QR_CODE.TITLE' | translate }}</a></li>
+    <li *ngIf="checkVisibility('/assistants')"><a routerLink="/assistants" class="sidenav-close main-color">{{ 'ASSISTANTS.TITLE' | translate }}</a></li>
+    <li *ngIf="checkVisibility('/schedule')"><a routerLink="/schedule" class="sidenav-close main-color">Schedule</a></li>
     <li><a class="sidenav-close main-color" (click)="auth.logout()">{{ 'LOGOUT.TITLE' | translate }}</a></li>
   </ng-container>
 </ul>

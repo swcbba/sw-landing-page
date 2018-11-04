@@ -61,6 +61,7 @@ export class AuthService {
   hasAccess(roles: Roles, url: string): boolean {
     switch (url) {
       case '/qr-code':
+      case '/schedule':
         return roles.assistant;
       case '/assistants':
         return roles.staff;

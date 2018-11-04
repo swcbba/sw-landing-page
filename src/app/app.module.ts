@@ -48,6 +48,7 @@ import { LanguageButtonComponent } from './custom-components/language-button/lan
 import { AssistantsComponent } from './assistants/assistants.component';
 import { AppMenuComponent } from './app-menu/app-menu.component';
 import { SpinnerLoaderComponent } from './custom-components/spinner-loader/spinner-loader.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -78,7 +79,8 @@ export function createTranslateLoader(http: HttpClient) {
     LanguageButtonComponent,
     AssistantsComponent,
     AppMenuComponent,
-    SpinnerLoaderComponent
+    SpinnerLoaderComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,

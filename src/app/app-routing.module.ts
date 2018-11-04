@@ -7,6 +7,7 @@ import { AuthGuardService } from './authentication/auth-guard.service';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './authentication/sign-in/sign-in.component';
 import { AssistantsComponent } from './assistants/assistants.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,11 @@ const routes: Routes = [
   {
     path: 'assistants',
     component: AssistantsComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'schedule',
+    component: ScheduleComponent,
     canActivate: [AuthGuardService]
   }
 ];
