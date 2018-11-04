@@ -47,6 +47,7 @@ import { SignInComponent } from './authentication/sign-in/sign-in.component';
 import { LanguageButtonComponent } from './custom-components/language-button/language-button.component';
 import { AssistantsComponent } from './assistants/assistants.component';
 import { AppMenuComponent } from './app-menu/app-menu.component';
+import { SpinnerLoaderComponent } from './custom-components/spinner-loader/spinner-loader.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -76,7 +77,8 @@ export function createTranslateLoader(http: HttpClient) {
     SignInComponent,
     LanguageButtonComponent,
     AssistantsComponent,
-    AppMenuComponent
+    AppMenuComponent,
+    SpinnerLoaderComponent
   ],
   imports: [
     BrowserModule,

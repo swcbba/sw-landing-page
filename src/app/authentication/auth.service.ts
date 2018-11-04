@@ -13,6 +13,7 @@ import { Roles } from '../users/roles';
   providedIn: 'root'
 })
 export class AuthService {
+  loading: boolean;
   displayError: boolean;
 
   constructor(
@@ -20,6 +21,7 @@ export class AuthService {
     private userService: UserService,
     private afAuth: AngularFireAuth
   ) {
+    this.loading = false;
     this.displayError = false;
   }
 
@@ -35,6 +37,7 @@ export class AuthService {
   }
 
   login(email, password): void {
+    this.loading = true;
     this.displayError = false;
     this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
@@ -43,6 +46,7 @@ export class AuthService {
         this.router.navigate(['/qr-code']);
       })
       .catch(err => {
+        this.loading = false;
         this.displayError = true;
         console.error(err);
       });
