@@ -51,7 +51,10 @@
     "TITLE": "Rockstars"
   },
   "PARTNERS": {
-    "TITLE": "Socios",
+    "TITLE": "Socios"
+  },
+  "SPONSORS": {
+    "TITLE": "Patrocinadores",
     "BECOME_SPONSOR": "Patrocinar"
   },
   "PARTICIPANTS": {
