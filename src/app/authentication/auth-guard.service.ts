@@ -15,7 +15,7 @@ import { AuthService } from './auth.service';
   providedIn: 'root'
 })
 export class AuthGuardService implements CanActivate {
-  constructor(private router: Router, private auth: AuthService) {}
+  constructor(private auth: AuthService, private router: Router) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -36,6 +36,7 @@ export class AuthGuardService implements CanActivate {
   }
 
   private checkLogIn(falseCondition: boolean, url: string): boolean {
+    this.auth.loading = false;
     if (falseCondition) {
       this.router.navigate([url]);
       return false;

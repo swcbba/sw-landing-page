@@ -22,9 +22,12 @@
         </div>
       </div>
       <div class="row right">
-        <button class="waves-effect waves-light btn" [disabled]="loginForm.invalid" (click)="auth.login(email, password)">{{'LOGIN.SIGNIN' | translate}}</button>
+        <button class="waves-effect waves-light btn" [disabled]="loginForm.invalid" (click)="auth.login(email, password)">{{'LOGIN.SIGNIN'
+          | translate}}</button>
       </div>
     </form>
   </div>
   <div class="parallax"><img class="banner-image" src="assets/images/Image2.jpg"></div>
 </div>
+
+<sw-spinner-loader *ngIf="auth.loading"></sw-spinner-loader>
