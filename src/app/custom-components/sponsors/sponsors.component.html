@@ -1,0 +1,12 @@
+<div class="container center-align">
+  <p class="medium-text main-color">{{'SPONSORS.TITLE' | translate}}</p>
+  <div class="row">
+    <div *ngFor="let sponsor of sponsors$ | async" class="col m4 offset-m4 sponsor">
+      <a target="_blank" rel="noopener noreferrer" [href]="sponsor.link">
+        <img class="sponsors-logo" [src]="sponsor.pictureURL" alt="">
+      </a>
+    </div>
+  </div>
+  <a target="_blank" rel="noopener noreferrer" [href]="sponsorFormURL" class="btn-large call-to-action waves-effect small-text">
+    {{'SPONSORS.BECOME_SPONSOR' | translate}}</a>
+</div>
