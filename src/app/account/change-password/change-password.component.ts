@@ -12,7 +12,7 @@ export class ChangePasswordComponent implements OnDestroy {
   newPassword: string;
   confirmNewPassword: string;
 
-  constructor(private auth: AuthService) {}
+  constructor(public auth: AuthService) {}
 
   ngOnDestroy(): void {
     this.auth.hideMessages();
