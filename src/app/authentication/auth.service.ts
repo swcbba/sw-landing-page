@@ -42,6 +42,7 @@ export class AuthService {
     this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(credential => {
+        console.log(credential);
         this.userService.createUserInitData(credential.user);
         this.router.navigate(['/qr-code']);
       })

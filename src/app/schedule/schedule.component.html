@@ -2,17 +2,34 @@
   <sw-app-menu></sw-app-menu>
 </header>
 <main>
-  <div class="container">
-    <div class="row">
-      <div class="input-field col s12 m4">
-        <select>
-          <option value="1">Team Building MIE. 7</option>
-          <option value="2" selected>SW 1er Día VIE 9</option>
-          <option value="3">SW 2do Día SAB 10</option>
-          <option value="3">SW 3er Día DOM 11</option>
-        </select>
-        <label>Selecciona un día</label>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#test1">Team Building</a></li>
+        <li class="tab col s3"><a href="#test2">Day 1</a></li>
+        <li class="tab col s3"><a href="#test3">Day 2</a></li>
+        <li class="tab col s3"><a href="#test4">Day 3</a></li>
+      </ul>
+    </div>
+    <div id="test1" class="col s12">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel white">
+              <span>19:00 - 22:00</span>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div id="test2" class="col s12">
+      <div class="container"></div>
+    </div>
+    <div id="test3" class="col s12">
+      <div class="container"></div>
+    </div>
+    <div id="test4" class="col s12">
+      <div class="container"></div>
     </div>
   </div>
 </main>

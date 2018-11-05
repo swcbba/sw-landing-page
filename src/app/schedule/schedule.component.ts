@@ -8,11 +8,11 @@ declare const $: any;
   styleUrls: ['./schedule.component.scss']
 })
 export class ScheduleComponent implements OnInit {
-  constructor() {}
-
   ngOnInit() {
     $(() => {
-      $('select').formSelect();
+      $('.tabs').tabs({
+        swipeable: true
+      });
     });
   }
 }
