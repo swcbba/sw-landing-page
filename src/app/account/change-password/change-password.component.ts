@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 import { AuthService } from 'src/app/authentication/auth.service';
 
@@ -7,12 +7,16 @@ import { AuthService } from 'src/app/authentication/auth.service';
   templateUrl: './change-password.component.html',
   styleUrls: ['./change-password.component.scss']
 })
-export class ChangePasswordComponent {
+export class ChangePasswordComponent implements OnDestroy {
   currentPassword: string;
   newPassword: string;
   repeatNewPassword: string;
 
   constructor(private auth: AuthService) {}
+
+  ngOnDestroy(): void {
+    this.auth.hideMessages();
+  }
 
   changePassword() {
     this.auth.changePassword(

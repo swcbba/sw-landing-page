@@ -17,15 +17,14 @@ export class AuthService {
   loading: boolean;
   displayError: boolean;
   passwordChanged: boolean;
+  displayChangePassword: boolean;
 
   constructor(
     private router: Router,
     private userService: UserService,
     private afAuth: AngularFireAuth
   ) {
-    this.loading = false;
-    this.displayError = false;
-    this.passwordChanged = false;
+    this.hideMessages();
   }
 
   getAuthUser(): Observable<User> {
@@ -65,8 +64,8 @@ export class AuthService {
     this.displayError = false;
     this.passwordChanged = false;
     if (newPassword === repeatNewPassword) {
-      let user = this.afAuth.auth.currentUser;
-      let credential = firebase.auth.EmailAuthProvider.credential(
+      const user = this.afAuth.auth.currentUser;
+      const credential = firebase.auth.EmailAuthProvider.credential(
         user.email,
         currentPassword
       );
@@ -75,7 +74,17 @@ export class AuthService {
         .then(() => {
           user
             .updatePassword(newPassword)
-            .then(() => (this.passwordChanged = true))
+            .then(() => {
+              if (this.displayChangePassword) {
+                this.userService
+                  .updateUserPasswordChanged(user.uid, user.email)
+                  .then(() => {
+                    this.displayChangePassword = false;
+                    this.router.navigate(['/qr-code']);
+                  });
+              }
+              this.passwordChanged = true;
+            })
             .catch(err => {
               this.displayError = true;
               console.error(err);
@@ -99,6 +108,13 @@ export class AuthService {
       default:
         return true;
     }
+  }
+
+  hideMessages(): void {
+    this.loading = false;
+    this.displayError = false;
+    this.passwordChanged = false;
+    this.displayChangePassword = false;
   }
 
   private getAuthState(): Observable<any> {

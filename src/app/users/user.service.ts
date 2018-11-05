@@ -19,6 +19,21 @@ export class UserService {
     return this.afs.doc<User>(`users/${uid}`).valueChanges();
   }
 
+  updateUserPasswordChanged(uid: string, email: string): Promise<void> {
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc<User>(
+      `users/${uid}`
+    );
+    const data: User = {
+      uid: uid,
+      email: email,
+      roles: {
+        assistant: true
+      },
+      passwordChanged: true
+    };
+    return userRef.set(data, { merge: true });
+  }
+
   createUserInitData(user): void {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc<User>(
       `users/${user.uid}`
@@ -33,7 +48,8 @@ export class UserService {
             email: user.email,
             roles: {
               assistant: true
-            }
+            },
+            passwordChanged: false
           };
           userRef.set(data, { merge: true });
         }
