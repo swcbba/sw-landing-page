@@ -92,5 +92,17 @@
     "NAME": "Nombre",
     "EMAIL": "Correo",
     "PROFILE": "Perfil"
+  },
+  "ACCOUNT": {
+    "TITLE": "Cuenta"
+  },
+  "CHANGE_PASSWORD": {
+    "FORCE_CHANGE": "Por favor modifica tu contraseña antes de poder continuar.",
+    "SUCCESS": "La contraseña fue cambiada exitosamente.",
+    "ERROR": "Error: No se pudo cambiar la contraseña, inténtalo de nuevo.",
+    "CURRENT": "Contraseña actual",
+    "NEW": "Nueva contraseña",
+    "CONFIRM_NEW": "Confirme su nueva contraseña",
+    "CHANGE": "Cambiar contraseña"
   }
 }
