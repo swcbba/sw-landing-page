@@ -9,6 +9,7 @@ import { SignInComponent } from './authentication/sign-in/sign-in.component';
 import { AssistantsComponent } from './assistants/assistants.component';
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
+import { CreateCredentialsComponent } from './create-credentials/create-credentials.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,11 @@ const routes: Routes = [
   {
     path: 'account/change-password',
     component: ChangePasswordComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'create-credentials',
+    component: CreateCredentialsComponent,
     canActivate: [AuthGuardService]
   }
 ];

@@ -1,0 +1,42 @@
+import { Component, OnInit } from '@angular/core';
+
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AssistantsService } from '../assistants/assistants.service';
+import { first } from 'rxjs/operators';
+
+const initPassword = 'tgswc18';
+
+@Component({
+  selector: 'sw-create-credentials',
+  templateUrl: './create-credentials.component.html',
+  styleUrls: ['./create-credentials.component.scss']
+})
+export class CreateCredentialsComponent implements OnInit {
+  constructor(
+    private assistantsService: AssistantsService,
+    private afAuth: AngularFireAuth
+  ) {}
+
+  ngOnInit() {}
+
+  createCredentials(): void {
+    this.assistantsService
+      .getAssistants()
+      .pipe(first())
+      .subscribe(assistants => {
+        let successCount = 0;
+        let errorCount = 0;
+        assistants.forEach(assistant => {
+          this.afAuth.auth
+            .createUserWithEmailAndPassword(
+              assistant.email.replace(/ /g, ''),
+              initPassword
+            )
+            .then(user => console.log('Success count:', successCount++, user))
+            .catch(err =>
+              console.error('Error count:', errorCount++, assistant, err)
+            );
+        });
+      });
+  }
+}
