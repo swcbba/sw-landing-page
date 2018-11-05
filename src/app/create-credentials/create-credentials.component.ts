@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AssistantsService } from '../assistants/assistants.service';
+
 import { first } from 'rxjs/operators';
+
+import { AssistantsService } from '../assistants/assistants.service';
 
 const initPassword = 'tgswc18';
 
