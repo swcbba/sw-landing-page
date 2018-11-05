@@ -103,6 +103,7 @@
     "CURRENT": "Contraseña actual",
     "NEW": "Nueva contraseña",
     "CONFIRM_NEW": "Confirme su nueva contraseña",
-    "CHANGE": "Cambiar contraseña"
+    "CHANGE": "Cambiar contraseña",
+    "MIN_LENGTH": "La contraseña debe contener un mínimo de 6 caracteres."
   }
 }

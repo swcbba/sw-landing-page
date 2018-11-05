@@ -10,6 +10,8 @@ import { UserService } from '../users/user.service';
 import { User } from '../users/user';
 import { Roles } from '../users/roles';
 
+const passMinChar = 6;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -73,11 +75,15 @@ export class AuthService {
     });
   }
 
-  changePassword(currentPassword, newPassword, confirmNewPassword): void {
+  changePassword(
+    currentPassword: string,
+    newPassword: string,
+    confirmNewPassword: string
+  ): void {
     this.loading = true;
     this.displayError = false;
     this.passwordChanged = false;
-    if (newPassword === confirmNewPassword) {
+    if (newPassword === confirmNewPassword && newPassword.length >= passMinChar) {
       const user = this.afAuth.auth.currentUser;
       const credential = firebase.auth.EmailAuthProvider.credential(
         user.email,
