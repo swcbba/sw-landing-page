@@ -1,9 +1,9 @@
 <div class="container center-align">
   <p class="medium-text main-color">{{'PARTNERS.TITLE' | translate}}</p>
   <div class="row">
-    <div *ngFor="let partner of partners$ | async" class="col m4 partner">
+    <div *ngFor="let partner of partners$ | async" class="col s12 m6 l4 partner">
       <a target="_blank" rel="noopener noreferrer" [href]="partner.link">
-        <img class="partner-logo" [src]="partner.pictureURL" alt="" width="500" height="100">
+        <img class="partner-logo" [src]="partner.pictureURL" alt="">
       </a>
     </div>
   </div>
