@@ -4,6 +4,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 import { Observable, of } from 'rxjs';
 import { take, switchMap } from 'rxjs/operators';
+import * as firebase from 'firebase/app';
 
 import { UserService } from '../users/user.service';
 import { User } from '../users/user';
@@ -15,6 +16,7 @@ import { Roles } from '../users/roles';
 export class AuthService {
   loading: boolean;
   displayError: boolean;
+  passwordChanged: boolean;
 
   constructor(
     private router: Router,
@@ -23,6 +25,7 @@ export class AuthService {
   ) {
     this.loading = false;
     this.displayError = false;
+    this.passwordChanged = false;
   }
 
   getAuthUser(): Observable<User> {
@@ -58,6 +61,35 @@ export class AuthService {
     });
   }
 
+  changePassword(currentPassword, newPassword, repeatNewPassword): void {
+    this.displayError = false;
+    this.passwordChanged = false;
+    if (newPassword === repeatNewPassword) {
+      let user = this.afAuth.auth.currentUser;
+      let credential = firebase.auth.EmailAuthProvider.credential(
+        user.email,
+        currentPassword
+      );
+      user
+        .reauthenticateAndRetrieveDataWithCredential(credential)
+        .then(() => {
+          user
+            .updatePassword(newPassword)
+            .then(() => (this.passwordChanged = true))
+            .catch(err => {
+              this.displayError = true;
+              console.error(err);
+            });
+        })
+        .catch(err => {
+          this.displayError = true;
+          console.error(err);
+        });
+    } else {
+      this.displayError = true;
+    }
+  }
+
   hasAccess(roles: Roles, url: string): boolean {
     switch (url) {
       case '/qr-code':
@@ -65,7 +97,7 @@ export class AuthService {
       case '/assistants':
         return roles.staff;
       default:
-        return false;
+        return true;
     }
   }
 

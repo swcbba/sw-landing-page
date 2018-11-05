@@ -92,5 +92,8 @@
     "NAME": "Nombre",
     "EMAIL": "Correo",
     "PROFILE": "Perfil"
+  },
+  "ACCOUNT": {
+    "TITLE": "Cuenta"
   }
 }
