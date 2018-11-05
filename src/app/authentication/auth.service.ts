@@ -48,9 +48,7 @@ export class AuthService {
         this.router.navigate(['/qr-code']);
       })
       .catch(err => {
-        this.loading = false;
-        this.displayError = true;
-        console.error(err);
+        this.handleError(err);
       });
   }
 
@@ -60,10 +58,11 @@ export class AuthService {
     });
   }
 
-  changePassword(currentPassword, newPassword, repeatNewPassword): void {
+  changePassword(currentPassword, newPassword, confirmNewPassword): void {
+    this.loading = true;
     this.displayError = false;
     this.passwordChanged = false;
-    if (newPassword === repeatNewPassword) {
+    if (newPassword === confirmNewPassword) {
       const user = this.afAuth.auth.currentUser;
       const credential = firebase.auth.EmailAuthProvider.credential(
         user.email,
@@ -83,19 +82,18 @@ export class AuthService {
                     this.router.navigate(['/qr-code']);
                   });
               }
+              this.loading = false;
               this.passwordChanged = true;
             })
             .catch(err => {
-              this.displayError = true;
-              console.error(err);
+              this.handleError(err);
             });
         })
         .catch(err => {
-          this.displayError = true;
-          console.error(err);
+          this.handleError(err);
         });
     } else {
-      this.displayError = true;
+      this.handleError('Confirmed password is not the same');
     }
   }
 
@@ -119,5 +117,11 @@ export class AuthService {
 
   private getAuthState(): Observable<any> {
     return this.afAuth.authState.pipe(take(1));
+  }
+
+  private handleError(err: string): void {
+    this.loading = false;
+    this.displayError = true;
+    console.error(err);
   }
 }

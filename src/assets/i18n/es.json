@@ -102,7 +102,7 @@
     "ERROR": "Error: No se pudo cambiar la contraseña, inténtalo de nuevo.",
     "CURRENT": "Contraseña actual",
     "NEW": "Nueva contraseña",
-    "REPEAT_NEW": "Repita la nueva contraseña",
+    "CONFIRM_NEW": "Confirme su nueva contraseña",
     "CHANGE": "Cambiar contraseña"
   }
 }

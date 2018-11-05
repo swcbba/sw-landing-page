@@ -102,7 +102,7 @@
     "ERROR": "Error: Password couldn't be changed, please try again.",
     "CURRENT": "Current password",
     "NEW": "New password",
-    "REPEAT_NEW": "Repeat new password",
+    "CONFIRM_NEW": "Confirm new password",
     "CHANGE": "Change password"
   }
 }

@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/authentication/auth.service';
 export class ChangePasswordComponent implements OnDestroy {
   currentPassword: string;
   newPassword: string;
-  repeatNewPassword: string;
+  confirmNewPassword: string;
 
   constructor(private auth: AuthService) {}
 
@@ -22,10 +22,10 @@ export class ChangePasswordComponent implements OnDestroy {
     this.auth.changePassword(
       this.currentPassword,
       this.newPassword,
-      this.repeatNewPassword
+      this.confirmNewPassword
     );
     this.currentPassword = '';
     this.newPassword = '';
-    this.repeatNewPassword = '';
+    this.confirmNewPassword = '';
   }
 }
