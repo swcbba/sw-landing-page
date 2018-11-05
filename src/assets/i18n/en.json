@@ -103,6 +103,7 @@
     "CURRENT": "Current password",
     "NEW": "New password",
     "CONFIRM_NEW": "Confirm new password",
-    "CHANGE": "Change password"
+    "CHANGE": "Change password",
+    "MIN_LENGTH": "Password must contain a minimum of 6 characters."
   }
 }
