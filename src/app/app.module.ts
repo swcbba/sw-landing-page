@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import {
   TranslateModule,
@@ -16,6 +20,7 @@ import {
   WindowRef,
   DocumentRef
 } from 'angular-maps';
+import { QRCodeModule } from 'angularx-qrcode';
 
 import { ES_KEY } from './app.constants';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +40,17 @@ import { ColorLayerComponent } from './custom-components/color-layer/color-layer
 import { ParticipantsComponent } from './custom-components/participants/participants.component';
 import { PartnersComponent } from './custom-components/partners/partners.component';
 import { FacilitatorProfileComponent } from './custom-components/facilitator-profile/facilitator-profile.component';
+import { AccessDeniedComponent } from './custom-components/access-denied/access-denied.component';
+import { QRComponent } from './qr-code/qr-code.component';
+import { HomeComponent } from './home/home.component';
+import { SignInComponent } from './authentication/sign-in/sign-in.component';
+import { LanguageButtonComponent } from './custom-components/language-button/language-button.component';
+import { AssistantsComponent } from './assistants/assistants.component';
+import { AppMenuComponent } from './app-menu/app-menu.component';
+import { SpinnerLoaderComponent } from './custom-components/spinner-loader/spinner-loader.component';
+import { SponsorsComponent } from './custom-components/sponsors/sponsors.component';
+import { AccountComponent } from './account/account.component';
+import { ChangePasswordComponent } from './account/change-password/change-password.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,6 +59,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     HeaderComponent,
     BannerComponent,
     AboutComponent,
@@ -57,13 +74,28 @@ export function createTranslateLoader(http: HttpClient) {
     ColorLayerComponent,
     PartnersComponent,
     ParticipantsComponent,
-    FacilitatorProfileComponent
+    FacilitatorProfileComponent,
+    AccessDeniedComponent,
+    QRComponent,
+    SignInComponent,
+    LanguageButtonComponent,
+    AssistantsComponent,
+    AppMenuComponent,
+    SpinnerLoaderComponent,
+    SponsorsComponent,
+    AccountComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase, 'my-app-name'), // imports firebase/app needed for everything
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     MapModule.forRoot(),
     HttpClientModule,
+    AppRoutingModule,
+    QRCodeModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -1,0 +1,31 @@
+[
+  {
+    "partner": "American IRIS",
+    "pictureURL": "assets/images/americaniris.png",
+    "link": "https://americaniris.com/"
+  },
+  {
+    "partner": "Banco PYME Ecofuturo",
+    "pictureURL": "assets/images/bancopyme.png",
+    "link": "https://www2.bancoecofuturo.com.bo/"
+  },
+  {
+    "partner": "Hub 7",
+    "pictureURL": "assets/images/hub7.png",
+    "link": "https://www.facebook.com/hub7sa/"
+  },
+  {
+    "partner": "Super Jump Park",
+    "pictureURL": "assets/images/superjump.png",
+    "link": "//superjumppark.com/"
+  },
+  {
+    "partner": "El Cortijo PUB",
+    "pictureURL": "assets/images/cortijo.jpg",
+    "link": "https://www.facebook.com/CortijoPub/"
+  },
+  {
+    "partner": "Casa Real Singani",
+    "pictureURL": "assets/images/casareal.png"
+  }
+]

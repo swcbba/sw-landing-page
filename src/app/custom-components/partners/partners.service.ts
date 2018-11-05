@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-const profilesData = 'assets/data/partners.json';
+const partnersData = 'assets/data/partners.json';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,6 @@ export class PartnersService {
   constructor(private http: HttpClient) {}
 
   getPartnersData(): Observable<any> {
-    return this.http.get(profilesData);
+    return this.http.get(partnersData);
   }
 }

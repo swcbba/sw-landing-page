@@ -13,5 +13,10 @@
     "partner": "360 Workplace",
     "pictureURL": "assets/images/360Workplace.svg",
     "link": "//www.360workplace.com/"
+  },
+  {
+    "partner": "Feicobol",
+    "pictureURL": "assets/images/feicobol.png",
+    "link": "//www.feicobol.com.bo/"
   }
 ]

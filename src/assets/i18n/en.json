@@ -51,8 +51,11 @@
     "TITLE": "Rockstars"
   },
   "PARTNERS": {
-    "TITLE": "Our partners",
-    "BECOME_SPONSOR": "Become a Sponsor"
+    "TITLE": "Our partners"
+  },
+  "SPONSORS": {
+    "TITLE": "Sponsors",
+    "BECOME_SPONSOR": "Become a sponsor"
   },
   "PARTICIPANTS": {
     "TITLE": "Who can participate?",
@@ -70,5 +73,36 @@
     "CITY": "Viña del Mar, Chile",
     "SPECIALTY": "Specialized in facilitating the access of local and foreign entrepreneurs to the Chilean ecosystem, training them and connecting them with companies to generate business.",
     "DESCRIPTION": "He studied Business Administration and has two Diplomas in Business and Technology, and Corporate Entrepreneurship. He has been an entrepreneur for 10 years in different areas (Law, Tourism, Design, among others). Fan of Collaboration and Entrepreneurship as tools of social equalization and destroyers of old paradigms. He has dedicated himself to empowering, connecting and empowering entrepreneurs on their way to success."
+  },
+  "QR_CODE": {
+    "TITLE": "QR",
+    "DESCRIPTION": "* Use this QR code to access the benefits in the Startup Weekend 2018."
+  },
+  "LOGIN": {
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "SIGNIN": "Sign In",
+    "ERROR": "Error: Email or Password is incorrect."
+  },
+  "LOGOUT": {
+    "TITLE": "Logout"
+  },
+  "ASSISTANTS": {
+    "TITLE": "Assistants",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "PROFILE": "Profile"
+  },
+  "ACCOUNT": {
+    "TITLE": "Account"
+  },
+  "CHANGE_PASSWORD": {
+    "FORCE_CHANGE": "First, please change your password.",
+    "SUCCESS": "Password was changed successfully.",
+    "ERROR": "Error: Password couldn't be changed, please try again.",
+    "CURRENT": "Current password",
+    "NEW": "New password",
+    "CONFIRM_NEW": "Confirm new password",
+    "CHANGE": "Change password"
   }
 }

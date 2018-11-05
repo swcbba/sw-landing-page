@@ -3,6 +3,21 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: #5f00ed;
+  padding-top: 56px;
+
+  @media only screen and (min-width: 601px) {
+    padding-top: 64px;
+  }
+}
+
 a {
   cursor: pointer;
 }
@@ -93,4 +108,70 @@ a {
     only screen and (max-height: 640px) {
     font-size: 15px;
   }
+}
+
+.header-img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 40px;
+}
+
+.banner-image {
+  @media only screen and (max-width: 601px) {
+    left: 0;
+  }
+}
+
+.top-right-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.language-mobile-align {
+  float: right;
+  margin-right: 15px;
+  @media only screen and (min-width: 992px) {
+    display: none !important;
+  }
+}
+
+.brand-logo img {
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+  @media only screen and (min-width: 601px) {
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+}
+
+.btn {
+  background-color: #ff154f !important;
+  font-weight: 700;
+}
+
+.input-field input {
+  color: white !important;
+  border-bottom: 1px solid white !important;
+  box-shadow: 0 1px 0 0 white !important;
+}
+
+.input-field label {
+  color: white !important;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.error-message {
+  color: red;
+  font-weight: 700;
+}
+
+.success-message {
+  color: green;
+  font-weight: 700;
 }

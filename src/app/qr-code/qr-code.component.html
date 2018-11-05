@@ -1,0 +1,27 @@
+<header>
+  <sw-app-menu></sw-app-menu>
+</header>
+<main>
+  <div class="container center white-text">
+    <div class="row">
+      <br>
+      <div class="col s12">
+        <img id="header-img" class="responsive-img width-fixed" src="assets/images/Group75.svg" width="500" height="100"
+        alt="">
+      </div>
+      
+      <div class="col s12 separator">
+        <div class="white center-position">
+          <div class="qrcode">
+            <qrcode class="show-on-small hide-on-med-and-up" [qrdata]="qrText" [size]="250" [level]="'M'"></qrcode>
+            <qrcode class="show-on-medium  hide-on-small-only hide-on-large-only" [qrdata]="qrText" [size]="400" [level]="'M'"></qrcode>
+            <qrcode class="show-on-large hide-on-med-and-down" [qrdata]="qrText" [size]="500" [level]="'M'"></qrcode>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 separator-description">
+        <p class="text-note">{{ 'QR_CODE.DESCRIPTION' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</main>

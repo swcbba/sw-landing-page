@@ -3,27 +3,9 @@ li a.active {
   font-weight: 700;
 }
 
-.brand-logo img {
-  margin-top: 7px;
-  margin-bottom: 7px;
-
-  @media only screen and (min-width: 601px) {
-    margin-top: 11px;
-    margin-bottom: 11px;
-  }
-}
-
 .container {
   @media only screen and (max-width: 992px) {
     margin: 0;
     width: 100%;
-  }
-}
-
-.language-mobile-align {
-  float: right;
-  margin-right: 15px;
-  @media only screen and (min-width: 992px) {
-    display: none !important;
   }
 }
