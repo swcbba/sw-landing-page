@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from '../users/user.service';
 import { AuthService } from '../authentication/auth.service';
 
 @Component({
@@ -17,7 +16,9 @@ export class QRComponent implements OnInit {
 
   ngOnInit() {
     this.auth.getAuthUser().subscribe(user => {
-      this.qrText = user.uid;
+      this.qrText = user.assistantId
+        ? user.assistantId
+        : 'User is not an assistant';
     });
   }
 }

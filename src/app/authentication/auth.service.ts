@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { Observable, of } from 'rxjs';
-import { take, switchMap } from 'rxjs/operators';
+import { take, switchMap, first } from 'rxjs/operators';
 import * as firebase from 'firebase/app';
 
 import { UserService } from '../users/user.service';
@@ -38,14 +38,29 @@ export class AuthService {
     );
   }
 
+  getAuthUserAssociatedAssistant(): Observable<any> {
+    return this.getAuthState().pipe(
+      switchMap(user => {
+        if (user) {
+          return this.userService.getUser(user.uid);
+        }
+        return of(null);
+      })
+    );
+  }
+
   login(email, password): void {
     this.loading = true;
     this.displayError = false;
     this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(credential => {
-        this.userService.createUserInitData(credential.user);
-        this.router.navigate(['/qr-code']);
+        this.userService
+          .createUserInitData(credential.user)
+          .pipe(first())
+          .subscribe(() => {
+            this.router.navigate(['/qr-code']);
+          });
       })
       .catch(err => {
         this.handleError(err);
