@@ -1,0 +1,24 @@
+<header>
+  <sw-app-menu></sw-app-menu>
+</header>
+<main>
+  <div class="container">
+    <div class="row white-text">
+      <div class="col s12 row">
+        <p class="bold col s3 m5 right-align">{{ 'ASSISTANTS.NAME' | translate }}:</p>
+        <p class="col s9 m7">{{ (user$ | async)?.name }}</p>
+      </div>
+      <div class="col s12 row">
+        <p class="bold col s3 m5 right-align">{{ 'ASSISTANTS.EMAIL' | translate }}:</p>
+        <p class="col s9 m7">{{ (user$ | async)?.email }}</p>
+      </div>
+      <div class="col s12 row">
+        <p class="bold col s3 m5 right-align">{{ 'ASSISTANTS.PROFILE' | translate }}:</p>
+        <p class="col s9 m7">{{ (user$ | async)?.profile }}</p>
+      </div>
+      <div class="col s12 center-align" style="position: relative; bottom: 0px;">
+        <a class="btn" routerLink="/account/change-password">{{ 'CHANGE_PASSWORD.CHANGE' | translate }}</a>
+      </div>
+    </div>
+  </div>
+</main>

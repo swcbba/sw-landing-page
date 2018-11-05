@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { AuthService } from './auth.service';
+import { User } from '../users/user';
 
 @Injectable({
   providedIn: 'root'
@@ -21,16 +22,22 @@ export class AuthGuardService implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> {
-    const authUser: Observable<any> = this.auth.getAuthUser();
+    const authUser: Observable<User> = this.auth.getAuthUser();
 
     return authUser.pipe(
       map(user => {
+        let falseCondition: boolean;
+        if (user && !user.passwordChanged) {
+          this.auth.displayChangePassword = true;
+          falseCondition = state.url !== '/account/change-password';
+          return this.checkLogIn(falseCondition, '/account/change-password');
+        }
         if (state.url === '/login') {
-          const falseCondition: boolean = user !== null;
+          falseCondition = !!user;
           return this.checkLogIn(falseCondition, '/qr-code');
         }
-        const hasAccess = !!user && this.auth.hasAccess(user.roles, state.url);
-        return this.checkLogIn(!hasAccess, '/access-denied');
+        falseCondition = !!user && this.auth.hasAccess(user.roles, state.url);
+        return this.checkLogIn(!falseCondition, '/access-denied');
       })
     );
   }
