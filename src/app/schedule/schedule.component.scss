@@ -10,3 +10,8 @@
   color: white;
   background-color: #5f00ed;
 }
+
+.carousel .carousel-slider {
+  min-height: 100vh;
+  overflow-y: auto;
+}

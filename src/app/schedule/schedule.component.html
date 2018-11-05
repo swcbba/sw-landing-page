@@ -5,31 +5,59 @@
   <div class="row">
     <div class="col s12">
       <ul class="tabs">
-        <li class="tab col s3"><a class="active" href="#test1">Team Building</a></li>
-        <li class="tab col s3"><a href="#test2">Day 1</a></li>
-        <li class="tab col s3"><a href="#test3">Day 2</a></li>
-        <li class="tab col s3"><a href="#test4">Day 3</a></li>
+        <li class="tab col s3"><a class="active" href="#wednesday">Team Building</a></li>
+        <li class="tab col s3"><a href="#friday">Day 1</a></li>
+        <li class="tab col s3"><a href="#saturday">Day 2</a></li>
+        <li class="tab col s3"><a href="#sunday">Day 3</a></li>
       </ul>
     </div>
-    <div id="test1" class="col s12">
+    <div id="wednesday" class="col s12" style="min-height: 100vh; overflow-y: auto">
       <div class="container">
         <div class="row">
           <div class="col s12">
-            <div class="card-panel white">
-              <span>19:00 - 22:00</span>
+            <div class="card-panel white" *ngFor="let wSchedule of wednesdaySchedule">
+              <span>{{wSchedule.timeRange}}</span>
+              <span>{{wSchedule.action}}</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="test2" class="col s12">
-      <div class="container"></div>
+    <div id="friday" class="col s12" style="min-height: 200vh; overflow-y: auto">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel white" *ngFor="let fSchedule of fridaySchedule">
+              <span>{{fSchedule.timeRange}}</span>
+              <span>{{fSchedule.action}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="test3" class="col s12">
-      <div class="container"></div>
+    <div id="saturday" class="col s12" style="min-height: 200vh; overflow-y: auto">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel white" *ngFor="let saSchedule of saturdaydaySchedule">
+              <span>{{saSchedule.timeRange}}</span>
+              <span>{{saSchedule.action}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="test4" class="col s12">
-      <div class="container"></div>
+    <div id="sunday" class="col s12" style="min-height: 200vh; overflow-y: auto">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel white" *ngFor="let suSchedule of sundaySchedule">
+              <span>{{suSchedule.timeRange}}</span>
+              <span>{{suSchedule.action}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </main>
