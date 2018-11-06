@@ -51,6 +51,8 @@ import { SpinnerLoaderComponent } from './custom-components/spinner-loader/spinn
 import { SponsorsComponent } from './custom-components/sponsors/sponsors.component';
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -102,7 +104,8 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
-    })
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {
