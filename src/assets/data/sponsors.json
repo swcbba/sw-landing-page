@@ -1,5 +1,10 @@
 [
   {
+    "partner": "Comteco",
+    "pictureURL": "assets/images/comteco.jpg",
+    "link": "https://www.comteco.com.bo/"
+  },
+  {
     "partner": "American IRIS",
     "pictureURL": "assets/images/americaniris.png",
     "link": "https://americaniris.com/"
@@ -26,6 +31,7 @@
   },
   {
     "partner": "Casa Real Singani",
-    "pictureURL": "assets/images/casareal.png"
+    "pictureURL": "assets/images/casareal.png",
+    "link": ""
   }
 ]
