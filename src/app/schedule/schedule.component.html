@@ -15,9 +15,9 @@
       <div class="container">
         <div class="row">
           <div class="col s12">
-            <div class="card-panel white" *ngFor="let wSchedule of wednesdaySchedule">
-              <span>{{wSchedule.timeRange}}</span>
-              <span>{{wSchedule.action}}</span>
+            <div class="card-panel white row" *ngFor="let wSchedule of wednesdaySchedule">
+              <span class="col s2">{{wSchedule.timeRange}}</span>
+              <span class="col s10">{{wSchedule.action}}</span>
             </div>
           </div>
         </div>
@@ -27,9 +27,9 @@
       <div class="container">
         <div class="row">
           <div class="col s12">
-            <div class="card-panel white" *ngFor="let fSchedule of fridaySchedule">
-              <span>{{fSchedule.timeRange}}</span>
-              <span>{{fSchedule.action}}</span>
+            <div class="card-panel white row" *ngFor="let fSchedule of fridaySchedule">
+              <span class="col s2">{{fSchedule.timeRange}}</span>
+              <span class="col s10">{{fSchedule.action}}</span>
             </div>
           </div>
         </div>
@@ -39,9 +39,9 @@
       <div class="container">
         <div class="row">
           <div class="col s12">
-            <div class="card-panel white" *ngFor="let saSchedule of saturdaydaySchedule">
-              <span>{{saSchedule.timeRange}}</span>
-              <span>{{saSchedule.action}}</span>
+            <div class="card-panel white row" *ngFor="let saSchedule of saturdaydaySchedule">
+              <span class="col s2">{{saSchedule.timeRange}}</span>
+              <span class="col s10">{{saSchedule.action}}</span>
             </div>
           </div>
         </div>
@@ -51,9 +51,9 @@
       <div class="container">
         <div class="row">
           <div class="col s12">
-            <div class="card-panel white" *ngFor="let suSchedule of sundaySchedule">
-              <span>{{suSchedule.timeRange}}</span>
-              <span>{{suSchedule.action}}</span>
+            <div class="card-panel white row" *ngFor="let suSchedule of sundaySchedule">
+              <span class="col s2">{{suSchedule.timeRange}}</span>
+              <span class="col s10">{{suSchedule.action}}</span>
             </div>
           </div>
         </div>

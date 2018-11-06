@@ -50,6 +50,8 @@ import { AppMenuComponent } from './app-menu/app-menu.component';
 import { SpinnerLoaderComponent } from './custom-components/spinner-loader/spinner-loader.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { SponsorsComponent } from './custom-components/sponsors/sponsors.component';
+import { AccountComponent } from './account/account.component';
+import { ChangePasswordComponent } from './account/change-password/change-password.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -82,7 +84,9 @@ export function createTranslateLoader(http: HttpClient) {
     AppMenuComponent,
     SpinnerLoaderComponent,
     ScheduleComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    AccountComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
