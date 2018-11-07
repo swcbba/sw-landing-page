@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 
 import * as Materialize from 'materialize-css';
@@ -10,7 +10,7 @@ declare const $: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   constructor(private updates: SwUpdate) {
     this.updates.available.subscribe(event => {
       console.log('current version is', event.current);
@@ -23,11 +23,9 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
-
   private showUpdateMessage() {
     const toastHTML =
-      '<span>There is a new version of the app.</span><button id="toast-btn" class="btn-flat toast-action">Update now</button>';
+      '<span>There is a new version of the app.</span><button id="toast-btn" class="btn-flat toast-action main-color">Update</button>';
     Materialize.toast({ html: toastHTML, displayLength: Infinity });
     $('#toast-btn').on('click', () => {
       this.closeUpdateMessage();
