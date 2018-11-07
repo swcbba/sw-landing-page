@@ -33,10 +33,14 @@ export class CreateCredentialsComponent implements OnInit {
               assistant.email.replace(/ /g, ''),
               initPassword
             )
-            .then(user => console.log('Success count:', successCount++, user))
-            .catch(err =>
-              console.error('Error count:', errorCount++, assistant, err)
-            );
+            .then(user => {
+              successCount++;
+              console.log('Success count:', successCount, user);
+            })
+            .catch(err => {
+              errorCount++;
+              console.error('Error count:', errorCount, assistant, err);
+            });
         });
       });
   }
