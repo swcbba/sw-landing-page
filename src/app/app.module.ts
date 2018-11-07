@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import {
   TranslateModule,
@@ -22,6 +23,7 @@ import {
 } from 'angular-maps';
 import { QRCodeModule } from 'angularx-qrcode';
 
+import { environment } from 'src/environments/environment';
 import { ES_KEY } from './app.constants';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +31,6 @@ import { BannerComponent } from './custom-components/banner/banner.component';
 import { AboutComponent } from './custom-components/about/about.component';
 import { CountDownComponent } from './custom-components/countdown/countdown.component';
 import { NumberTransformPipe } from './pipes/number-transform/number-transform.pipe';
-import { environment } from 'src/environments/environment';
 import { HeaderComponent } from './custom-components/header/header.component';
 import { PicturesComponent } from './custom-components/pictures/pictures.component';
 import { LocationComponent } from './custom-components/location/location.component';
@@ -51,8 +52,6 @@ import { SpinnerLoaderComponent } from './custom-components/spinner-loader/spinn
 import { SponsorsComponent } from './custom-components/sponsors/sponsors.component';
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -105,7 +104,9 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   providers: [
     {
