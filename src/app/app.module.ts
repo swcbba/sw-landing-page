@@ -92,7 +92,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'my-app-name'), // imports firebase/app needed for everything
     AngularFireAuthModule,
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     MapModule.forRoot(),
     HttpClientModule,
     AppRoutingModule,
