@@ -23,7 +23,7 @@ import {
 } from 'angular-maps';
 import { QRCodeModule } from 'angularx-qrcode';
 
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 import { ES_KEY } from './app.constants';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

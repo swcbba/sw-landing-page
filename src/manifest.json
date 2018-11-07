@@ -1,7 +1,7 @@
 {
-  "name": "sw-landing-page",
-  "short_name": "sw-landing-page",
-  "theme_color": "#1976d2",
+  "name": "Techstars Global Startup Weekend Cochabamba 2018",
+  "short_name": "SW Cochabamba",
+  "theme_color": "#ffffff",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
