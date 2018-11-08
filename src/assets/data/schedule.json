@@ -58,16 +58,6 @@
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "09:00",
-        "action": "Bienvenida: Charla sobre Canvas y Validación",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "10:00",
-        "action": "Charla: Kanban",
-        "image": "assets/images/feicobol.png"
-      },
-      {
         "timeRange": "10:30",
         "action": "1º Ronda Mentoría",
         "image": "assets/images/feicobol.png"
@@ -75,11 +65,6 @@
       {
         "timeRange": "13:00",
         "action": "Almuerzo y Descanso",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "14:30",
-        "action": "Charla: Propuesta de Valor, MVP y Lean Canvas",
         "image": "assets/images/feicobol.png"
       },
       {
@@ -99,27 +84,7 @@
       },
       {
         "timeRange": "19:00",
-        "action": "Cena y Descanso",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "22:00",
-        "action": "Registro para camping y buses",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "22:15",
-        "action": "Salida de buses hacia la Plazuela Colón",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "22:30",
-        "action": "Organización y distribución de espacio de camping",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "23:00",
-        "action": "Actividad recreativa",
+        "action": "Cena",
         "image": "assets/images/feicobol.png"
       },
       {
@@ -143,16 +108,6 @@
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "09:15",
-        "action": "Charla: Branding",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "09:45",
-        "action": "Charla: Modelo de Negocios",
-        "image": "assets/images/feicobol.png"
-      },
-      {
         "timeRange": "10:15",
         "action": "3º Ronda Mentoría",
         "image": "assets/images/feicobol.png"
@@ -165,11 +120,6 @@
       {
         "timeRange": "14:00",
         "action": "Reporte de avances y necesidades",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "14:30",
-        "action": "Charla: Clínica de Pitch + Deck Presentaciones",
         "image": "assets/images/feicobol.png"
       },
       {
@@ -189,7 +139,7 @@
       },
       {
         "timeRange": "17:45",
-        "action": "Bocaditos y networking",
+        "action": "Networking",
         "image": "assets/images/feicobol.png"
       },
       {
