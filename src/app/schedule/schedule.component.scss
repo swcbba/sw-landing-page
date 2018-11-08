@@ -11,6 +11,15 @@
   background-color: #5f00ed;
 }
 
-#wednesday, #friday, #saturday, #sunday {
+#wednesday,
+#friday,
+#saturday,
+#sunday {
   padding-top: 2%;
+}
+
+.card-panel .img-container {
+  max-width: 100px;
+  max-height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.27);
 }

@@ -105,5 +105,12 @@
     "CONFIRM_NEW": "Confirm new password",
     "CHANGE": "Change password",
     "MIN_LENGTH": "Password must contain a minimum of 6 characters."
+  },
+  "SCHEDULE": {
+    "TITLE": "Schedule",
+    "TEAM_BILDING": "TEAM BUILDING",
+    "DAY1": "DAY 1",
+    "DAY2": "DAY 2",
+    "DAY3": "DAY 3"
   }
 }
