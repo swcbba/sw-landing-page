@@ -3,7 +3,7 @@
     "day": "wednesday",
     "schedule": [
       {
-        "timeRange": "19:00 - 22:00",
+        "timeRange": "19:00",
         "action": "Team Building - Super Jump Park",
         "image": "assets/images/superjump.png"
       }
@@ -53,77 +53,77 @@
     "day": "saturday",
     "schedule": [
       {
-        "timeRange": "08:00 - 09:00",
+        "timeRange": "08:00",
         "action": "Acreditación y Desayuno",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "09:00 - 10:00",
+        "timeRange": "09:00",
         "action": "Bienvenida: Charla sobre Canvas y Validación",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "10:00 - 10:15",
+        "timeRange": "10:00",
         "action": "Charla: Kanban",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "10:30 - 12:45",
+        "timeRange": "10:30",
         "action": "1º Ronda Mentoría",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "13:00 - 14:30",
+        "timeRange": "13:00",
         "action": "Almuerzo y Descanso",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "14:30 - 15:00",
+        "timeRange": "14:30",
         "action": "Charla: Propuesta de Valor, MVP y Lean Canvas",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "15:00 - 15:30",
+        "timeRange": "15:00",
         "action": "Reporte de avances y necesidades",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "15:30 - 18:30",
+        "timeRange": "15:30",
         "action": "2º Ronda Mentoría",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "18:30 - 21:30",
+        "timeRange": "18:30",
         "action": "Primera práctica de pitch",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "19:00 - 22:00",
+        "timeRange": "19:00",
         "action": "Cena y Descanso",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "22:00 - 22:15",
+        "timeRange": "22:00",
         "action": "Registro para camping y buses",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "22:15 - 22:30",
+        "timeRange": "22:15",
         "action": "Salida de buses hacia la Plazuela Colón",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "22:30 - 23:00",
+        "timeRange": "22:30",
         "action": "Organización y distribución de espacio de camping",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "23:00 - 00:00",
+        "timeRange": "23:00",
         "action": "Actividad recreativa",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "00:00 - 00:15",
+        "timeRange": "00:00",
         "action": "Cierre",
         "image": "assets/images/feicobol.png"
       }
@@ -133,78 +133,78 @@
     "day": "sunday",
     "schedule": [
       {
-        "timeRange": "08:00 - 09:00",
+        "timeRange": "08:00",
         "action": "Desayuno",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "09:00 - 09:15",
+        "timeRange": "09:00",
         "action": "Indicaciones iniciales y repaso de la agenda",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "09:15 - 09:45",
+        "timeRange": "09:15",
         "action": "Charla: Branding",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "09:45 - 10:15",
+        "timeRange": "09:45",
         "action": "Charla: Modelo de Negocios",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "10:15 - 12:30",
+        "timeRange": "10:15",
         "action": "3º Ronda Mentoría",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "12:30 - 14:00",
+        "timeRange": "12:30",
         "action": "Almuerzo y Descanso",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "14:00 - 14:30",
+        "timeRange": "14:00",
         "action": "Reporte de avances y necesidades",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "14:30 - 15:00",
+        "timeRange": "14:30",
         "action": "Charla: Clínica de Pitch + Deck Presentaciones",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "15:00 - 16:00",
+        "timeRange": "15:00",
         "action": "Entrega de presentaciones",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "16:00 - 16:45",
-        "action": "Práctica de Presentaciones y Pitch Final",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "17:00 - 20:00",
+        "timeRange": "16:00",
         "action": "¡Pitches Finales!",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "20:00 - 20:30",
+        "timeRange": "17:30",
         "action": "Deliberación",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "20:00 - 21:00",
+        "timeRange": "17:45",
         "action": "Bocaditos y networking",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "21:00 - 21:30",
-        "action": "Premicación",
+        "timeRange": "18:00",
+        "action": "Foto del evento",
+        "image": "assets/images/feicobol.png"
+      },
+      {
+        "timeRange": "18:15",
+        "action": "Salida de buses hacia El Cortijo",
         "image": "assets/images/cortijo.jpg"
       },
       {
-        "timeRange": "21:30 - 22:00",
-        "action": "Foto del evento",
+        "timeRange": "18:30",
+        "action": "Premiación y anuncio de ganadores",
         "image": "assets/images/cortijo.jpg"
       }
     ]
