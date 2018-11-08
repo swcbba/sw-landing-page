@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IMapOptions, IMarkerIconInfo, ILatLong } from 'angular-maps';
 
-const LATITUDE = -17.41809191207568;
-const LONGITUDE = -66.12963527113635;
+const LATITUDE = -17.419126;
+const LONGITUDE = -66.129811;
 
 @Component({
   selector: 'sw-location',
@@ -36,11 +36,13 @@ export class LocationComponent {
       showBreadcrumb: false,
       showScalebar: false,
       showDashboard: false,
-      mapTypeId: 7
+      mapTypeId: 2
     };
 
     this.iconInfo = {
-      markerType: 0
+      markerType: 6,
+      url: 'assets/images/Group23.svg',
+      scale: 0.25
     };
   }
 }

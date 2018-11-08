@@ -28,7 +28,7 @@
     "SECONDS": "Seconds"
   },
   "MAP_CONTENT": {
-    "LOCATION_NAME": "Feicobol",
+    "LOCATION_NAME": "Feicobol Pabellón Bolivia",
     "LOCATION_DESCRIPTION": "Startup Weekend Cochabamba 2018 will take place at Campo Ferial of the Alalay lagoon.",
     "ADDRESS": "Circuito Bolivia",
     "CITY": "Cochabamba, Bolivia"
@@ -105,5 +105,12 @@
     "CONFIRM_NEW": "Confirm new password",
     "CHANGE": "Change password",
     "MIN_LENGTH": "Password must contain a minimum of 6 characters."
+  },
+  "SCHEDULE": {
+    "TITLE": "Schedule",
+    "TEAM_BILDING": "TEAM BUILDING",
+    "DAY1": "DAY 1",
+    "DAY2": "DAY 2",
+    "DAY3": "DAY 3"
   }
 }
