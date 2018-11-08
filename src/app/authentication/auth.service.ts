@@ -57,7 +57,6 @@ export class AuthService {
     this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(credential => {
-
         this.userService
           .createUserInitData(credential.user)
           .pipe(first())
@@ -84,7 +83,10 @@ export class AuthService {
     this.loading = true;
     this.displayError = false;
     this.passwordChanged = false;
-    if (newPassword === confirmNewPassword && newPassword.length >= passMinChar) {
+    if (
+      newPassword === confirmNewPassword &&
+      newPassword.length >= passMinChar
+    ) {
       const user = this.afAuth.auth.currentUser;
       const credential = firebase.auth.EmailAuthProvider.credential(
         user.email,
