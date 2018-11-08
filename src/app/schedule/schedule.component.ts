@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScheduleService } from './schedule.service';
 import { Observable } from 'rxjs';
-import { shallowEqual } from '@angular/router/src/utils/collection';
 
 declare const $: any;
 
@@ -32,20 +31,6 @@ export class ScheduleComponent implements OnInit {
   }
 
   ngOnInit() {
-    $('.tabs').tabs({
-      swipeable: true,
-      onShow: function() {
-        const contentKey = $(this.$activeTabLink)
-          .attr('href')
-          .replace('#', '');
-        let tabContentHeight = 0;
-        if ($('#' + contentKey + ' .card-panel')[0]) {
-          $('#' + contentKey + ' .card-panel').each(function() {
-            tabContentHeight += $(this).height() + 48 + 20;
-          });
-          $('.tabs-content').css('height', tabContentHeight + 40 + 'px');
-        }
-      }
-    });
+    $('.tabs').tabs();
   }
 }
