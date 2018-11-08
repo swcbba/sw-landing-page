@@ -1,0 +1,95 @@
+<header><sw-app-menu></sw-app-menu></header>
+<main>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3">
+          <a class="active" href="#wednesday">{{
+            'SCHEDULE.TEAM_BILDING' | translate
+          }}</a>
+        </li>
+        <li class="tab col s3">
+          <a href="#friday">{{ 'SCHEDULE.DAY1' | translate }}</a>
+        </li>
+        <li class="tab col s3">
+          <a href="#saturday">{{ 'SCHEDULE.DAY2' | translate }}</a>
+        </li>
+        <li class="tab col s3">
+          <a href="#sunday">{{ 'SCHEDULE.DAY3' | translate }}</a>
+        </li>
+      </ul>
+    </div>
+    <div id="wednesday" class="col s12">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div
+              class="card-panel white row"
+              *ngFor="let wSchedule of wednesdaySchedule"
+            >
+              <span class="col s3 m2">{{ wSchedule.timeRange }}</span>
+              <span class="col s7 m7">{{ wSchedule.action }}</span>
+              <div class="col s2 m3 img-container">
+                <img [src]="wSchedule.image" class="responsive-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="friday" class="col s12">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div
+              class="card-panel white row"
+              *ngFor="let fSchedule of fridaySchedule"
+            >
+              <span class="col s3 m2">{{ fSchedule.timeRange }}</span>
+              <span class="col s7 m7">{{ fSchedule.action }}</span>
+              <div class="col s2 m3 img-container">
+                <img [src]="fSchedule.image" class="responsive-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="saturday" class="col s12">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div
+              class="card-panel white row"
+              *ngFor="let saSchedule of saturdaydaySchedule"
+            >
+              <span class="col s3 m2">{{ saSchedule.timeRange }}</span>
+              <span class="col s7 m7">{{ saSchedule.action }}</span>
+              <div class="col s2 m3 img-container">
+                <img [src]="saSchedule.image" class="responsive-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sunday" class="col s12">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div
+              class="card-panel white row"
+              *ngFor="let suSchedule of sundaySchedule"
+            >
+              <span class="col s3 m2">{{ suSchedule.timeRange }}</span>
+              <span class="col s7 m7">{{ suSchedule.action }}</span>
+              <div class="col s2 m3 img-container">
+                <img [src]="suSchedule.image" class="responsive-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

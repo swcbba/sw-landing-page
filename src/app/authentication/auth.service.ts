@@ -83,7 +83,10 @@ export class AuthService {
     this.loading = true;
     this.displayError = false;
     this.passwordChanged = false;
-    if (newPassword === confirmNewPassword && newPassword.length >= passMinChar) {
+    if (
+      newPassword === confirmNewPassword &&
+      newPassword.length >= passMinChar
+    ) {
       const user = this.afAuth.auth.currentUser;
       const credential = firebase.auth.EmailAuthProvider.credential(
         user.email,
@@ -121,6 +124,7 @@ export class AuthService {
   hasAccess(roles: Roles, url: string): boolean {
     switch (url) {
       case '/qr-code':
+      case '/schedule':
         return roles.assistant;
       case '/assistants':
         return roles.staff;
