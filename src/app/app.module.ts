@@ -54,6 +54,9 @@ import { SponsorsComponent } from './custom-components/sponsors/sponsors.compone
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
 import { AddCheckinAttributeComponent } from './add-checkin-attribute/add-checkin-attribute.component';
+import { CreateCredentialsComponent } from './create-credentials/create-credentials.component';
+import { NewsComponent } from './news/news.component';
+import { SupportComponent } from './support/support.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -89,7 +92,10 @@ export function createTranslateLoader(http: HttpClient) {
     SponsorsComponent,
     AccountComponent,
     ChangePasswordComponent,
-    AddCheckinAttributeComponent
+    AddCheckinAttributeComponent,
+    CreateCredentialsComponent,
+    NewsComponent,
+    SupportComponent
   ],
   imports: [
     BrowserModule,

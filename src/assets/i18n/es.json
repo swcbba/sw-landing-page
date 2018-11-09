@@ -112,5 +112,16 @@
     "DAY1": "DÍA 1",
     "DAY2": "DÍA 2",
     "DAY3": "DÍA 3"
+  },
+  "NEWS": {
+    "TITLE": "Noticias",
+    "MESSAGE": "Mensaje",
+    "SEND": "Enviar"
+  },
+  "SUPPORT": {
+    "TITLE": "Soporte"
+  },
+  "CRED": {
+    "CREATE": "Crear credenciales"
   }
 }
