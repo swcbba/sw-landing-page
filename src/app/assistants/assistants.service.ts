@@ -39,9 +39,24 @@ export class AssistantsService {
   }
 
   updateAssistant(assistant: Assistant): void {
+    const data: Assistant = {
+      id: assistant.id,
+      name: assistant.name,
+      email: assistant.email,
+      checkin: assistant.checkin,
+      secondCheckin: assistant.secondCheckin,
+      thirdCheckin: assistant.thirdCheckin,
+      fridayDinner: assistant.fridayDinner,
+      saturdayBreakfast: assistant.saturdayBreakfast,
+      saturdayLunch: assistant.saturdayLunch,
+      saturdayDinner: assistant.saturdayDinner,
+      sundayBreakfast: assistant.sundayBreakfast,
+      sundayLunch: assistant.sundayLunch,
+      souvenirsCheckin: assistant.souvenirsCheckin
+    };
     this.afs
       .collection<Assistant>('assistants')
-      .doc(assistant.id)
-      .set(assistant, { merge: true });
+      .doc(data.id)
+      .set(data, { merge: true });
   }
 }

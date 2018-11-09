@@ -1,5 +1,9 @@
 export interface Assistant {
   id: string;
+  email: string;
+  name: string;
+  age?: number;
+  shirtSize?: string;
   checkin?: boolean;
   secondCheckin?: boolean;
   thirdCheckin?: boolean;
@@ -10,13 +14,9 @@ export interface Assistant {
   sundayBreakfast?: boolean;
   sundayLunch?: boolean;
   souvenirsCheckin?: boolean;
-  age: number;
-  email: string;
   gender?: string;
-  name: string;
   phoneNumber?: string;
   profile?: string;
-  shirtSize: string;
   ticket?: string;
   transferSupportURL?: string;
   visible?: boolean;
