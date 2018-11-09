@@ -15,6 +15,7 @@ export class QRComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.auth.loading = false;
     this.auth.getAuthUser().subscribe(user => {
       this.qrText = user.assistantId
         ? user.assistantId

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AuthService } from 'src/app/authentication/auth.service';
 
 declare const $: any;
 
@@ -8,11 +11,17 @@ declare const $: any;
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private auth: AuthService, private router: Router) {}
 
   ngOnInit(): void {
     $(() => {
       $('.sidenav').sidenav();
     });
+    this.auth.loading = false;
+  }
+
+  accessApp(): void {
+    this.auth.loading = true;
+    this.router.navigate(['/login']);
   }
 }
