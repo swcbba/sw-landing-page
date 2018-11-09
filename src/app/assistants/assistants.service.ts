@@ -39,7 +39,8 @@ export class AssistantsService {
       saturdayLunch: false,
       saturdayDinner: false,
       sundayBreakfast: false,
-      sundayLunch: false
+      sundayLunch: false,
+      souvenirsCheckin: false
     };
     ref.set(data, {
       merge: true

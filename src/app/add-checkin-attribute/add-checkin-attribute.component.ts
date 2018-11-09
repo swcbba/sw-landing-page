@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
 import { AssistantsService } from '../assistants/assistants.service';
 
 @Component({
@@ -6,17 +7,12 @@ import { AssistantsService } from '../assistants/assistants.service';
   templateUrl: './add-checkin-attribute.component.html',
   styleUrls: ['./add-checkin-attribute.component.scss']
 })
-export class AddCheckinAttributeComponent implements OnInit {
-
-  constructor(private a: AssistantsService) { 
+export class AddCheckinAttributeComponent {
+  constructor(private a: AssistantsService) {
     this.a.getAssistants().subscribe(assistants => {
       assistants.forEach(assistant => {
         this.a.updateAssistant(assistant.id);
       });
     });
   }
-
-  ngOnInit() {
-  }
-
 }
