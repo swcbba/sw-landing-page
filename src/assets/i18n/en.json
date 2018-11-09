@@ -91,7 +91,17 @@
     "TITLE": "Assistants",
     "NAME": "Name",
     "EMAIL": "Email",
-    "PROFILE": "Profile"
+    "PROFILE": "Profile",
+    "SEARCH": "Search assistants...",
+    "ALL": "All",
+    "CHECKIN": "Check in",
+    "BREAKFAST": "Breakfast",
+    "LUNCH": "Lunch",
+    "DINNER": "Dinner",
+    "FRIDAY": "Friday",
+    "SATURDAY": "Saturday",
+    "SUNDAY": "Sunday",
+    "SOUVENIRS": "Souvenirs"
   },
   "ACCOUNT": {
     "TITLE": "Account"
