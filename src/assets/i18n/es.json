@@ -91,7 +91,17 @@
     "TITLE": "Asistentes",
     "NAME": "Nombre",
     "EMAIL": "Correo",
-    "PROFILE": "Perfil"
+    "PROFILE": "Perfil",
+    "SEARCH": "Buscar asistentes...",
+    "ALL": "Todos",
+    "CHECKIN": "Registro",
+    "BREAKFAST": "Desayuno",
+    "LUNCH": "Almuerzo",
+    "DINNER": "Cena",
+    "FRIDAY": "Viernes",
+    "SATURDAY": "Sábado",
+    "SUNDAY": "Domingo",
+    "SOUVENIRS": "Souvenirs"
   },
   "ACCOUNT": {
     "TITLE": "Cuenta"

@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Assistant } from './assistant';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,8 @@ import { map } from 'rxjs/operators';
 export class AssistantsService {
   constructor(private afs: AngularFirestore) {}
 
-  getAssistants(): Observable<Array<any>> {
-    return this.afs.collection<any>('assistants').valueChanges();
+  getAssistants(): Observable<Array<Assistant>> {
+    return this.afs.collection<Assistant>('assistants').valueChanges();
   }
 
   getAssistant(id: string): Observable<any> {
@@ -27,5 +28,35 @@ export class AssistantsService {
           return assistants.length > 0 ? assistants[0] : null;
         })
       );
+  }
+
+  getAssistantsByFilter(attribute, value): Observable<Array<Assistant>> {
+    return this.afs
+      .collection<Assistant>('assistants', ref =>
+        ref.where(attribute, '==', value)
+      )
+      .valueChanges();
+  }
+
+  updateAssistant(assistant: Assistant): void {
+    const data: Assistant = {
+      id: assistant.id,
+      name: assistant.name,
+      email: assistant.email,
+      checkin: assistant.checkin,
+      secondCheckin: assistant.secondCheckin,
+      thirdCheckin: assistant.thirdCheckin,
+      fridayDinner: assistant.fridayDinner,
+      saturdayBreakfast: assistant.saturdayBreakfast,
+      saturdayLunch: assistant.saturdayLunch,
+      saturdayDinner: assistant.saturdayDinner,
+      sundayBreakfast: assistant.sundayBreakfast,
+      sundayLunch: assistant.sundayLunch,
+      souvenirsCheckin: assistant.souvenirsCheckin
+    };
+    this.afs
+      .collection<Assistant>('assistants')
+      .doc(data.id)
+      .set(data, { merge: true });
   }
 }
