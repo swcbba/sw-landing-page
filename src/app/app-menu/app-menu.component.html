@@ -13,8 +13,8 @@
               'QR_CODE.TITLE' | translate
               }}</a>
           </li>
-          <li *ngIf="checkVisibility('/qr-code')">
-            <a routerLink="/news" class="main-color">News</a>
+          <li *ngIf="checkVisibility('/news')">
+            <a routerLink="/news" class="main-color">{{'NEWS.TITLE' | translate}}</a>
           </li>
           <li *ngIf="checkVisibility('/assistants')">
             <a routerLink="/assistants" class="main-color">{{
@@ -52,8 +52,8 @@
         'QR_CODE.TITLE' | translate
         }}</a>
     </li>
-    <li>
-      <a routerLink="/news" class="sidenav-close main-color">News</a>
+    <li *ngIf="checkVisibility('/news')">
+      <a routerLink="/news" class="sidenav-close main-color">{{'NEWS.TITLE' | translate}}</a>
     </li>
     <li *ngIf="checkVisibility('/assistants')">
       <a routerLink="/assistants" class="sidenav-close main-color">{{
