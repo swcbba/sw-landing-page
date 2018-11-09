@@ -120,5 +120,8 @@
   },
   "SUPPORT": {
     "TITLE": "Soporte"
+  },
+  "CRED": {
+    "CREATE": "Crear credenciales"
   }
 }

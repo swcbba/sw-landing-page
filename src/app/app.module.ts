@@ -53,12 +53,9 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { SponsorsComponent } from './custom-components/sponsors/sponsors.component';
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
-<<<<<<< HEAD
 import { CreateCredentialsComponent } from './create-credentials/create-credentials.component';
-=======
 import { NewsComponent } from './news/news.component';
 import { SupportComponent } from './support/support.component';
->>>>>>> 39b0a905ee82c02f6171dcb38af572a7dce60c62
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -94,12 +91,9 @@ export function createTranslateLoader(http: HttpClient) {
     SponsorsComponent,
     AccountComponent,
     ChangePasswordComponent,
-<<<<<<< HEAD
-    CreateCredentialsComponent
-=======
+    CreateCredentialsComponent,
     NewsComponent,
     SupportComponent
->>>>>>> 39b0a905ee82c02f6171dcb38af572a7dce60c62
   ],
   imports: [
     BrowserModule,

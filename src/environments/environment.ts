@@ -6,12 +6,12 @@ export const environment = {
   production: false,
   mapKey: 'AiieQo9VbTBwg_ZSPdmnE0kbORnnQ7SsHvZ-klkQNOvfrpp5Th6Jvny9H6junIe5',
   firebase: {
-    apiKey: 'AIzaSyBczQGyq0eYcMw78E0eWrDKW-Y-M-d_0EY',
-    authDomain: 'swcbba-org.firebaseapp.com',
-    databaseURL: 'https://swcbba-org.firebaseio.com',
-    projectId: 'swcbba-org',
-    storageBucket: 'swcbba-org.appspot.com',
-    messagingSenderId: '577441047632'
+    apiKey: 'AIzaSyDYcpUpRpTIKXqqQ7VDraPuDPhSxFquuDk',
+    authDomain: 'sw-landing-page-dev.firebaseapp.com',
+    databaseURL: 'https://sw-landing-page-dev.firebaseio.com',
+    projectId: 'sw-landing-page-dev',
+    storageBucket: 'sw-landing-page-dev.appspot.com',
+    messagingSenderId: '1036905512445'
   }
 };
 

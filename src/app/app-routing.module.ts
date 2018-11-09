@@ -10,7 +10,6 @@ import { AssistantsComponent } from './assistants/assistants.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
-import { CreateCredentialsComponent } from './create-credentials/create-credentials.component';
 import { NewsComponent } from './news/news.component';
 import { SupportComponent } from './support/support.component';
 
@@ -50,11 +49,6 @@ const routes: Routes = [
   {
     path: 'account/change-password',
     component: ChangePasswordComponent,
-    canActivate: [AuthGuardService]
-  },
-  {
-    path: 'create-credentials',
-    component: CreateCredentialsComponent,
     canActivate: [AuthGuardService]
   },
   {
