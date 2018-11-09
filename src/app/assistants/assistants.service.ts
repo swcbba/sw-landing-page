@@ -30,11 +30,18 @@ export class AssistantsService {
       );
   }
 
-  getAssistantByFilter(attribute, value): Observable<Array<Assistant>> {
+  getAssistantsByFilter(attribute, value): Observable<Array<Assistant>> {
     return this.afs
       .collection<Assistant>('assistants', ref =>
         ref.where(attribute, '==', value)
       )
       .valueChanges();
+  }
+
+  updateAssistant(assistant: Assistant): void {
+    this.afs
+      .collection<Assistant>('assistants')
+      .doc(assistant.id)
+      .set(assistant, { merge: true });
   }
 }

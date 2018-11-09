@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Observable } from 'rxjs';
-
 import { AssistantsService } from './assistants.service';
-
 import { Assistant } from './assistant';
+import { first } from 'rxjs/operators';
 
 declare const $: any;
 @Component({
@@ -19,14 +17,9 @@ export class AssistantsComponent implements OnInit {
 
   constructor(private assistantsService: AssistantsService) {
     this.search = '';
-    this.filterValue = '';
+    this.filterValue = 'all';
     this.assistants = new Array();
-    this.assistantsService.getAssistants().subscribe(assistants => {
-      this.assistants = assistants;
-      this.assistants.forEach(assistant => {
-        assistant.visible = true;
-      });
-    });
+    this.filterAll();
   }
 
   ngOnInit(): void {
@@ -36,7 +29,7 @@ export class AssistantsComponent implements OnInit {
   }
 
   searchUser(): void {
-    let self = this;
+    const self = this;
     this.assistants.forEach(function(assistant) {
       assistant.visible = assistant.name
         .toLowerCase()
@@ -50,14 +43,36 @@ export class AssistantsComponent implements OnInit {
   }
 
   filterByStatus(): void {
-    let value = $('#filter-checkbox').prop('checked');
+    const value = $('#filter-checkbox').prop('checked');
+    if (this.filterValue === 'all') {
+      this.filterAll();
+    } else {
+      this.assistantsService
+        .getAssistantsByFilter(this.filterValue, value)
+        .pipe(first())
+        .subscribe(assistants => {
+          this.assistants = assistants;
+          this.assistants.forEach(assistant => {
+            assistant.visible = true;
+          });
+        });
+    }
+  }
+
+  filterAll(): void {
     this.assistantsService
-      .getAssistantByFilter(this.filterValue, value)
+      .getAssistants()
+      .pipe(first())
       .subscribe(assistants => {
         this.assistants = assistants;
         this.assistants.forEach(assistant => {
           assistant.visible = true;
         });
       });
+  }
+
+  updateAssistant(assistant: Assistant, attribute: string): void {
+    assistant[attribute] = !assistant[attribute];
+    this.assistantsService.updateAssistant(assistant);
   }
 }
