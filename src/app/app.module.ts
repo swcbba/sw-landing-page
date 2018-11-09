@@ -53,6 +53,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { SponsorsComponent } from './custom-components/sponsors/sponsors.component';
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
+import { CreateCredentialsComponent } from './create-credentials/create-credentials.component';
 import { NewsComponent } from './news/news.component';
 import { SupportComponent } from './support/support.component';
 
@@ -90,6 +91,7 @@ export function createTranslateLoader(http: HttpClient) {
     SponsorsComponent,
     AccountComponent,
     ChangePasswordComponent,
+    CreateCredentialsComponent,
     NewsComponent,
     SupportComponent
   ],
