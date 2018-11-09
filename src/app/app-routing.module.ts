@@ -10,6 +10,7 @@ import { AssistantsComponent } from './assistants/assistants.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,11 @@ const routes: Routes = [
   {
     path: 'account/change-password',
     component: ChangePasswordComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'news',
+    component: NewsComponent,
     canActivate: [AuthGuardService]
   }
 ];

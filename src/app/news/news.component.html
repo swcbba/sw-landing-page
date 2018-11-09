@@ -1,0 +1,28 @@
+<header>
+  <sw-app-menu></sw-app-menu>
+</header>
+<main>
+  <div class="container">
+    <div class="row">
+      <form #newsForm="ngForm" novalidate>
+        <div class="input-field col s12 m10">
+          <textarea id="message" class="materialize-textarea" name="message" [(ngModel)]="message" required></textarea>
+          <label for="message">Mensaje</label>
+        </div>
+        <div class="col s4 offset-s8 m2">
+          <button type="button" class="btn waves-effect waves-light" [disabled]="newsForm.invalid" (click)="sendMessage()">Enviar
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </form>
+      <br>
+      <div class="col s12">
+        <div *ngFor="let new of news$ | async" class="card-panel white row">
+          <span class="col s3 m1 main-color">{{new.date.toDate() | date: 'HH:mm dd/MM'}}</span>
+          <span class="col s9 m11">{{new.new}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

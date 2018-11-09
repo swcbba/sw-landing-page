@@ -2,44 +2,44 @@
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a routerLink="/" id="logo-container" class="brand-logo">
-        <img src="assets/images/Group23.svg" width="30px" height="42px" alt=""
-      /></a>
-      <a
-        [hidden]="!logged"
-        data-target="app-nav-mobile"
-        class="sidenav-trigger main-color"
-      >
+        <img src="assets/images/Group23.svg" width="30px" height="42px" alt="" /></a>
+      <a [hidden]="!logged" data-target="app-nav-mobile" class="sidenav-trigger main-color">
         <i class="material-icons">menu</i>
       </a>
       <ul class="right hide-on-med-and-down">
         <ng-container *ngIf="logged">
-          <li *ngIf="checkVisibility('/qr-code')">
+          <li>
             <a routerLink="/qr-code" class="main-color">{{
               'QR_CODE.TITLE' | translate
-            }}</a>
+              }}</a>
+          </li>
+          <li *ngIf="checkVisibility('/qr-code')">
+            <a routerLink="/news" class="main-color">News</a>
           </li>
           <li *ngIf="checkVisibility('/assistants')">
             <a routerLink="/assistants" class="main-color">{{
               'ASSISTANTS.TITLE' | translate
-            }}</a>
+              }}</a>
           </li>
           <li *ngIf="checkVisibility('/schedule')">
             <a routerLink="/schedule" class="main-color">{{
               'SCHEDULE.TITLE' | translate
-            }}</a>
+              }}</a>
           </li>
           <li>
             <a routerLink="/account" class="main-color">{{
               'ACCOUNT.TITLE' | translate
-            }}</a>
+              }}</a>
           </li>
           <li>
             <a class="main-color" (click)="auth.logout()">{{
               'LOGOUT.TITLE' | translate
-            }}</a>
+              }}</a>
           </li>
         </ng-container>
-        <li><sw-language-button></sw-language-button></li>
+        <li>
+          <sw-language-button></sw-language-button>
+        </li>
       </ul>
       <sw-language-button class="language-mobile-align"></sw-language-button>
     </div>
@@ -50,27 +50,30 @@
     <li *ngIf="checkVisibility('/qr-code')">
       <a routerLink="/qr-code" class="sidenav-close main-color">{{
         'QR_CODE.TITLE' | translate
-      }}</a>
+        }}</a>
+    </li>
+    <li>
+      <a routerLink="/news" class="sidenav-close main-color">News</a>
     </li>
     <li *ngIf="checkVisibility('/assistants')">
       <a routerLink="/assistants" class="sidenav-close main-color">{{
         'ASSISTANTS.TITLE' | translate
-      }}</a>
+        }}</a>
     </li>
     <li *ngIf="checkVisibility('/schedule')">
       <a routerLink="/schedule" class="sidenav-close main-color">{{
         'SCHEDULE.TITLE' | translate
-      }}</a>
+        }}</a>
     </li>
     <li>
       <a routerLink="/account" class="sidenav-close main-color">{{
         'ACCOUNT.TITLE' | translate
-      }}</a>
+        }}</a>
     </li>
     <li>
       <a class="sidenav-close main-color" (click)="auth.logout()">{{
         'LOGOUT.TITLE' | translate
-      }}</a>
+        }}</a>
     </li>
   </ng-container>
 </ul>

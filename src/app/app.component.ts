@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 
 import * as Materialize from 'materialize-css';
+import * as messaging from 'firebase/messaging';
 
 declare const $: any;
 
@@ -12,6 +13,9 @@ declare const $: any;
 })
 export class AppComponent {
   constructor(private updates: SwUpdate) {
+    messaging.usePublicVapidKey(
+      'BIrXN0OZ9Zj5mlo2T2x8kOUgoL5xJbOO_khFzkVx1_MKPEbbOogxyn0KMTrLZmlN_blmZXU4763QuuTHyeSfdSg'
+    );
     this.updates.available.subscribe(event => {
       console.log('current version is', event.current);
       console.log('available version is', event.available);
