@@ -18,5 +18,6 @@ export class SignInComponent implements OnInit {
     $(() => {
       $('.parallax').parallax();
     });
+    this.auth.loading = false;
   }
 }
