@@ -3,12 +3,14 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { Observable, of } from 'rxjs';
-import { take, switchMap, first } from 'rxjs/operators';
+import { take, switchMap, first, map } from 'rxjs/operators';
 import * as firebase from 'firebase/app';
 
 import { UserService } from '../users/user.service';
 import { User } from '../users/user';
 import { Roles } from '../users/roles';
+
+const passMinChar = 6;
 
 @Injectable({
   providedIn: 'root'
@@ -73,11 +75,18 @@ export class AuthService {
     });
   }
 
-  changePassword(currentPassword, newPassword, confirmNewPassword): void {
+  changePassword(
+    currentPassword: string,
+    newPassword: string,
+    confirmNewPassword: string
+  ): void {
     this.loading = true;
     this.displayError = false;
     this.passwordChanged = false;
-    if (newPassword === confirmNewPassword) {
+    if (
+      newPassword === confirmNewPassword &&
+      newPassword.length >= passMinChar
+    ) {
       const user = this.afAuth.auth.currentUser;
       const credential = firebase.auth.EmailAuthProvider.credential(
         user.email,
@@ -112,11 +121,25 @@ export class AuthService {
     }
   }
 
+  checkAccess(url: string): Observable<boolean> {
+    return this.getAuthUser().pipe(
+      first(),
+      map(user => {
+        if (user) {
+          return this.hasAccess(user.roles, url);
+        }
+        return false;
+      })
+    );
+  }
+
   hasAccess(roles: Roles, url: string): boolean {
     switch (url) {
       case '/qr-code':
+      case '/schedule':
         return roles.assistant;
       case '/assistants':
+      case '/support':
         return roles.staff;
       default:
         return true;

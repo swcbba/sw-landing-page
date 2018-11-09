@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import {
   TranslateModule,
@@ -22,6 +23,7 @@ import {
 } from 'angular-maps';
 import { QRCodeModule } from 'angularx-qrcode';
 
+import { environment } from '../environments/environment';
 import { ES_KEY } from './app.constants';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +31,6 @@ import { BannerComponent } from './custom-components/banner/banner.component';
 import { AboutComponent } from './custom-components/about/about.component';
 import { CountDownComponent } from './custom-components/countdown/countdown.component';
 import { NumberTransformPipe } from './pipes/number-transform/number-transform.pipe';
-import { environment } from 'src/environments/environment';
 import { HeaderComponent } from './custom-components/header/header.component';
 import { PicturesComponent } from './custom-components/pictures/pictures.component';
 import { LocationComponent } from './custom-components/location/location.component';
@@ -48,10 +49,16 @@ import { LanguageButtonComponent } from './custom-components/language-button/lan
 import { AssistantsComponent } from './assistants/assistants.component';
 import { AppMenuComponent } from './app-menu/app-menu.component';
 import { SpinnerLoaderComponent } from './custom-components/spinner-loader/spinner-loader.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 import { SponsorsComponent } from './custom-components/sponsors/sponsors.component';
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
+<<<<<<< HEAD
 import { CreateCredentialsComponent } from './create-credentials/create-credentials.component';
+=======
+import { NewsComponent } from './news/news.component';
+import { SupportComponent } from './support/support.component';
+>>>>>>> 39b0a905ee82c02f6171dcb38af572a7dce60c62
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -83,17 +90,23 @@ export function createTranslateLoader(http: HttpClient) {
     AssistantsComponent,
     AppMenuComponent,
     SpinnerLoaderComponent,
+    ScheduleComponent,
     SponsorsComponent,
     AccountComponent,
     ChangePasswordComponent,
+<<<<<<< HEAD
     CreateCredentialsComponent
+=======
+    NewsComponent,
+    SupportComponent
+>>>>>>> 39b0a905ee82c02f6171dcb38af572a7dce60c62
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'my-app-name'), // imports firebase/app needed for everything
     AngularFireAuthModule,
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     MapModule.forRoot(),
     HttpClientModule,
     AppRoutingModule,
@@ -104,6 +117,9 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
     })
   ],
   providers: [

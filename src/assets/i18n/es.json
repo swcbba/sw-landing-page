@@ -28,7 +28,7 @@
     "SECONDS": "Segundos"
   },
   "MAP_CONTENT": {
-    "LOCATION_NAME": "Feicobol",
+    "LOCATION_NAME": "Feicobol Pabellón Bolivia",
     "LOCATION_DESCRIPTION": "El Startup Weekend Cochabamba 2018 se realizará en instalaciones del Campo Ferial Alalay.",
     "ADDRESS": "Circuito Bolivia",
     "CITY": "Cochabamba, Bolivia"
@@ -68,7 +68,7 @@
   },
   "FACILITATOR": {
     "TITLE": "Facilitador",
-    "NAME": "Gonzalo Mena F.",
+    "NAME": "Gonzalo Mena",
     "JOB": "Gerente Elkare Consultora y Prof. De Emprendimiento e Innovación en Duoc UC",
     "CITY": "Viña del Mar, Chile",
     "SPECIALTY": "Especializado en facilitar el acceso de emprendedores locales y extranjeros al ecosistema chileno, capacitarlos y conectarlos con empresas para que generen negocios.",
@@ -103,6 +103,22 @@
     "CURRENT": "Contraseña actual",
     "NEW": "Nueva contraseña",
     "CONFIRM_NEW": "Confirme su nueva contraseña",
-    "CHANGE": "Cambiar contraseña"
+    "CHANGE": "Cambiar contraseña",
+    "MIN_LENGTH": "La contraseña debe contener un mínimo de 6 caracteres."
+  },
+  "SCHEDULE": {
+    "TITLE": "Cronograma",
+    "TEAM_BILDING": "FRATERNIZACIÓN",
+    "DAY1": "DÍA 1",
+    "DAY2": "DÍA 2",
+    "DAY3": "DÍA 3"
+  },
+  "NEWS": {
+    "TITLE": "Noticias",
+    "MESSAGE": "Mensaje",
+    "SEND": "Enviar"
+  },
+  "SUPPORT": {
+    "TITLE": "Soporte"
   }
 }

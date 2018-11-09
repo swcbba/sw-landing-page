@@ -1,0 +1,24 @@
+.tabs {
+  background-color: #5f00ed;
+}
+
+.tabs .tab a {
+  color: white;
+}
+
+.tabs .tab a:focus.active {
+  color: white;
+  background-color: #5f00ed;
+}
+
+#wednesday,
+#friday,
+#saturday,
+#sunday {
+  padding-top: 2%;
+}
+
+.card-panel .img-container {
+  max-width: 100px;
+  max-height: 100px;
+}

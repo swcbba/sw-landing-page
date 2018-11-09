@@ -1,0 +1,16 @@
+<header><sw-app-menu></sw-app-menu></header>
+<main>
+  <div class="container center white-text">
+    <div class="row">
+      <br />
+      <ng-container *ngFor="let assistant of (assistants$ | async)">
+        <div class="col s12 m6 l4 xl3 qr-container">
+          <div class="center-position">
+            <qrcode [qrdata]="assistant.id" [size]="200" [level]="'M'"></qrcode>
+          </div>
+          <p>{{ assistant.name }}</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</main>

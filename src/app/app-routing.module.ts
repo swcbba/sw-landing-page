@@ -7,9 +7,12 @@ import { AuthGuardService } from './authentication/auth-guard.service';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './authentication/sign-in/sign-in.component';
 import { AssistantsComponent } from './assistants/assistants.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
 import { CreateCredentialsComponent } from './create-credentials/create-credentials.component';
+import { NewsComponent } from './news/news.component';
+import { SupportComponent } from './support/support.component';
 
 const routes: Routes = [
   {
@@ -36,6 +39,10 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
+    path: 'schedule',
+    component: ScheduleComponent
+  },
+  {
     path: 'account',
     component: AccountComponent,
     canActivate: [AuthGuardService]
@@ -48,6 +55,16 @@ const routes: Routes = [
   {
     path: 'create-credentials',
     component: CreateCredentialsComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'news',
+    component: NewsComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'support',
+    component: SupportComponent,
     canActivate: [AuthGuardService]
   }
 ];

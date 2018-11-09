@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'node_modules/materialize-css/sass/materialize';
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -11,15 +14,29 @@ main {
   min-height: 100%;
   width: 100%;
   background-color: #5f00ed;
-  padding-top: 56px;
+  padding-top: 76px;
 
   @media only screen and (min-width: 601px) {
-    padding-top: 64px;
+    padding-top: 84px;
   }
 }
 
 a {
   cursor: pointer;
+}
+
+#toast-container {
+  @media only screen and (min-width: 601px) {
+    top: auto !important;
+    right: auto !important;
+    bottom: 10%;
+    left: 7%;
+  }
+}
+
+.toast {
+  background-color: white;
+  color: black;
 }
 
 .full-screen {
@@ -160,6 +177,15 @@ a {
 
 .input-field label {
   color: white !important;
+}
+
+.materialize-textarea {
+  color: white;
+}
+
+.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ff154f !important;
+  box-shadow: 0 1px 0 0 #ff154f !important;
 }
 
 .bold {
