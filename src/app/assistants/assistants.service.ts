@@ -28,4 +28,21 @@ export class AssistantsService {
         })
       );
   }
+
+  updateAssistant(id: string): void {
+    const ref = this.afs.doc<any>(`assistants/${id}`);
+    const data = {
+      secondCheckin: false,
+      thirdCheckin: false,
+      fridayDinner: false,
+      saturdayBreakfast: false,
+      saturdayLunch: false,
+      saturdayDinner: false,
+      sundayBreakfast: false,
+      sundayLunch: false
+    };
+    ref.set(data, {
+      merge: true
+    });
+  }
 }
