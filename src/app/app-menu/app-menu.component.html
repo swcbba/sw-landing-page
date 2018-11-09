@@ -8,7 +8,7 @@
       </a>
       <ul class="right hide-on-med-and-down">
         <ng-container *ngIf="logged">
-          <li>
+          <li *ngIf="checkVisibility('/qr-code')">
             <a routerLink="/qr-code" class="main-color">{{
               'QR_CODE.TITLE' | translate
               }}</a>
