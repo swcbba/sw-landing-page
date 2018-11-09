@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { Observable, of } from 'rxjs';
-import { take, switchMap, first } from 'rxjs/operators';
+import { take, switchMap, first, map } from 'rxjs/operators';
 import * as firebase from 'firebase/app';
 
 import { UserService } from '../users/user.service';
@@ -121,12 +121,25 @@ export class AuthService {
     }
   }
 
+  checkAccess(url: string): Observable<boolean> {
+    return this.getAuthUser().pipe(
+      first(),
+      map(user => {
+        if (user) {
+          return this.hasAccess(user.roles, url);
+        }
+        return false;
+      })
+    );
+  }
+
   hasAccess(roles: Roles, url: string): boolean {
     switch (url) {
       case '/qr-code':
       case '/schedule':
         return roles.assistant;
       case '/assistants':
+      case '/support':
         return roles.staff;
       default:
         return true;

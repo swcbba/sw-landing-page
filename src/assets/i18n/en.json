@@ -112,5 +112,13 @@
     "DAY1": "DAY 1",
     "DAY2": "DAY 2",
     "DAY3": "DAY 3"
+  },
+  "NEWS": {
+    "TITLE": "News",
+    "MESSAGE": "Message",
+    "SEND": "Send"
+  },
+  "SUPPORT": {
+    "TITLE": "Support"
   }
 }
