@@ -179,6 +179,15 @@ a {
   color: white !important;
 }
 
+.materialize-textarea {
+  color: white;
+}
+
+.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ff154f !important;
+  box-shadow: 0 1px 0 0 #ff154f !important;
+}
+
 .bold {
   font-weight: 700;
 }
