@@ -3,20 +3,97 @@
 </header>
 <main>
   <div class="container white-text">
+    <div class="row">
+      <div class="input-field col s12 m4 nopad">
+        <input type="text" [(ngModel)]="search" (ngModelChange)="searchUser()" class="form-control" placeholder="Search volunteers..." />
+      </div>
+      <div class="input-field col s10 m4">
+        <select [(ngModel)]="filterValue" (ngModelChange)="filterByStatus()">
+          <optgroup label="Viernes">
+            <option value="checkin">Registro</option>
+            <option value="fridayDinner">Cena</option>
+          </optgroup>
+          <optgroup label="Sábado">
+            <option value="secondCheckin">Registro</option>
+            <option value="saturdayBreakfast">Desayuno</option>
+            <option value="saturdayLunch">Almuerzo</option>
+            <option value="saturdayDinner">Cena</option>
+          </optgroup>
+          <optgroup label="Domingo">
+            <option value="thirdCheckin">Registro</option>
+            <option value="sundayBreakfast">Desayuno</option>
+            <option value="sundayLunch">Almuerzo</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="filter-checkbox-container col s2 m4">
+        <label>
+          <input id="filter-checkbox" type="checkbox" (change)="filterByStatus()"/>
+          <span></span>
+        </label>
+      </div>
+    </div>
     <table class="responsive-table">
       <thead>
         <tr>
           <th>{{ 'ASSISTANTS.NAME' | translate }}</th>
-          <th>{{ 'ASSISTANTS.EMAIL' | translate }}</th>
-          <th>{{ 'ASSISTANTS.PROFILE' | translate }}</th>
+          <th>Viernes</th>
+          <th>Sábado</th>
+          <th>Domingo</th>
         </tr>
       </thead>
-      
+
       <tbody>
-        <tr *ngFor="let assistant of assistants$ | async">
-          <td>{{assistant.name}}</td>
-          <td>{{assistant.email}}</td>
-          <td>{{assistant.profile}}</td>
+        <tr *ngFor="let assistant of assistants">
+          <td *ngIf="assistant.visible">{{assistant.name}}</td>
+          <td *ngIf="assistant.visible">
+            <div class="row">
+              <label class="col s12">
+                <input type="checkbox" />
+                <span>Registro</span>
+              </label>
+              <label class="col s12">
+                <input type="checkbox" />
+                <span>Cena</span>
+              </label>
+            </div>
+          </td>
+          <td *ngIf="assistant.visible">
+            <div class="row">
+              <label class="col s12">
+                <input type="checkbox" />
+                <span>Registro</span>
+              </label>
+              <label class="col s12">
+                <input type="checkbox" />
+                <span>Desayuno</span>
+              </label>
+              <label class="col s12">
+                <input type="checkbox" />
+                <span>Almuerzo</span>
+              </label>
+              <label class="col s12">
+                <input type="checkbox" />
+                <span>Cena</span>
+              </label>
+            </div>
+          </td>
+          <td *ngIf="assistant.visible">
+            <div class="row">
+              <label class="col s12">
+                <input type="checkbox" />
+                <span>Registro</span>
+              </label>
+              <label class="col s12">
+                <input type="checkbox" />
+                <span>Desayuno</span>
+              </label>
+              <label class="col s12">
+                <input type="checkbox" />
+                <span>Almuerzo</span>
+              </label>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
