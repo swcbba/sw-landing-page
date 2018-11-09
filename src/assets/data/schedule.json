@@ -13,37 +13,37 @@
     "day": "friday",
     "schedule": [
       {
-        "timeRange": "18:30",
+        "timeRange": "17:30",
         "action": "Registro",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "19:00",
+        "timeRange": "18:00",
         "action": "Cena y Networking",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "19:20",
+        "timeRange": "18:20",
         "action": "Bienvenida y Speakers",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "19:30",
-        "action": "Comienzan los Pitches",
+        "timeRange": "18:30",
+        "action": "Comparte tu idea (Pitch inicial)",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "21:00",
+        "timeRange": "20:00",
         "action": "Votación",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "21:15",
+        "timeRange": "20:15",
         "action": "Formación de equipos",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "22:00",
+        "timeRange": "21:00",
         "action": "Comienza el trabajo",
         "image": "assets/images/feicobol.png"
       }
@@ -53,43 +53,48 @@
     "day": "saturday",
     "schedule": [
       {
-        "timeRange": "08:00",
-        "action": "Acreditación y Desayuno",
+        "timeRange": "08:30",
+        "action": "Desayuno",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "10:30",
-        "action": "1º Ronda Mentoría",
+        "timeRange": "09:30",
+        "action": "Comienza el trabajo",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "13:00",
-        "action": "Almuerzo y Descanso",
+        "timeRange": "10:00",
+        "action": "1º Ronda de mentoría",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "15:00",
-        "action": "Reporte de avances y necesidades",
+        "timeRange": "12:30",
+        "action": "Almuerzo",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "15:30",
-        "action": "2º Ronda Mentoría",
+        "timeRange": "13:30",
+        "action": "Reporte del estado de cada equipo",
+        "image": "assets/images/feicobol.png"
+      },
+      {
+        "timeRange": "14:30",
+        "action": "2ª Ronda de mentoría",
         "image": "assets/images/feicobol.png"
       },
       {
         "timeRange": "18:30",
-        "action": "Primera práctica de pitch",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "19:00",
         "action": "Cena",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "00:00",
-        "action": "Cierre",
+        "timeRange": "19:30",
+        "action": "Reporte del estado de cada equipo",
+        "image": "assets/images/feicobol.png"
+      },
+      {
+        "timeRange": "22:00",
+        "action": "Cierre o trabajo de noche",
         "image": "assets/images/feicobol.png"
       }
     ]
@@ -98,33 +103,28 @@
     "day": "sunday",
     "schedule": [
       {
-        "timeRange": "08:00",
+        "timeRange": "08:30",
         "action": "Desayuno",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "09:00",
-        "action": "Indicaciones iniciales y repaso de la agenda",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "10:15",
-        "action": "3º Ronda Mentoría",
+        "timeRange": "10:00",
+        "action": "3º Ronda de mentoría",
         "image": "assets/images/feicobol.png"
       },
       {
         "timeRange": "12:30",
-        "action": "Almuerzo y Descanso",
+        "action": "Almuerzo",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "14:00",
-        "action": "Reporte de avances y necesidades",
+        "timeRange": "13:30",
+        "action": "Última ronda de mentoría",
         "image": "assets/images/feicobol.png"
       },
       {
         "timeRange": "15:00",
-        "action": "Entrega de presentaciones",
+        "action": "Preparación de últimos detalles, preparación pitch",
         "image": "assets/images/feicobol.png"
       },
       {
@@ -133,28 +133,18 @@
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "17:30",
+        "timeRange": "18:30",
         "action": "Deliberación",
         "image": "assets/images/feicobol.png"
       },
       {
-        "timeRange": "17:45",
-        "action": "Networking",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "18:00",
-        "action": "Foto del evento",
-        "image": "assets/images/feicobol.png"
-      },
-      {
-        "timeRange": "18:15",
-        "action": "Salida de buses hacia El Cortijo",
+        "timeRange": "19:00",
+        "action": "Premiación",
         "image": "assets/images/cortijo.jpg"
       },
       {
-        "timeRange": "18:30",
-        "action": "Premiación y anuncio de ganadores",
+        "timeRange": "19:30",
+        "action": "After Party",
         "image": "assets/images/cortijo.jpg"
       }
     ]
