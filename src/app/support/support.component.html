@@ -6,15 +6,9 @@
       <ng-container *ngFor="let assistant of (assistants$ | async)">
         <div class="col s12 m6 l4 xl3 qr-container">
           <div class="center-position">
-            <div class="qrcode">
-              <qrcode
-                [qrdata]="assistant.id"
-                [size]="200"
-                [level]="'M'"
-              ></qrcode>
-            </div>
+            <qrcode [qrdata]="assistant.id" [size]="200" [level]="'M'"></qrcode>
           </div>
-          <p class="text-note">{{ assistant.name }}</p>
+          <p>{{ assistant.name }}</p>
         </div>
       </ng-container>
     </div>
