@@ -139,6 +139,7 @@ export class AuthService {
       case '/schedule':
         return roles.assistant;
       case '/assistants':
+      case '/support':
         return roles.staff;
       default:
         return true;

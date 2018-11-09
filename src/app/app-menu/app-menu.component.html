@@ -26,9 +26,14 @@
               'SCHEDULE.TITLE' | translate
               }}</a>
           </li>
-          <li>
+          <li *ngIf="checkVisibility('/account')">
             <a routerLink="/account" class="main-color">{{
               'ACCOUNT.TITLE' | translate
+              }}</a>
+          </li>
+          <li *ngIf="checkVisibility('/support')">
+            <a routerLink="/support" class="main-color">{{
+              'SUPPORT.TITLE' | translate
               }}</a>
           </li>
           <li>
@@ -65,9 +70,14 @@
         'SCHEDULE.TITLE' | translate
         }}</a>
     </li>
-    <li>
+    <li *ngIf="checkVisibility('/account')">
       <a routerLink="/account" class="sidenav-close main-color">{{
         'ACCOUNT.TITLE' | translate
+        }}</a>
+    </li>
+    <li *ngIf="checkVisibility('/support')">
+      <a routerLink="/support" class="sidenav-close main-color">{{
+        'SUPPORT.TITLE' | translate
         }}</a>
     </li>
     <li>

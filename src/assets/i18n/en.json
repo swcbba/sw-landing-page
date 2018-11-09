@@ -117,5 +117,8 @@
     "TITLE": "News",
     "MESSAGE": "Message",
     "SEND": "Send"
+  },
+  "SUPPORT": {
+    "TITLE": "Support"
   }
 }
