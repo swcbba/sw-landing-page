@@ -28,7 +28,7 @@
       </div>
       <div class="filter-checkbox-container col s2 m4">
         <label>
-          <input id="filter-checkbox" type="checkbox" (change)="filterByStatus()"/>
+          <input id="filter-checkbox" type="checkbox" (change)="filterByStatus()" />
           <span></span>
         </label>
       </div>
@@ -45,55 +45,57 @@
 
       <tbody>
         <tr *ngFor="let assistant of assistants">
-          <td *ngIf="assistant.visible">{{assistant.name}}</td>
-          <td *ngIf="assistant.visible">
-            <div class="row">
-              <label class="col s12">
-                <input type="checkbox" />
-                <span>Registro</span>
-              </label>
-              <label class="col s12">
-                <input type="checkbox" />
-                <span>Cena</span>
-              </label>
-            </div>
-          </td>
-          <td *ngIf="assistant.visible">
-            <div class="row">
-              <label class="col s12">
-                <input type="checkbox" />
-                <span>Registro</span>
-              </label>
-              <label class="col s12">
-                <input type="checkbox" />
-                <span>Desayuno</span>
-              </label>
-              <label class="col s12">
-                <input type="checkbox" />
-                <span>Almuerzo</span>
-              </label>
-              <label class="col s12">
-                <input type="checkbox" />
-                <span>Cena</span>
-              </label>
-            </div>
-          </td>
-          <td *ngIf="assistant.visible">
-            <div class="row">
-              <label class="col s12">
-                <input type="checkbox" />
-                <span>Registro</span>
-              </label>
-              <label class="col s12">
-                <input type="checkbox" />
-                <span>Desayuno</span>
-              </label>
-              <label class="col s12">
-                <input type="checkbox" />
-                <span>Almuerzo</span>
-              </label>
-            </div>
-          </td>
+          <ng-container *ngIf="assistant.visible">
+            <td>{{assistant.name}}</td>
+            <td>
+              <div class="row">
+                <label class="col s12">
+                  <input type="checkbox" />
+                  <span>Registro</span>
+                </label>
+                <label class="col s12">
+                  <input type="checkbox" />
+                  <span>Cena</span>
+                </label>
+              </div>
+            </td>
+            <td>
+              <div class="row">
+                <label class="col s12">
+                  <input type="checkbox" />
+                  <span>Registro</span>
+                </label>
+                <label class="col s12">
+                  <input type="checkbox" />
+                  <span>Desayuno</span>
+                </label>
+                <label class="col s12">
+                  <input type="checkbox" />
+                  <span>Almuerzo</span>
+                </label>
+                <label class="col s12">
+                  <input type="checkbox" />
+                  <span>Cena</span>
+                </label>
+              </div>
+            </td>
+            <td>
+              <div class="row">
+                <label class="col s12">
+                  <input type="checkbox" />
+                  <span>Registro</span>
+                </label>
+                <label class="col s12">
+                  <input type="checkbox" />
+                  <span>Desayuno</span>
+                </label>
+                <label class="col s12">
+                  <input type="checkbox" />
+                  <span>Almuerzo</span>
+                </label>
+              </div>
+            </td>
+          </ng-container>
         </tr>
       </tbody>
     </table>

@@ -16,18 +16,22 @@ export class AssistantsComponent implements OnInit {
   search: string;
   filterValue: string;
   assistants: Array<Assistant>;
-  assistants$: Observable<Assistant[]>;
 
   constructor(private assistantsService: AssistantsService) {
     this.search = '';
     this.filterValue = '';
     this.assistants = new Array();
-    this.assistants$ = this.assistantsService.getAssistants();
-    this.assistants$.subscribe(data => {
-      this.assistants = data;
+    this.assistantsService.getAssistants().subscribe(assistants => {
+      this.assistants = assistants;
       this.assistants.forEach(assistant => {
         assistant.visible = true;
       });
+    });
+  }
+
+  ngOnInit(): void {
+    $(() => {
+      $('select').formSelect();
     });
   }
 
@@ -47,15 +51,13 @@ export class AssistantsComponent implements OnInit {
 
   filterByStatus(): void {
     let value = $('#filter-checkbox').prop('checked');
-    console.log('status', this.filterValue, value);
-    this.assistantsService.getAssistantByFilter(this.filterValue, value).subscribe(data => {
-      console.log(data);
-    });
-  }
-
-  ngOnInit() {
-    $(document).ready(function() {
-      $('select').formSelect();
-    });
+    this.assistantsService
+      .getAssistantByFilter(this.filterValue, value)
+      .subscribe(assistants => {
+        this.assistants = assistants;
+        this.assistants.forEach(assistant => {
+          assistant.visible = true;
+        });
+      });
   }
 }
