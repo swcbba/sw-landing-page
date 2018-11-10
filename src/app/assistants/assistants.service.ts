@@ -52,7 +52,8 @@ export class AssistantsService {
       saturdayDinner: assistant.saturdayDinner,
       sundayBreakfast: assistant.sundayBreakfast,
       sundayLunch: assistant.sundayLunch,
-      souvenirsCheckin: assistant.souvenirsCheckin
+      souvenirsCheckin: assistant.souvenirsCheckin,
+      tshirt: assistant.tshirt
     };
     this.afs
       .collection<Assistant>('assistants')

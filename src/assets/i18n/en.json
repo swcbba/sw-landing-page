@@ -101,7 +101,8 @@
     "FRIDAY": "Friday",
     "SATURDAY": "Saturday",
     "SUNDAY": "Sunday",
-    "SOUVENIRS": "Souvenirs"
+    "SOUVENIRS": "Souvenirs",
+    "TSHIRT": "Shirt"
   },
   "ACCOUNT": {
     "TITLE": "Account"
