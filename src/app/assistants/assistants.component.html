@@ -29,6 +29,11 @@
             <option value="sundayBreakfast">{{'ASSISTANTS.BREAKFAST' | translate}}</option>
             <option value="sundayLunch">{{'ASSISTANTS.LUNCH' | translate}}</option>
           </optgroup>
+          <optgroup label="{{'ASSISTANTS.SOUVENIRS' | translate}}">
+            <option value="souvenirsCheckin">{{'ASSISTANTS.SOUVENIRS' | translate}}</option>
+            <option value="tshirt">{{'ASSISTANTS.TSHIRT' | translate}}</option>
+            <option value="drink">{{'ASSISTANTS.DRINK' | translate}}</option>
+          </optgroup>
         </select>
       </div>
       <div [hidden]="filterValue === 'all'" class="filter-checkbox-container col s2 m4">
@@ -160,6 +165,14 @@
                     (change)="updateAssistant(assistant, 'tshirt')"
                   />
                   <span>{{'ASSISTANTS.TSHIRT' | translate}}</span>
+                </label>
+                <label class="col s12">
+                  <input
+                    type="checkbox"
+                    [checked]="assistant.drink"
+                    (change)="updateAssistant(assistant, 'drink')"
+                  />
+                  <span>{{'ASSISTANTS.DRINK' | translate}}</span>
                 </label>
               </div>
             </td>

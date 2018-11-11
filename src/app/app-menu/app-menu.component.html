@@ -13,9 +13,6 @@
               'QR_CODE.TITLE' | translate
               }}</a>
           </li>
-          <li *ngIf="checkVisibility('/news')">
-            <a routerLink="/news" class="main-color">{{'NEWS.TITLE' | translate}}</a>
-          </li>
           <li *ngIf="checkVisibility('/assistants')">
             <a routerLink="/assistants" class="main-color">{{
               'ASSISTANTS.TITLE' | translate
@@ -35,6 +32,9 @@
             <a routerLink="/support" class="main-color">{{
               'SUPPORT.TITLE' | translate
               }}</a>
+          </li>
+          <li *ngIf="checkVisibility('/after')">
+            <a routerLink="/after" class="main-color">After Party</a>
           </li>
           <li>
             <a class="main-color" (click)="auth.logout()">{{
@@ -57,9 +57,6 @@
         'QR_CODE.TITLE' | translate
         }}</a>
     </li>
-    <li *ngIf="checkVisibility('/news')">
-      <a routerLink="/news" class="sidenav-close main-color">{{'NEWS.TITLE' | translate}}</a>
-    </li>
     <li *ngIf="checkVisibility('/assistants')">
       <a routerLink="/assistants" class="sidenav-close main-color">{{
         'ASSISTANTS.TITLE' | translate
@@ -79,6 +76,9 @@
       <a routerLink="/support" class="sidenav-close main-color">{{
         'SUPPORT.TITLE' | translate
         }}</a>
+    </li>
+    <li *ngIf="checkVisibility('/after')">
+      <a routerLink="/after" class="sidenav-close main-color">After Party</a>
     </li>
     <li>
       <a class="sidenav-close main-color" (click)="auth.logout()">{{

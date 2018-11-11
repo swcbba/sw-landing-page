@@ -56,6 +56,7 @@ import { ChangePasswordComponent } from './account/change-password/change-passwo
 import { CreateCredentialsComponent } from './create-credentials/create-credentials.component';
 import { NewsComponent } from './news/news.component';
 import { SupportComponent } from './support/support.component';
+import { AfterPartyComponent } from './after-party/after-party.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -93,7 +94,8 @@ export function createTranslateLoader(http: HttpClient) {
     ChangePasswordComponent,
     CreateCredentialsComponent,
     NewsComponent,
-    SupportComponent
+    SupportComponent,
+    AfterPartyComponent
   ],
   imports: [
     BrowserModule,
