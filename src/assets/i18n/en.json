@@ -102,7 +102,8 @@
     "SATURDAY": "Saturday",
     "SUNDAY": "Sunday",
     "SOUVENIRS": "Souvenirs",
-    "TSHIRT": "Shirt"
+    "TSHIRT": "Shirt",
+    "DRINK": "Drink"
   },
   "ACCOUNT": {
     "TITLE": "Account"
@@ -134,5 +135,8 @@
   },
   "CRED": {
     "CREATE": "Create credentials"
+  },
+  "AFTER": {
+    "TITLE": "Get a Chuflay!"
   }
 }

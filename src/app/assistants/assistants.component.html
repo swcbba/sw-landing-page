@@ -161,6 +161,14 @@
                   />
                   <span>{{'ASSISTANTS.TSHIRT' | translate}}</span>
                 </label>
+                <label class="col s12">
+                  <input
+                    type="checkbox"
+                    [checked]="assistant.drink"
+                    (change)="updateAssistant(assistant, 'drink')"
+                  />
+                  <span>{{'ASSISTANTS.DRINK' | translate}}</span>
+                </label>
               </div>
             </td>
           </ng-container>

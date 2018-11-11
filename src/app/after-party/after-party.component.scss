@@ -1,0 +1,25 @@
+main {
+  background-color: white;
+}
+
+.after-container {
+  height: 77vh;
+  min-height: 400px;
+}
+
+.after-logo {
+  max-width: 200px;
+  max-height: 100px;
+
+  @media only screen and (max-width: 992px) {
+    max-width: 100%;
+  }
+}
+
+.title {
+  font-size: 35px;
+}
+
+.hashtags {
+  font-size: 20px;
+}

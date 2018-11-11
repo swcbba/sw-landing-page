@@ -12,6 +12,7 @@ import { AccountComponent } from './account/account.component';
 import { ChangePasswordComponent } from './account/change-password/change-password.component';
 import { NewsComponent } from './news/news.component';
 import { SupportComponent } from './support/support.component';
+import { AfterPartyComponent } from './after-party/after-party.component';
 
 const routes: Routes = [
   {
@@ -59,6 +60,11 @@ const routes: Routes = [
   {
     path: 'support',
     component: SupportComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'after',
+    component: AfterPartyComponent,
     canActivate: [AuthGuardService]
   }
 ];

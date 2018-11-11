@@ -15,6 +15,7 @@ export interface Assistant {
   sundayLunch?: boolean;
   souvenirsCheckin?: boolean;
   tshirt?: boolean;
+  drink?: boolean;
   gender?: string;
   phoneNumber?: string;
   profile?: string;
